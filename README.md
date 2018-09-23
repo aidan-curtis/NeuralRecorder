@@ -8,10 +8,11 @@ We aim to design a device that can be implanted into a patient’s brain and tra
 ## Project Scope
 We will build a fully functioning wireless neural recording system that uses data compression to efficiently transmit local field potentials and/or single unit action potential data from patients to a nearby data collection device.
 
-It will contain 3 major subsystems:
+It will contain four major subsystems:
 - A power management system
 - Frontend interface chip that does signal conditioning
 - A wireless link to a receiver
+- A novel data compression implementation
 
 With a budget of $2,500 and working between August 29, 2018 and April 11, 2019 we must meet or exceed a minimum set of requirements:
 - 48 electrode channels consisting of 6 probes with 8 electrodes each

@@ -24,6 +24,7 @@ With a budget of $2,500 and working between August 29, 2018 and April 11, 2019 w
 
 
 ## Team
+![Team Axon Mobile]( NeuralRecorder/team photo.jpg )
 - *Benjamin Klimko:* bhk2 at rice dot edu
 - *Sophie D'Amico:* srd5 at rice dot edu
 - *Aidan Curtis:* arc11 at rice dot edu

@@ -1,9 +1,0 @@
-how to commit things to git from terminal:
-
-- open terminal
-- make sure you're in the git folder (e.g. C:/Users/sophi/NeuralRecorder)
-- put whatever files you want to commit in this folder
-- 'git status' will tell you if there are things in your local folder that aren't committed
-- 'git add .' will add the files
-- 'git commit -m "whatever message you want to go with your commit"' to commit the files
-- 'git push origin master' and you're done! will have to enter your github username and password

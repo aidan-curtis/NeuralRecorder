@@ -1,7 +1,44 @@
-function [outputArg1,outputArg2] = Compress(inputArg1,inputArg2)
+function [output_data] = Compress(input_signal)
 %COMPRESS Summary of this function goes here
 %   Detailed explanation goes here
-outputArg1 = inputArg1;
-outputArg2 = inputArg2;
+
+    N = 1024;
+    M = 256;
+    channel = 1;
+
+    % Load in the input data
+    channel_data = input_signal(channel, :);
+    compressed_channel_data = zeros(size(channel_data));
+    psi = zeros(N,N);
+    for ii = 1:N
+        ek = zeros(1,N);
+        ek(ii) = 1;
+        psi(ii, :) = idct(ek)';
+    end
+
+%     psi = WavMatLevel(N, log2(N), 'db8');
+
+
+    for index = [1:N:(length(channel_data))]
+        index
+        x = channel_data(index:(index+N-1))';
+        % Random Matrix
+        Phi = randn(M,N);
+
+        % Compression
+        y = Phi*x;
+
+        % DCT basis
+        Theta = zeros(M,N);
+        Theta = Phi*(psi);
+
+        % Find good starting point
+        s2 = pinv(Theta)*y;
+
+        % Find basis persuit solution
+        s1 = l1eq_pd(s2,Theta,Theta',y,5e-3,30); % L1-magic toolbox
+        compressed_channel_data(index:(index+N-1)) = s2;
+    end
+    output_data = compressed_channel_data;
 end
 

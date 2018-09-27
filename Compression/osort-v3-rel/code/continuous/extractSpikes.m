@@ -104,7 +104,7 @@ switch( params.peakAlignMethod )
     case METHOD_PEAKFIND_POWER
         kernelSize=25;
         peakFindSignal = runningStd(filteredSignal, kernelSize);
-        peakFindSignal = [powerSignal; zeros(kernelSize-1,1) ];          
+%         peakFindSignal = [powerSignal; zeros(kernelSize-1,1) ];          
     case METHOD_PEAKFIND_MTEO
         MTEOScales=[1 2 3]; %how many scales to use to compute the MTEO signal.
         peakFindSignal = MTEO( filteredSignal', MTEOScales);        

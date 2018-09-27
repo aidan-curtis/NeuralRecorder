@@ -1,11 +1,19 @@
-function [spikeTimes, numClustersDetected] = CalculateStatistics(signal)
-% This function takes in a list of filenames for channels and calls OSort
-% on those file names to get two things
+function [spikeTimes, numClustersDetected] = CalculateStatistics(pathRaw, pathOut)
+% Input: 
+% This function takes in a path to the txt data
+% Output:
 % 1.) Gets the times of every detected spike
 % 2.) Gets the number of detected clusters
 % Returns both of these statistics
 
-outputArg1 = inputArg1;
-outputArg2 = inputArg2;
+load('./Osort_params/paramsIn.mat');
+load('./Osort_params/paths.mat');
+paths.pathOut = pathOut;
+paths.pathRaw = pathRaw;
+filesToProcess = size(dir([pathRaw '/*.jpg']),1);
+thres = 5;
+filesToProcess=2;
+normalizationChannels = [];
+StandaloneGUI(paths, filesToProcess, thres, normalizationChannels, paramsIn)
 end
 

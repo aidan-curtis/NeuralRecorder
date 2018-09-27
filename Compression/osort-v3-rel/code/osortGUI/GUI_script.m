@@ -60,4 +60,5 @@ for i=1:length(filesToProcess)
 end
 paramsIn.groundChannels=groundChannels;
 %% execute
+
 StandaloneGUI(paths, filesToProcess, thres, normalizationChannels, paramsIn);

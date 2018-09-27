@@ -571,7 +571,6 @@ function varargout = GUI_OutputFcn(hObject, eventdata, handles)
 % Get default command line output from handles structure
 varargout{1} = handles.output;
 
-
 function pathOut_Callback(hObject, eventdata, handles)
 set(handles.pathOut,'String', fixPathString( get(handles.pathOut,'String')));
 
@@ -581,9 +580,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 
-
 function filesToProcess_Callback(hObject, eventdata, handles)
-
 
 function filesToProcess_CreateFcn(hObject, eventdata, handles)
 
@@ -591,16 +588,13 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 
-
 function groundChannels_Callback(hObject, eventdata, handles)
-
 
 function groundChannels_CreateFcn(hObject, eventdata, handles)
 
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
-
 
 function rawFileVersionA_Callback(hObject, eventdata, handles)
 set(handles.rawFileVersionC,'Value',0)
@@ -634,16 +628,13 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 
-
 function patientID_Callback(hObject, eventdata, handles)
-
 
 function patientID_CreateFcn(hObject, eventdata, handles)
 
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
-
 
 function doFigures_Callback(hObject, eventdata, handles)
 
@@ -672,7 +663,6 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 
-
 function pathRaw_Callback(hObject, eventdata, handles)
 set(handles.pathRaw,'String', fixPathString( get(handles.pathRaw,'String')));
 
@@ -684,9 +674,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 
-
 function outputFormat_Callback(hObject, eventdata, handles)
-
 
 function outputFormat_CreateFcn(hObject, eventdata, handles)
 
@@ -695,7 +683,6 @@ function outputFormat_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
-
 
 function detectionMethodA_Callback(hObject, eventdata, handles)
 
@@ -755,12 +742,9 @@ reappearwavelet(handles);
 enablewavelet(handles);
 enablescales(handles);
 
-
 function extractionThreshold_Callback(hObject, eventdata, handles)
 
-
 function kernelSize_Callback(hObject, eventdata, handles)
-
 
 function kernelSize_CreateFcn(hObject, eventdata, handles)
 
@@ -769,7 +753,6 @@ function kernelSize_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
-
 
 function scalesRange_Callback(hObject, eventdata, handles)
 
@@ -780,6 +763,7 @@ function scalesRange_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
+
 function extractionThreshold_CreateFcn(hObject, eventdata, handles)
 
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
@@ -788,7 +772,6 @@ end
 
 function waveletName_Callback(hObject, eventdata, handles)
 
-
 function waveletName_CreateFcn(hObject, eventdata, handles)
 
 % Hint: edit controls usually have a white background on Windows.
@@ -796,7 +779,6 @@ function waveletName_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
-
 
 function peakAlignMethodA_Callback(hObject, eventdata, handles)
 set(handles.peakAlignMethodB,'Value',0)
@@ -860,7 +842,6 @@ else
         enablealignmethod(handles);
     end
 end
-
 
 function merge_Callback(hObject, eventdata, handles)
 global FIGUREPATH

@@ -8,5 +8,3 @@ plot(q, 'b')
 plot(v(:, 1), v(:, 2), '.', 'markersize', 10)
 hold on;
 plot(0,0,'r.', 'markersize', 25)
-
-

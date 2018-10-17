@@ -33,5 +33,5 @@ void loop (void)
  // turn SPI hardware off
  SPI.end ();
  
- while (1);  //loop
+// while (1);  //loop
 }

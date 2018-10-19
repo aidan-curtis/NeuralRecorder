@@ -5,80 +5,80 @@ import numpy as np
 import pyqtgraph as pg
 import random
 from pyqtgraph.ptime import time
+import sys
 
 
 class Visualizer:
-    def __init__(self):
-        import sys
+    def __init__(self, generator):
+        self.app = QtGui.QApplication([])
+
         if (sys.flags.interactive != 1) or not hasattr(QtCore, 'PYQT_VERSION'):
             QtGui.QApplication.instance().exec_()
 
+        self.generator = generator
+        self.num_channels = generator.num_channels
+        self.streams = [[] for _ in range(self.num_channels)]
 
+        self.x_range = 5000
+        self.update_speed = 64
+        # Colors = [yellow, purple, blue, green, red, pink, grey, orange]
+        self.colors = [(255, 235, 59), (156, 39, 176), (3, 169, 244), (76, 175, 80), (244, 67, 54), (233, 30, 99), (158, 158, 158), (255, 87, 54)]
+
+        assert self.generator.load_chunk_size/float(self.update_speed)==int(self.generator.load_chunk_size/self.update_speed)
         self.setup()
-
-    def give_data_chunk(self):
-
-        # for i in range(num_channels):
-        #     plots.append(cw.addPlot(row=i, col=0))
-
-        #     plots[-1].hideAxis('bottom')
-
-        #     plots[-1].setRange(QtCore.QRectF(0, -10, 1000, 40))
-        #     curves.append(plots[-1].plot())
-
-        pass 
-
+        self.plot()
 
     def setup(self):
-        num_channels = 8
-        app = QtGui.QApplication([])
-        w = QtGui.QMainWindow()
-        cw = pg.GraphicsLayoutWidget()
+        self.w = QtGui.QMainWindow()
+        self.cw = pg.GraphicsLayoutWidget()
 
-        w.show()
-        w.resize(400,600)
-        w.setCentralWidget(cw)
+        self.w.show()
+        self.w.resize(400,600)
+        self.w.setCentralWidget(self.cw)
 
+        self.plots = []
+        self.curves = []
+        self.scatter_plots = []
 
-        plots = []
-        curves = []
+        for i in range(self.num_channels):
+            self.plots.append(self.cw.addPlot(row=i, col=0))
+            self.plots[i].hideAxis('bottom')
+            self.plots[i].setRange(QtCore.QRectF(0, -1000, self.x_range, 2000))
+            self.curves.append(self.plots[i].plot())
+            self.curves[i].setPen(pg.mkPen(color=self.colors[i]))
 
-
-    def plot(self, x_value, x_filt, pos_thresh, neg_thresh)
-        # What should we do if there is no data in the queue ... NOTHING
-        scatter_plots = []
-
-        for i in range(num_channels):
-            scatter_plots.append(cw.addPlot(row=i, col=1))
-            s1 = pg.ScatterPlotItem(size=4, pen=pg.mkPen(None), brush=pg.mkBrush(255, 255, 255, 120))
+        for i in range(self.num_channels):
+            self.scatter_plots.append(self.cw.addPlot(row=i, col=1))
+            s1 = pg.ScatterPlotItem(size=4, pen=pg.mkPen(None), brush=pg.mkBrush(self.colors[i][0], self.colors[i][1], self.colors[i][2], 120))
             pos = np.random.normal(size=(2,100), scale=1e-5)
             spots = [{'pos': pos[:,i], 'data': 1} for i in range(100)] + [{'pos': [0,0], 'data': 1}]
             s1.addPoints(spots)
-            scatter_plots[-1].addItem(s1)
-            
+            self.scatter_plots[-1].addItem(s1)
 
-        #Gernating synthetic data streams
-        datas = [[0] for _ in range(num_channels)]
-        for j in range(num_channels):
-            for i in range(10000):
-                    datas[j].append(datas[j][-1]+random.uniform(-1, 1))
+        self.app.processEvents()  # force complete redraw for every plot
 
 
-        fps = None
-        total = 0
 
-    def update(self):
+    def add_data_to_stream(self, chunk, ch_index):
+        self.streams[ch_index]+=list(chunk)
+        if(len(self.streams[ch_index])>self.x_range):
+            self.streams[ch_index] = list(np.array(self.streams[ch_index])[len(self.streams[ch_index])-self.x_range:len(self.streams[ch_index])])
 
-        for ch in range(num_channels):
-            curves[ch].setData(np.array(datas[ch][0:total]))
+    def plot(self):
+        print(self.curves)
+        while(not self.generator.done):
+            generated_data = self.generator.get_data_chunk()
+            chunk_index=0
+            while(chunk_index*self.update_speed<self.generator.load_chunk_size):
+                for ch in range(self.num_channels):
+                    self.add_data_to_stream(generated_data[chunk_index*self.update_speed:(chunk_index+1)*self.update_speed,ch], ch)
+                    self.curves[ch].setData(self.streams[ch])
+                chunk_index+=1
+                self.app.processEvents()  # force complete redraw for every plot
 
 
-        total+=1
 
-        app.processEvents()  # force complete redraw for every plot
 
-    timer = QtCore.QTimer()
-    timer.timeout.connect(update)
-    timer.start(0)
+
 
         

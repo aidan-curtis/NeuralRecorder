@@ -21,9 +21,6 @@ With a budget of $2,500 and working between August 29, 2018 and April 11, 2019 w
 - An ADC resolution of at least 8 bits
 - Ability to wirelessly transmit data at least 1 meter
 - A Sampling rate of at least 1000 Hz
-- Range of wireless functionality: 1 meter
-- Sampling rate: >1000 Hz
-
 
 ## Team
 ![Team Axon Mobile]( team photo.jpg )

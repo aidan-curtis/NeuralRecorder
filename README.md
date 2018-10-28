@@ -33,4 +33,5 @@ With a budget of $2,500 and working between August 29, 2018 and April 11, 2019 w
 - *Irene Zhang:* zz36 at rice dot edu
 - *Andres Gomez:* aeg6 at rice dot edu
 
-
+## Sponsorship
+Thanks to Altium for sponsoring our team and providing us with Altium Designer so we can easily and efficiently create custom PCBs for our project.

@@ -1,0 +1,36 @@
+#include <msp430.h> 
+#include <msp430FR5994.h>
+
+
+/**
+ * hello.c
+ */
+volatile char received_ch = 0;
+int main(void)
+{
+    WDTCTL = WDTPW + WDTHOLD; // Stop WDT
+
+    P1OUT |= BIT2; // Slave select set to 1
+    P1DIR |= BIT2; // Enable output for slave select pin
+
+
+    P5SEL0 = BIT0 | BIT1 | BIT2; // First part of putting these pins in spi mode
+    P5SEL1 = BIT0 | BIT1 | BIT2; // First part of putting these pins in spi mode
+
+    UCB1CTL1 = UCSWRST; // Set master mode to active
+    UCB1CTL0 |= UCCKPH + UCMSB + UCMST + UCSYNC; // 3-pin, 8-bit SPI master
+    UCB1CTL1 |= UCSSEL_2; // SMCLK
+    UCB1BR0 |= 0x02; // /2
+    UCB1BR1 = 0; //
+    UCB1CTL1 &= ~UCSWRST; // **Initialize USCI state machine**
+
+
+    P1OUT &= (~BIT5); // Select Device
+
+    while (!(UCB1IFG & UCTXIFG)); // USCI_A0 TX buffer ready?
+    UCB1TXBUF = 0xAA; // Send 0xAA over SPI to Slave
+    while (!(UCB1IFG & UCRXIFG)); // USCI_A0 RX Received?
+    received_ch = UCB1RXBUF; // Store received data
+
+    P1OUT |= (BIT5); // Unselect Device
+}

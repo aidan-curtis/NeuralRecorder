@@ -1,0 +1,25 @@
+
+**** Build of configuration Debug for project testing2 ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 2 all -O 
+ 
+Building file: "../blink.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="C:/ti/ccsv8/ccs_base/msp430/include" --include_path="C:/Users/South/workspace_v8/testing2" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="blink.d_raw"  "../blink.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'blink.obj' failed
+"../blink.c", line 28: error #20: identifier "P1SEL" is undefined
+"../blink.c", line 29: error #20: identifier "P5SEL2" is undefined
+"../blink.c", line 36: error #20: identifier "UCB0MCTL" is undefined
+"../blink.c", line 42: error #20: identifier "IFG2" is undefined
+"../blink.c", line 42: error #20: identifier "UCB0TXIFG" is undefined
+"../blink.c", line 44: error #20: identifier "UCB0RXIFG" is undefined
+"../blink.c", line 45: error #20: identifier "received_ch" is undefined
+"../blink.c", line 42: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../blink.c", line 44: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+7 errors detected in the compilation of "../blink.c".
+gmake: *** [blink.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****

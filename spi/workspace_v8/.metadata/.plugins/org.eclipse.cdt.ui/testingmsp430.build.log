@@ -1,0 +1,8 @@
+
+**** Build of configuration Debug for project testingmsp430 ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 2 all -O 
+ 
+gmake[1]: 'testingmsp430.out' is up to date.
+
+**** Build Finished ****

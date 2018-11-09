@@ -1,0 +1,8 @@
+
+**** Build of configuration Debug for project official_example ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 2 all -O 
+ 
+gmake[1]: 'official_example.out' is up to date.
+
+**** Build Finished ****

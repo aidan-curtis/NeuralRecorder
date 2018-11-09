@@ -1,0 +1,11 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:testingmsp430,org.eclipse.launchbar.core.descriptorType.default\:official_example
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:official_example/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:official_example/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:testagain/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:testagain/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:testingmsp430/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:testingmsp430/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

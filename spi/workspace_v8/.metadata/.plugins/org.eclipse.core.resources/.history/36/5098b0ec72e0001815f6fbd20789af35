@@ -1,0 +1,127 @@
+#include "driverlib.h"
+
+uint8_t RXData1 = 0;
+uint8_t RXData2 = 0;
+uint8_t TXData = 0;
+
+void main(void)
+{
+    volatile uint16_t i;
+
+    //Stop watchdog timer
+    WDT_A_hold(WDT_A_BASE);
+
+    // Configure Pins for LFXIN
+    //Set PJ.4 and PJ.5 as Primary Module Function Input.
+
+
+
+    // Set the master active pin 8.1 as output
+    GPIO_setAsOutputPin(GPIO_PORT_P8, GPIO_PIN1);
+    // Set the slave active pin 8.2 as input
+    GPIO_setAsInputPin(GPIO_PORT_P8, GPIO_PIN2);
+
+    GPIO_setAsPeripheralModuleFunctionInputPin(
+        GPIO_PORT_PJ,
+        GPIO_PIN4 + GPIO_PIN5,
+        GPIO_PRIMARY_MODULE_FUNCTION
+        );
+
+    //Set external frequency for XT1
+    CS_setExternalClockSource(32768,0);
+    //Set DCO frequency to max DCO setting
+    CS_setDCOFreq(CS_DCORSEL_0,CS_DCOFSEL_3);
+    //Select XT1 as the clock source for ACLK with no frequency divider
+    CS_initClockSignal(CS_ACLK,CS_LFXTCLK_SELECT,CS_CLOCK_DIVIDER_1);
+    //Start XT1 with no time out
+    CS_turnOnLFXT(CS_LFXT_DRIVE_0);
+
+    // Configure SPI pins
+    // Configure Pins for UCB0CLK
+
+    /*
+
+     * Select Port 5
+     * Set Pin 2 to input Secondary Module Function, (UCB1CLK).
+     */
+    GPIO_setAsPeripheralModuleFunctionInputPin(
+        GPIO_PORT_P5,
+        GPIO_PIN2,
+        GPIO_PRIMARY_MODULE_FUNCTION
+        );
+    // Configure Pins for UCB1TXD/UCB1SIMO, UCB1RXD/UCB1SOMI
+    //Set P5.0, P5.1 as Secondary Module Function Input.
+    /*
+
+     * Select Port 5
+     * Set Pin 0, 1 to input Secondary Module Function, (UCB1TXD/UCB1SIMO, UCB1RXD/UCB1SOMI).
+     */
+    GPIO_setAsPeripheralModuleFunctionInputPin(
+        GPIO_PORT_P5,
+        GPIO_PIN0 + GPIO_PIN1,
+        GPIO_PRIMARY_MODULE_FUNCTION
+        );
+
+    /*
+     * Disable the GPIO power-on default high-impedance mode to activate
+     * previously configured port settings
+     */
+    PMM_unlockLPM5();
+
+    //Initialize Master
+    EUSCI_B_SPI_initMasterParam param = {0};
+    param.selectClockSource = EUSCI_B_SPI_CLOCKSOURCE_ACLK;
+    param.clockSourceFrequency = CS_getACLK();
+    param.desiredSpiClock = 500000;
+    param.msbFirst = EUSCI_B_SPI_LSB_FIRST;
+    param.clockPhase = EUSCI_B_SPI_PHASE_DATA_CHANGED_ONFIRST_CAPTURED_ON_NEXT;
+    param.clockPolarity = EUSCI_B_SPI_CLOCKPOLARITY_INACTIVITY_HIGH;
+    param.spiMode = EUSCI_B_SPI_3PIN;
+    EUSCI_B_SPI_initMaster(EUSCI_B1_BASE, &param);
+
+
+    //Set master ready pin to high to complete handshake
+    GPIO_setOutputHighOnPin(GPIO_PORT_P8, GPIO_PIN1);
+
+    //Wait for slave ready pin to be high
+    while(!GPIO_getInputPinValue(GPIO_PORT_P8, GPIO_PIN1));
+
+
+    //Set master ready pin to high to complete handshake
+    GPIO_setOutputLowOnPin(GPIO_PORT_P8, GPIO_PIN1);
+
+    //Enable SPI module
+    EUSCI_B_SPI_enable(EUSCI_B1_BASE);
+
+    EUSCI_B_SPI_clearInterrupt(EUSCI_B1_BASE,
+                               EUSCI_B_SPI_RECEIVE_INTERRUPT
+                               );
+
+    // Enable USCI_B0 RX interrupt
+    EUSCI_B_SPI_enableInterrupt(EUSCI_B1_BASE,
+                                EUSCI_B_SPI_RECEIVE_INTERRUPT);
+
+
+    //USCI_B0 TX buffer ready?
+    while (!(UCB1IFG & UCTXIFG)); // wait for TX buffer ready
+
+    //Transmit Data to slave
+    UCB1TXBUF = 0x8F;
+
+    //USCI_B0 RX buffer ready?
+    while (!(UCB1IFG & UCRXIFG)); // wait for RX buffer ready
+
+    RXData1 = UCB1RXBUF;
+
+
+    //USCI_B0 TX buffer ready?
+    while (!(UCB1IFG & UCTXIFG)); // wait for TX buffer ready
+
+    //Transmit Data to slave
+    UCB1TXBUF = 0xAA;
+
+    //USCI_B0 RX buffer ready?
+    while (!(UCB1IFG & UCRXIFG)); // wait for RX buffer ready
+
+    RXData2 = UCB1RXBUF;
+}

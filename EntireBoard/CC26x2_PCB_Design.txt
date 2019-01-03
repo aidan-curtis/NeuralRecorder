@@ -1,0 +1,55 @@
+CC26x2 Doc List
+=======================
+General
+CC26xx Tools Overview
+	- http://processors.wiki.ti.com/index.php/CC13xx_CC26xx_Tools_Overview#Using_CCS_v6.1_with_XDS110_and_CC13xx.2FCC26xx
+CC2652R1 Quick Start Guide
+	- http://www.ti.com/lit/ml/swru528/swru528.pdf
+CC26x0 SimpleLink Wireless MCU Technical Reference Guide
+	- http://www.ti.com/lit/ug/swcu185a/swcu185a.pdf
+Production Test and Programming for CC26xx
+	- http://processors.wiki.ti.com/index.php/Production_Test_and_Programming_of_SimpleLink_CC26xx_or_CC13xx_Wireless_MCUs
+Design a product with CC26xx
+	- http://processors.wiki.ti.com/index.php/Designing_a_Product_with_SimpleLink_CC26xx_or_CC13xx_Wireless_MCUs#Step_6_-_Test_the_hardware
+	- Very useful links
+-----------------------
+PCB Design
+CC26xx Hardware Layout Considerations
+	- http://processors.wiki.ti.com/images/8/8b/CC26xx_HW_training_Layout_Considerations.pdf
+CC26xx RF Frontends and Antennas
+	- http://processors.wiki.ti.com/images/4/45/CC26xx_HW_training_RF_Frontends_and_Antennas.pdf
+	- Differential vs Single-ended design. Differential vs Balun. External vs Internal bias
+2.4GHz Inverted F Antenna
+	- http://www.ti.com/lit/an/swru120c/swru120c.pdf
+	- GND plane placement wrt antenna
+PCB Design Considerations 
+	- http://www.ti.com/lit/an/swra640/swra640.pdf 
+Johnson Balun for CC26xx Family
+	- http://www.ti.com/lit/an/swra572/swra572.pdf 
+	- 9 discrete LC components into a single components(basically replacing LC on RF_N and RF_P pins)
+	- Complex impedance matching
+Hardware Migration from CC26x0 to CC26x2
+	- http://www.ti.com/lit/an/swra582/swra582.pdf
+Crystal Selection
+	- http://processors.wiki.ti.com/index.php/CC26xx_Crystals
+XDS110 Debug Probe guide
+	- http://www.ti.com/lit/ug/sprui94/sprui94.pdf	
+CC Debugger User Guide 
+	- http://www.ti.com/lit/ug/swru197h/swru197h.pdf
+-----------------------
+Software
+CC26xx Family SW Quick Start Guide
+	- http://processors.wiki.ti.com/index.php/CC26xx_Family_SW_Quickstart_Guide
+Flash Programming via JTAG Port
+	- https://e2e.ti.com/support/wireless-connectivity/bluetooth/f/538/p/556076/2033879?tisearch=e2e-sitesearch&keymatch=%20user%3A290509#2033879
+CC26xx JTAG Flash Programming
+	- https://e2e.ti.com/support/wireless-connectivity/bluetooth/f/538/t/521220
+SmartRF Flash Programmer User Manual
+	- http://www.ti.com/lit/ug/swru069g/swru069g.pdf
+	- NOTE that CC26x2 is not supported
+CCS Uniflash
+	- http://processors.wiki.ti.com/index.php/Category:CCS_UniFlash
+Uniflash v4 Quick Guide
+	- http://processors.wiki.ti.com/index.php/UniFlash_v4_Quick_Guide
+JTAG and Uniflash Video Tutorial
+	- https://training.ti.com/using-jtag-ucd3138-introduction-uniflash

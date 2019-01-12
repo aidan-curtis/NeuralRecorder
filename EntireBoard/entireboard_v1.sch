@@ -157,7 +157,7 @@
 <layer number="254" name="OrgLBR" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="255" name="routoute" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
-<schematic>
+<schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
 <libraries>
 <library name="antenna">
 <packages>
@@ -5543,6 +5543,55 @@ MANUFACTURER:SAMTEC.</description>
 <text x="-2.794" y="-4.826" size="0.762" layer="21">1</text>
 <text x="-2.794" y="4.064" size="0.762" layer="21">2</text>
 </package>
+<package name="RHD2000_EVAL_BOARD_TESTPOINT">
+<pad name="1" x="0" y="0" drill="1.016" rot="R90"/>
+<text x="1.016" y="-0.4826" size="0.9906" layer="25" font="vector" ratio="12">&gt;NAME</text>
+</package>
+<package name="RHD2000_EVAL_BOARD_TESTPOINT_SMALL">
+<pad name="1" x="0" y="0" drill="0.8128" shape="octagon" rot="R90"/>
+<text x="-1.016" y="0.7874" size="0.9906" layer="25" font="vector" ratio="12">&gt;NAME</text>
+</package>
+<package name="SW_1188E">
+<hole x="1.15" y="0" drill="0.9"/>
+<hole x="-1.15" y="0" drill="0.9"/>
+<smd name="P$4" x="2.1" y="1.3" dx="0.9" dy="1.3" layer="1"/>
+<smd name="P$3" x="-2.1" y="1.3" dx="0.9" dy="1.3" layer="1"/>
+<smd name="P$2" x="3.375" y="-0.5" dx="1.45" dy="1" layer="1"/>
+<smd name="P$1" x="-3.5" y="-0.5" dx="1.45" dy="1" layer="1"/>
+<text x="-3.5" y="2.5" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.5" y="-3" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="PTH_2.54MM_01X01">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 1 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="0" y="0" drill="1"/>
+<wire x1="-1.25" y1="1.25" x2="1.25" y2="1.25" width="0.127" layer="21"/>
+<wire x1="1.25" y1="1.25" x2="1.25" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="1.25" y1="-1.25" x2="-1.25" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-1.25" y1="-1.25" x2="-1.25" y2="1.25" width="0.127" layer="21"/>
+<text x="-1.25" y="1.5" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
+<text x="0" y="-1.27" size="1.016" layer="21" font="vector" ratio="16" rot="R270" align="center-left">&gt;LABEL01</text>
+<polygon width="0.127" layer="21">
+<vertex x="-1.905" y="-1.905"/>
+<vertex x="-1.905" y="-1.27"/>
+<vertex x="-1.27" y="-0.635"/>
+<vertex x="-0.635" y="-1.27"/>
+<vertex x="-1.27" y="-1.905"/>
+</polygon>
+</package>
+<package name="RHD2000_EVAL_BOARD_0402">
+<wire x1="-0.4572" y1="0.254" x2="0.4572" y2="0.254" width="0.1016" layer="51"/>
+<wire x1="0.4572" y1="-0.254" x2="-0.4572" y2="-0.254" width="0.1016" layer="51"/>
+<wire x1="-1.0668" y1="0.5588" x2="1.0668" y2="0.5588" width="0.127" layer="21"/>
+<wire x1="1.0668" y1="0.5588" x2="1.0668" y2="-0.5588" width="0.127" layer="21"/>
+<wire x1="1.0668" y1="-0.5588" x2="-1.0668" y2="-0.5588" width="0.127" layer="21"/>
+<wire x1="-1.0668" y1="-0.5588" x2="-1.0668" y2="0.5588" width="0.127" layer="21"/>
+<rectangle x1="-0.508" y1="-0.254" x2="-0.254" y2="0.254" layer="51"/>
+<rectangle x1="0.254" y1="-0.254" x2="0.508" y2="0.254" layer="51"/>
+<smd name="1" x="-0.5334" y="0" dx="0.6858" dy="0.762" layer="1"/>
+<smd name="2" x="0.5334" y="0" dx="0.6858" dy="0.762" layer="1"/>
+<text x="-1.143" y="0.762" size="1.016" layer="25" font="vector">&gt;NAME</text>
+<text x="-1.27" y="-1.778" size="1.016" layer="27" font="vector">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="R0402" urn="urn:adsk.eagle:package:23547/3" type="model">
@@ -6310,6 +6359,72 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pin name="8" x="22.86" y="-7.62" length="middle" rot="R180"/>
 <pin name="9" x="0" y="-10.16" length="middle"/>
 <pin name="10" x="22.86" y="-10.16" length="middle" rot="R180"/>
+</symbol>
+<symbol name="RHD2000_EVAL_BOARD_TESTPOINT">
+<circle x="0" y="-1.27" radius="1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-5.08" width="0.254" layer="94"/>
+<pin name="1" x="0" y="-7.62" length="short" direction="pas" rot="R90"/>
+<text x="0.254" y="-5.715" size="1.778" layer="95">&gt;NAME</text>
+</symbol>
+<symbol name="SWITCH">
+<circle x="-1.27" y="0" radius="0.254" width="0.127" layer="94"/>
+<circle x="1.27" y="0" radius="0.254" width="0.127" layer="94"/>
+<circle x="-1.778" y="-1.27" radius="0.254" width="0.127" layer="94"/>
+<circle x="1.778" y="-1.27" radius="0.254" width="0.127" layer="94"/>
+<wire x1="-1.27" y1="-1.27" x2="1.27" y2="-1.27" width="0.127" layer="94"/>
+<wire x1="-1.524" y1="-1.27" x2="1.524" y2="-1.27" width="0.127" layer="94"/>
+<wire x1="-1.524" y1="0" x2="-2.54" y2="0" width="0.127" layer="94"/>
+<wire x1="-2.032" y1="-1.27" x2="-2.54" y2="-1.27" width="0.127" layer="94"/>
+<wire x1="1.524" y1="0" x2="2.54" y2="0" width="0.127" layer="94"/>
+<wire x1="2.032" y1="-1.27" x2="2.54" y2="-1.27" width="0.127" layer="94"/>
+<rectangle x1="-1.27" y1="0.381" x2="1.143" y2="0.508" layer="94"/>
+<rectangle x1="1.143" y1="0.381" x2="1.27" y2="0.508" layer="94"/>
+<wire x1="-0.254" y1="0.508" x2="-0.254" y2="0.762" width="0.127" layer="94"/>
+<wire x1="-0.254" y1="0.762" x2="0.254" y2="0.762" width="0.127" layer="94"/>
+<wire x1="0.254" y1="0.762" x2="0.254" y2="0.508" width="0.127" layer="94"/>
+<pin name="P$1" x="-2.54" y="-1.27" length="point" function="dot" rot="R180"/>
+<pin name="P$2" x="2.54" y="-1.27" length="point" function="dot" rot="R180"/>
+<pin name="P$3" x="-2.54" y="0" length="point" function="dot" rot="R180"/>
+<pin name="P$4" x="2.54" y="0" length="point" function="dot" rot="R180"/>
+<text x="-2.54" y="1.27" size="1.27" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-3.81" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="CON_01X01">
+<description>&lt;b&gt;Description:&lt;/b&gt; Symbol for Connector 1 Position 1 Row.&lt;br&gt;</description>
+<pin name="PIN1" x="-2.54" y="0" visible="off" length="short"/>
+<text x="7.62" y="0" size="1.016" layer="97" font="vector" align="center-left">&gt;LABEL01</text>
+<wire x1="0" y1="1.27" x2="0" y2="-1.27" width="0.127" layer="94"/>
+<wire x1="0" y1="-1.27" x2="16.51" y2="-1.27" width="0.127" layer="94"/>
+<wire x1="16.51" y1="-1.27" x2="16.51" y2="1.27" width="0.127" layer="94"/>
+<wire x1="16.51" y1="1.27" x2="0" y2="1.27" width="0.127" layer="94"/>
+<text x="0" y="5.08" size="1.016" layer="95" font="vector" align="top-left">&gt;NAME</text>
+<text x="0" y="2.54" size="1.016" layer="96" font="vector">&gt;VALUE</text>
+<text x="0.508" y="0" size="1.016" layer="97" font="vector" rot="R180" align="center-right">PIN01</text>
+</symbol>
+<symbol name="LED">
+<description>&lt;h3&gt;LED&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;</description>
+<wire x1="1.27" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.032" y1="-0.762" x2="-3.429" y2="-2.159" width="0.1524" layer="94"/>
+<wire x1="-1.905" y1="-1.905" x2="-3.302" y2="-3.302" width="0.1524" layer="94"/>
+<text x="-3.429" y="-4.572" size="1.778" layer="95" font="vector" rot="R90">&gt;NAME</text>
+<text x="1.905" y="-4.572" size="1.778" layer="96" font="vector" rot="R90" align="top-left">&gt;VALUE</text>
+<pin name="C" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="A" x="0" y="2.54" visible="off" length="short" direction="pas" rot="R270"/>
+<polygon width="0.1524" layer="94">
+<vertex x="-3.429" y="-2.159"/>
+<vertex x="-3.048" y="-1.27"/>
+<vertex x="-2.54" y="-1.778"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-3.302" y="-3.302"/>
+<vertex x="-2.921" y="-2.413"/>
+<vertex x="-2.413" y="-2.921"/>
+</polygon>
 </symbol>
 </symbols>
 <devicesets>
@@ -7672,6 +7787,88 @@ MANUFACTURER:SAMTEC.</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="RHD2000_EVAL_BOARD_TESTPOINT" prefix="TP">
+<description>PCB Test Point</description>
+<gates>
+<gate name="TP$1" symbol="RHD2000_EVAL_BOARD_TESTPOINT" x="0" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="RHD2000_EVAL_BOARD_TESTPOINT">
+<connects>
+<connect gate="TP$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="_SMALL" package="RHD2000_EVAL_BOARD_TESTPOINT_SMALL">
+<connects>
+<connect gate="TP$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SW_1188E">
+<gates>
+<gate name="G$1" symbol="SWITCH" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SW_1188E">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="P$3" pad="P$3"/>
+<connect gate="G$1" pin="P$4" pad="P$4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CON_01X01" prefix="J">
+<description>&lt;b&gt;Library:&lt;/b&gt;  MF_Connectors&lt;br/&gt;
+&lt;b&gt;Description:&lt;/b&gt; Header Connector with 01 Positions and 01 Rows. Use the LABEL Attribute to label the pin on the schematic and PCB. You can remove the attributes on the PCB by using the SMASH function on the part and then deleting the text.&lt;br/&gt;</description>
+<gates>
+<gate name="G$1" symbol="CON_01X01" x="0" y="0"/>
+</gates>
+<devices>
+<device name="_PTH_2.54MM" package="PTH_2.54MM_01X01">
+<connects>
+<connect gate="G$1" pin="PIN1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="HOUSEPART" value="YES" constant="no"/>
+<attribute name="LABEL01" value="" constant="no"/>
+<attribute name="MPN" value="MF-CON-2.54mm-01x01" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-CON-2.54mm-01x01" constant="no"/>
+<attribute name="VALUE" value="MF-CON-2.54mm-01x01" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LED-SMD">
+<gates>
+<gate name="G$1" symbol="LED" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RHD2000_EVAL_BOARD_0402">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="C" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="supply1">
@@ -8237,6 +8434,175 @@ MANUFACTURER:SAMTEC.</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="MF_Passives">
+<packages>
+<package name="R0402">
+<description>&lt;b&gt;Description:&lt;/b&gt; Standard 0402 Package for Resistors&lt;br/&gt;</description>
+<smd name="P$1" x="-0.55" y="0" dx="0.5" dy="0.6" layer="1" rot="R180"/>
+<smd name="P$2" x="0.55" y="0" dx="0.5" dy="0.6" layer="1" rot="R180"/>
+<wire x1="-1.1" y1="0.55" x2="-1.1" y2="-0.55" width="0.127" layer="21"/>
+<wire x1="-1.1" y1="-0.55" x2="1.1" y2="-0.55" width="0.127" layer="21"/>
+<wire x1="1.1" y1="-0.55" x2="1.1" y2="0.55" width="0.127" layer="21"/>
+<wire x1="1.1" y1="0.55" x2="-1.1" y2="0.55" width="0.127" layer="21"/>
+<text x="-1.1" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
+</package>
+<package name="R0603">
+<description>&lt;b&gt;Description:&lt;/b&gt; Standard 0603 Package for Resistors&lt;br/&gt;</description>
+<smd name="P$1" x="-0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
+<smd name="P$2" x="0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
+<wire x1="-1.4" y1="0.7" x2="-1.4" y2="-0.7" width="0.127" layer="21"/>
+<wire x1="-1.4" y1="-0.7" x2="1.4" y2="-0.7" width="0.127" layer="21"/>
+<wire x1="1.4" y1="-0.7" x2="1.4" y2="0.7" width="0.127" layer="21"/>
+<wire x1="1.4" y1="0.7" x2="-1.4" y2="0.7" width="0.127" layer="21"/>
+<text x="-1.4" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
+</package>
+<package name="R0805">
+<description>&lt;b&gt;Description:&lt;/b&gt; Standard 0805 Package for Resistors&lt;br/&gt;</description>
+<smd name="P$1" x="-0.95" y="0" dx="0.7" dy="1.3" layer="1" rot="R180"/>
+<smd name="P$2" x="0.95" y="0" dx="0.7" dy="1.3" layer="1" rot="R180"/>
+<wire x1="-1.8" y1="0.9" x2="-1.8" y2="-0.9" width="0.127" layer="21"/>
+<wire x1="-1.8" y1="-0.9" x2="1.8" y2="-0.9" width="0.127" layer="21"/>
+<wire x1="1.8" y1="-0.9" x2="1.8" y2="0.9" width="0.127" layer="21"/>
+<wire x1="1.8" y1="0.9" x2="-1.8" y2="0.9" width="0.127" layer="21"/>
+<text x="-1.8" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
+</package>
+<package name="R1206">
+<description>&lt;b&gt;Description:&lt;/b&gt; Standard 1206 Package for Resistors&lt;br/&gt;</description>
+<smd name="P$1" x="-1.45" y="0" dx="0.9" dy="1.6" layer="1" rot="R180"/>
+<smd name="P$2" x="1.45" y="0" dx="0.9" dy="1.6" layer="1" rot="R180"/>
+<wire x1="-2.2" y1="1.1" x2="-2.2" y2="-1.1" width="0.127" layer="21"/>
+<wire x1="-2.2" y1="-1.1" x2="2.2" y2="-1.1" width="0.127" layer="21"/>
+<wire x1="2.2" y1="-1.1" x2="2.2" y2="1.1" width="0.127" layer="21"/>
+<wire x1="2.2" y1="1.1" x2="-2.2" y2="1.1" width="0.127" layer="21"/>
+<text x="-2.2" y="1.3" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
+</package>
+<package name="R1210">
+<description>&lt;b&gt;Description:&lt;/b&gt; Standard 1210 Package for Resistors&lt;br/&gt;</description>
+<smd name="P$1" x="-1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
+<smd name="P$2" x="1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
+<wire x1="-2.2" y1="1.6" x2="-2.2" y2="-1.6" width="0.127" layer="21"/>
+<wire x1="-2.2" y1="-1.6" x2="2.2" y2="-1.6" width="0.127" layer="21"/>
+<wire x1="2.2" y1="-1.6" x2="2.2" y2="1.6" width="0.127" layer="21"/>
+<wire x1="2.2" y1="1.6" x2="-2.2" y2="1.6" width="0.127" layer="21"/>
+<text x="-2.2" y="1.8" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
+</package>
+</packages>
+<symbols>
+<symbol name="RESISTOR">
+<description>&lt;b&gt;Library:&lt;/b&gt;  MF_Passives&lt;br/&gt;
+&lt;b&gt;Description:&lt;/b&gt; Symbol for Resistors&lt;br/&gt;</description>
+<pin name="P$1" x="0" y="5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="P$2" x="0" y="-5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
+<wire x1="0" y1="2.54" x2="1.016" y2="2.159" width="0.1524" layer="94"/>
+<wire x1="1.016" y1="2.159" x2="-1.016" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="-1.016" y1="1.524" x2="1.016" y2="0.889" width="0.1524" layer="94"/>
+<wire x1="1.016" y1="0.889" x2="-1.016" y2="0.254" width="0.1524" layer="94"/>
+<wire x1="-1.016" y1="0.254" x2="1.016" y2="-0.381" width="0.1524" layer="94"/>
+<wire x1="1.016" y1="-0.381" x2="-1.016" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="-1.016" y1="-1.016" x2="1.016" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="1.016" y1="-1.651" x2="-1.016" y2="-2.286" width="0.1524" layer="94"/>
+<wire x1="-1.016" y1="-2.286" x2="0" y2="-2.54" width="0.1524" layer="94"/>
+<text x="2.54" y="1.524" size="1.016" layer="95" font="vector" align="top-left">&gt;NAME</text>
+<text x="2.54" y="-1.524" size="1.016" layer="96" font="vector">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="RESISTOR" prefix="R" uservalue="yes">
+<description>&lt;b&gt;Library:&lt;/b&gt;  MF_Passives&lt;br/&gt;
+&lt;b&gt;Description:&lt;/b&gt; Device for Resistors. Manufacture part number (MPN), Voltage, Tolerance, and Wattage Rating can be added via Attributes.  Check https://factory.macrofab.com/parts for the house parts list.&lt;br/&gt;</description>
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="_0402" package="R0402">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="HOUSEPART" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="TOLERANCE" value="" constant="no"/>
+<attribute name="URL" value="" constant="no"/>
+<attribute name="VOLTAGE" value="" constant="no"/>
+<attribute name="WATTAGE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_0603" package="R0603">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="HOUSEPART" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="TOLERANCE" value="" constant="no"/>
+<attribute name="URL" value="" constant="no"/>
+<attribute name="VOLTAGE" value="" constant="no"/>
+<attribute name="WATTAGE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_0805" package="R0805">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="HOUSEPART" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="TOLERANCE" value="" constant="no"/>
+<attribute name="URL" value="" constant="no"/>
+<attribute name="VOLTAGE" value="" constant="no"/>
+<attribute name="WATTAGE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_1206" package="R1206">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="HOUSEPART" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="TOLERANCE" value="" constant="no"/>
+<attribute name="URL" value="" constant="no"/>
+<attribute name="VOLTAGE" value="" constant="no"/>
+<attribute name="WATTAGE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_1210" package="R1210">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="HOUSEPART" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="POPULATE" value="" constant="no"/>
+<attribute name="TOLERANCE" value="" constant="no"/>
+<attribute name="URL" value="" constant="no"/>
+<attribute name="VOLTAGE" value="" constant="no"/>
+<attribute name="WATTAGE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -8316,6 +8682,20 @@ MANUFACTURER:SAMTEC.</description>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J1" library="AxonMobile" deviceset="FTSH-105-01-XXX-DV-K" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
+<part name="TP_SPI_CS" library="AxonMobile" deviceset="RHD2000_EVAL_BOARD_TESTPOINT" device="_SMALL"/>
+<part name="TP_SPI_CLK" library="AxonMobile" deviceset="RHD2000_EVAL_BOARD_TESTPOINT" device="_SMALL"/>
+<part name="TP_SPI_MOSI" library="AxonMobile" deviceset="RHD2000_EVAL_BOARD_TESTPOINT" device="_SMALL"/>
+<part name="TP_SPI_MISO" library="AxonMobile" deviceset="RHD2000_EVAL_BOARD_TESTPOINT" device="_SMALL"/>
+<part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="R2" library="AxonMobile" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3"/>
+<part name="BTN_RESET" library="AxonMobile" deviceset="SW_1188E" device=""/>
+<part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="3.3V" library="AxonMobile" deviceset="CON_01X01" device="_PTH_2.54MM" value="MF-CON-2.54mm-01x01"/>
+<part name="GND" library="AxonMobile" deviceset="CON_01X01" device="_PTH_2.54MM" value="MF-CON-2.54mm-01x01"/>
+<part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="CURRENT-SENSE" library="MF_Passives" deviceset="RESISTOR" device="_0402" value="0.01ohm"/>
+<part name="R_CS" library="MF_Passives" deviceset="RESISTOR" device="_0402" value="0.01ohm"/>
+<part name="POWER_IND" library="AxonMobile" deviceset="LED-SMD" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8330,8 +8710,12 @@ MANUFACTURER:SAMTEC.</description>
 <text x="71.12" y="58.42" size="1.778" layer="97">P22</text>
 <text x="81.28" y="58.42" size="1.778" layer="97">P44</text>
 <text x="91.44" y="58.42" size="1.778" layer="97">P34</text>
-<text x="97.79" y="172.72" size="1.778" layer="97">TODO: add 0ohm resistor for rebustness</text>
 <text x="115.57" y="67.31" size="2.54" layer="97">JTAG Debugging Connector</text>
+<text x="96.52" y="157.48" size="1.778" layer="97">NOTE: add pads on 4 SPI signal lines for testing</text>
+<text x="7.62" y="58.42" size="0.889" layer="97">5V Ext Supply</text>
+<text x="7.62" y="58.42" size="0.889" layer="97">5V Ext Supply</text>
+<text x="7.62" y="58.42" size="0.889" layer="97">3.3V Ext Supply</text>
+<text x="7.62" y="48.26" size="0.889" layer="97">GND Pin</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -8480,16 +8864,16 @@ MANUFACTURER:SAMTEC.</description>
 <instance part="GND8" gate="1" x="24.384" y="78.232">
 <attribute name="VALUE" x="21.844" y="75.692" size="1.778" layer="96"/>
 </instance>
-<instance part="R1" gate="G$1" x="16.51" y="154.178" rot="R90">
-<attribute name="NAME" x="15.0114" y="150.368" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="19.812" y="150.368" size="1.778" layer="96" rot="R90"/>
+<instance part="R1" gate="G$1" x="20.32" y="154.178" rot="R90">
+<attribute name="NAME" x="18.8214" y="150.368" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="23.622" y="150.368" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="C20" gate="G$1" x="16.51" y="140.462">
-<attribute name="NAME" x="17.526" y="141.097" size="1.778" layer="95"/>
-<attribute name="VALUE" x="17.526" y="136.271" size="1.778" layer="96"/>
+<instance part="C20" gate="G$1" x="20.32" y="139.192">
+<attribute name="NAME" x="21.336" y="139.827" size="1.778" layer="95"/>
+<attribute name="VALUE" x="21.336" y="135.001" size="1.778" layer="96"/>
 </instance>
-<instance part="GND10" gate="1" x="16.51" y="130.302">
-<attribute name="VALUE" x="13.97" y="127.762" size="1.778" layer="96"/>
+<instance part="GND10" gate="1" x="20.32" y="125.222">
+<attribute name="VALUE" x="17.78" y="122.682" size="1.778" layer="96"/>
 </instance>
 <instance part="J1" gate="G$1" x="129.54" y="62.23">
 <attribute name="NAME" x="134.62" y="65.532" size="1.27" layer="95"/>
@@ -8497,6 +8881,53 @@ MANUFACTURER:SAMTEC.</description>
 </instance>
 <instance part="GND11" gate="1" x="127" y="44.45">
 <attribute name="VALUE" x="124.46" y="41.91" size="1.778" layer="96"/>
+</instance>
+<instance part="TP_SPI_CS" gate="TP$1" x="111.76" y="147.32">
+<attribute name="NAME" x="112.014" y="141.605" size="1.778" layer="95"/>
+</instance>
+<instance part="TP_SPI_CLK" gate="TP$1" x="114.3" y="142.24">
+<attribute name="NAME" x="114.554" y="136.525" size="1.778" layer="95"/>
+</instance>
+<instance part="TP_SPI_MOSI" gate="TP$1" x="116.84" y="137.16">
+<attribute name="NAME" x="117.094" y="131.445" size="1.778" layer="95"/>
+</instance>
+<instance part="TP_SPI_MISO" gate="TP$1" x="119.38" y="132.08">
+<attribute name="NAME" x="119.634" y="126.365" size="1.778" layer="95"/>
+</instance>
+<instance part="GND13" gate="1" x="8.89" y="125.222">
+<attribute name="VALUE" x="6.35" y="122.682" size="1.778" layer="96"/>
+</instance>
+<instance part="R2" gate="G$1" x="8.89" y="140.97" rot="R270">
+<attribute name="NAME" x="10.3886" y="144.78" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="5.588" y="144.78" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="BTN_RESET" gate="G$1" x="8.89" y="132.08" rot="R90">
+<attribute name="NAME" x="7.62" y="129.54" size="1.27" layer="95" rot="R90"/>
+<attribute name="VALUE" x="12.7" y="129.54" size="1.27" layer="96" rot="R90"/>
+</instance>
+<instance part="GND14" gate="1" x="13.97" y="125.222">
+<attribute name="VALUE" x="11.43" y="122.682" size="1.778" layer="96"/>
+</instance>
+<instance part="3.3V" gate="G$1" x="22.86" y="58.42" rot="R180">
+<attribute name="LABEL01" x="15.24" y="58.42" size="1.016" layer="97" font="vector" rot="R180" align="center-left"/>
+<attribute name="NAME" x="22.86" y="53.34" size="1.016" layer="95" font="vector" rot="R180" align="top-left"/>
+<attribute name="VALUE" x="22.86" y="55.88" size="1.016" layer="96" font="vector" rot="R180"/>
+</instance>
+<instance part="GND" gate="G$1" x="22.86" y="48.26" rot="R180">
+<attribute name="LABEL01" x="15.24" y="48.26" size="1.016" layer="97" font="vector" rot="R180" align="center-left"/>
+<attribute name="NAME" x="22.86" y="43.18" size="1.016" layer="95" font="vector" rot="R180" align="top-left"/>
+<attribute name="VALUE" x="22.86" y="45.72" size="1.016" layer="96" font="vector" rot="R180"/>
+</instance>
+<instance part="GND15" gate="1" x="27.94" y="39.37">
+<attribute name="VALUE" x="25.4" y="36.83" size="1.778" layer="96"/>
+</instance>
+<instance part="R_CS" gate="G$1" x="26.67" y="179.07" rot="R90">
+<attribute name="NAME" x="25.146" y="181.61" size="1.016" layer="95" font="vector" rot="R90" align="top-left"/>
+<attribute name="VALUE" x="28.194" y="181.61" size="1.016" layer="96" font="vector" rot="R90"/>
+</instance>
+<instance part="POWER_IND" gate="G$1" x="36.83" y="179.07" rot="R90">
+<attribute name="NAME" x="41.402" y="175.641" size="1.778" layer="95" font="vector" rot="R180"/>
+<attribute name="VALUE" x="41.402" y="180.975" size="1.778" layer="96" font="vector" rot="R180" align="top-left"/>
 </instance>
 </instances>
 <busses>
@@ -8696,7 +9127,7 @@ MANUFACTURER:SAMTEC.</description>
 <segment>
 <pinref part="C20" gate="G$1" pin="2"/>
 <pinref part="GND10" gate="1" pin="GND"/>
-<wire x1="16.51" y1="135.382" x2="16.51" y2="132.842" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="134.112" x2="20.32" y2="127.762" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="3"/>
@@ -8711,6 +9142,28 @@ MANUFACTURER:SAMTEC.</description>
 <pinref part="J1" gate="G$1" pin="9"/>
 <wire x1="129.54" y1="52.07" x2="127" y2="52.07" width="0.1524" layer="91"/>
 <junction x="127" y="52.07"/>
+</segment>
+<segment>
+<pinref part="BTN_RESET" gate="G$1" pin="P$3"/>
+<pinref part="GND13" gate="1" pin="GND"/>
+<wire x1="8.89" y1="129.54" x2="8.89" y2="127.762" width="0.1524" layer="91"/>
+<pinref part="BTN_RESET" gate="G$1" pin="P$1"/>
+<wire x1="10.16" y1="129.54" x2="10.16" y2="127.762" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="127.762" x2="8.89" y2="127.762" width="0.1524" layer="91"/>
+<junction x="8.89" y="127.762"/>
+</segment>
+<segment>
+<pinref part="BTN_RESET" gate="G$1" pin="P$2"/>
+<wire x1="10.16" y1="134.62" x2="10.16" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="GND14" gate="1" pin="GND"/>
+<wire x1="10.16" y1="137.16" x2="13.97" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="13.97" y1="137.16" x2="13.97" y2="127.762" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND" gate="G$1" pin="PIN1"/>
+<pinref part="GND15" gate="1" pin="GND"/>
+<wire x1="25.4" y1="48.26" x2="27.94" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="48.26" x2="27.94" y2="41.91" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VDDR" class="0">
@@ -8756,8 +9209,11 @@ MANUFACTURER:SAMTEC.</description>
 <segment>
 <pinref part="L2" gate="G$1" pin="1"/>
 <wire x1="38.1" y1="55.88" x2="25.4" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="55.88" x2="25.4" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="55.88" x2="25.4" y2="58.42" width="0.1524" layer="91"/>
 <label x="25.4" y="63.5" size="1.778" layer="95" xref="yes"/>
+<pinref part="3.3V" gate="G$1" pin="PIN1"/>
+<wire x1="25.4" y1="58.42" x2="25.4" y2="63.5" width="0.1524" layer="91"/>
+<junction x="25.4" y="58.42"/>
 </segment>
 </net>
 <net name="VDDS" class="0">
@@ -8775,9 +9231,10 @@ MANUFACTURER:SAMTEC.</description>
 <wire x1="48.26" y1="162.56" x2="43.18" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="162.56" x2="43.18" y2="165.1" width="0.1524" layer="91"/>
 <junction x="43.18" y="165.1"/>
-<label x="43.18" y="175.26" size="1.778" layer="95" rot="R180" xref="yes"/>
-<wire x1="43.18" y1="175.26" x2="43.18" y2="170.18" width="0.1524" layer="91"/>
 <junction x="43.18" y="170.18"/>
+<wire x1="43.18" y1="179.07" x2="43.18" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="41.91" y1="179.07" x2="43.18" y2="179.07" width="0.1524" layer="91"/>
+<pinref part="POWER_IND" gate="G$1" pin="C"/>
 </segment>
 <segment>
 <pinref part="C3" gate="G$1" pin="1"/>
@@ -8807,8 +9264,13 @@ MANUFACTURER:SAMTEC.</description>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="16.51" y1="159.258" x2="16.51" y2="162.56" width="0.1524" layer="91"/>
-<label x="16.51" y="162.56" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="20.32" y1="159.258" x2="20.32" y2="162.56" width="0.1524" layer="91"/>
+<label x="20.32" y="162.56" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R_CS" gate="G$1" pin="P$1"/>
+<wire x1="21.59" y1="179.07" x2="19.05" y2="179.07" width="0.1524" layer="91"/>
+<label x="19.05" y="179.07" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -8841,14 +9303,19 @@ MANUFACTURER:SAMTEC.</description>
 <pinref part="U2" gate="A" pin="ADC_REF"/>
 </segment>
 </net>
-<net name="SPI_CS" class="0">
+<net name="SPI_CS_TP" class="0">
 <segment>
 <pinref part="CC2652R1" gate="CC2652R1" pin="DIO_7"/>
 <wire x1="93.98" y1="152.4" x2="109.22" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="152.4" x2="109.22" y2="139.7" width="0.1524" layer="91"/>
-<pinref part="U2" gate="A" pin="!CS!+"/>
-<wire x1="109.22" y1="139.7" x2="152.4" y2="139.7" width="0.1524" layer="91"/>
 <label x="93.98" y="152.4" size="1.778" layer="95"/>
+<wire x1="109.22" y1="152.4" x2="109.22" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="139.7" x2="111.76" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="TP_SPI_CS" gate="TP$1" pin="1"/>
+<wire x1="111.76" y1="139.7" x2="144.78" y2="139.7" width="0.1524" layer="91"/>
+<junction x="111.76" y="139.7"/>
+<pinref part="U2" gate="A" pin="!CS!+"/>
+<wire x1="144.78" y1="139.7" x2="146.05" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="146.05" y1="139.7" x2="152.4" y2="139.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SPI_MISO" class="0">
@@ -8856,9 +9323,16 @@ MANUFACTURER:SAMTEC.</description>
 <pinref part="CC2652R1" gate="CC2652R1" pin="DIO_8"/>
 <wire x1="93.98" y1="149.86" x2="106.68" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="149.86" x2="106.68" y2="124.46" width="0.1524" layer="91"/>
-<pinref part="U2" gate="A" pin="MISO+"/>
-<wire x1="106.68" y1="124.46" x2="152.4" y2="124.46" width="0.1524" layer="91"/>
 <label x="93.98" y="149.86" size="1.778" layer="95"/>
+<wire x1="106.68" y1="124.46" x2="119.38" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="TP_SPI_MISO" gate="TP$1" pin="1"/>
+<wire x1="119.38" y1="124.46" x2="134.62" y2="124.46" width="0.1524" layer="91"/>
+<junction x="119.38" y="124.46"/>
+<pinref part="U2" gate="A" pin="MISO+"/>
+<wire x1="134.62" y1="124.46" x2="137.16" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="124.46" x2="146.05" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="146.05" y1="124.46" x2="152.4" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="124.46" x2="137.16" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SPI_MOSI" class="0">
@@ -8866,9 +9340,16 @@ MANUFACTURER:SAMTEC.</description>
 <pinref part="CC2652R1" gate="CC2652R1" pin="DIO_9"/>
 <wire x1="93.98" y1="147.32" x2="104.14" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="147.32" x2="104.14" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="U2" gate="A" pin="MOSI+"/>
-<wire x1="104.14" y1="129.54" x2="152.4" y2="129.54" width="0.1524" layer="91"/>
 <label x="93.98" y="147.32" size="1.778" layer="95"/>
+<wire x1="104.14" y1="129.54" x2="116.84" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="TP_SPI_MOSI" gate="TP$1" pin="1"/>
+<wire x1="116.84" y1="129.54" x2="135.89" y2="129.54" width="0.1524" layer="91"/>
+<junction x="116.84" y="129.54"/>
+<pinref part="U2" gate="A" pin="MOSI+"/>
+<wire x1="135.89" y1="129.54" x2="137.16" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="129.54" x2="146.05" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="146.05" y1="129.54" x2="152.4" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="129.54" x2="137.16" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SPI_CLK" class="0">
@@ -8876,9 +9357,16 @@ MANUFACTURER:SAMTEC.</description>
 <pinref part="CC2652R1" gate="CC2652R1" pin="DIO_10"/>
 <wire x1="93.98" y1="144.78" x2="101.6" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="144.78" x2="101.6" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="U2" gate="A" pin="SCLK+"/>
-<wire x1="101.6" y1="134.62" x2="152.4" y2="134.62" width="0.1524" layer="91"/>
 <label x="93.98" y="144.78" size="1.778" layer="95"/>
+<wire x1="101.6" y1="134.62" x2="114.3" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="TP_SPI_CLK" gate="TP$1" pin="1"/>
+<wire x1="114.3" y1="134.62" x2="135.89" y2="134.62" width="0.1524" layer="91"/>
+<junction x="114.3" y="134.62"/>
+<pinref part="U2" gate="A" pin="SCLK+"/>
+<wire x1="135.89" y1="134.62" x2="137.16" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="134.62" x2="146.05" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="146.05" y1="134.62" x2="152.4" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="134.62" x2="137.16" y2="134.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RF_P" class="0">
@@ -8991,21 +9479,39 @@ MANUFACTURER:SAMTEC.</description>
 <net name="WMCU_RESET" class="0">
 <segment>
 <pinref part="CC2652R1" gate="CC2652R1" pin="RESET_N"/>
-<wire x1="48.26" y1="144.78" x2="16.51" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="144.78" x2="20.32" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="16.51" y1="144.78" x2="16.51" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="144.78" x2="20.32" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="C20" gate="G$1" pin="1"/>
-<wire x1="16.51" y1="147.32" x2="16.51" y2="149.098" width="0.1524" layer="91"/>
-<wire x1="16.51" y1="143.002" x2="16.51" y2="144.78" width="0.1524" layer="91"/>
-<junction x="16.51" y="144.78"/>
-<wire x1="16.51" y1="147.32" x2="5.08" y2="147.32" width="0.1524" layer="91"/>
-<junction x="16.51" y="147.32"/>
-<label x="3.81" y="148.59" size="1.27" layer="95"/>
+<wire x1="20.32" y1="147.32" x2="20.32" y2="149.098" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="141.732" x2="20.32" y2="144.78" width="0.1524" layer="91"/>
+<junction x="20.32" y="144.78"/>
+<wire x1="20.32" y1="147.32" x2="8.89" y2="147.32" width="0.1524" layer="91"/>
+<junction x="20.32" y="147.32"/>
+<label x="6.35" y="148.59" size="1.27" layer="95"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="8.89" y1="146.05" x2="8.89" y2="147.32" width="0.1524" layer="91"/>
+<junction x="8.89" y="147.32"/>
+<wire x1="8.89" y1="147.32" x2="5.08" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="10"/>
 <wire x1="152.4" y1="52.07" x2="165.1" y2="52.07" width="0.1524" layer="91"/>
 <label x="152.4" y="52.07" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$16" class="0">
+<segment>
+<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="BTN_RESET" gate="G$1" pin="P$4"/>
+<wire x1="8.89" y1="135.89" x2="8.89" y2="134.62" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$13" class="0">
+<segment>
+<pinref part="R_CS" gate="G$1" pin="P$2"/>
+<wire x1="31.75" y1="179.07" x2="34.29" y2="179.07" width="0.1524" layer="91"/>
+<pinref part="POWER_IND" gate="G$1" pin="A"/>
 </segment>
 </net>
 </nets>
@@ -9021,7 +9527,7 @@ MANUFACTURER:SAMTEC.</description>
 <attribute name="SHEET" x="233.68" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="165.1" y="19.05" size="2.54" layer="94"/>
 </instance>
-<instance part="U$2" gate="G$1" x="181.61" y="135.89"/>
+<instance part="U$2" gate="G$1" x="198.12" y="135.89"/>
 <instance part="GND36" gate="1" x="168.91" y="123.19">
 <attribute name="VALUE" x="166.37" y="120.65" size="1.778" layer="96"/>
 </instance>
@@ -9074,6 +9580,10 @@ MANUFACTURER:SAMTEC.</description>
 <instance part="GND39" gate="1" x="113.03" y="158.75">
 <attribute name="VALUE" x="110.49" y="156.21" size="1.778" layer="96"/>
 </instance>
+<instance part="CURRENT-SENSE" gate="G$1" x="179.07" y="138.43" rot="R90">
+<attribute name="NAME" x="177.546" y="140.97" size="1.016" layer="95" font="vector" rot="R90" align="top-left"/>
+<attribute name="VALUE" x="180.594" y="140.97" size="1.016" layer="96" font="vector" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -9098,12 +9608,12 @@ MANUFACTURER:SAMTEC.</description>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="GND"/>
-<wire x1="173.99" y1="133.35" x2="168.91" y2="133.35" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="133.35" x2="168.91" y2="133.35" width="0.1524" layer="91"/>
 <pinref part="GND36" gate="1" pin="GND"/>
 <wire x1="168.91" y1="133.35" x2="168.91" y2="130.81" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="GND@1"/>
 <wire x1="168.91" y1="130.81" x2="168.91" y2="125.73" width="0.1524" layer="91"/>
-<wire x1="173.99" y1="130.81" x2="168.91" y2="130.81" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="130.81" x2="168.91" y2="130.81" width="0.1524" layer="91"/>
 <junction x="168.91" y="130.81"/>
 </segment>
 </net>
@@ -9169,9 +9679,16 @@ MANUFACTURER:SAMTEC.</description>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="C11" gate="G$1" pin="2"/>
 <pinref part="U$2" gate="G$1" pin="FEED"/>
+<wire x1="184.15" y1="138.43" x2="190.5" y2="138.43" width="0.1524" layer="91"/>
+<pinref part="CURRENT-SENSE" gate="G$1" pin="P$2"/>
+</segment>
+</net>
+<net name="N$11" class="0">
+<segment>
+<pinref part="C11" gate="G$1" pin="2"/>
 <wire x1="168.91" y1="138.43" x2="173.99" y2="138.43" width="0.1524" layer="91"/>
+<pinref part="CURRENT-SENSE" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 </nets>

@@ -1,6 +1,8 @@
 CC26x2 Doc List
 =======================
 General
+CC2652R Datasheet
+	- http://www.ti.com/lit/ds/symlink/cc2652r.pdf
 CC26xx Tools Overview
 	- http://processors.wiki.ti.com/index.php/CC13xx_CC26xx_Tools_Overview#Using_CCS_v6.1_with_XDS110_and_CC13xx.2FCC26xx
 CC2652R1 Quick Start Guide
@@ -14,6 +16,8 @@ Design a product with CC26xx
 	- Very useful links
 -----------------------
 PCB Design
+CC26xx Hardware Design Checklist
+	- http://processors.wiki.ti.com/index.php/CC26xx_HW_Checklist
 CC26xx Hardware Layout Considerations
 	- http://processors.wiki.ti.com/images/8/8b/CC26xx_HW_training_Layout_Considerations.pdf
 CC26xx RF Frontends and Antennas
@@ -22,9 +26,9 @@ CC26xx RF Frontends and Antennas
 2.4GHz Inverted F Antenna
 	- http://www.ti.com/lit/an/swru120c/swru120c.pdf
 	- GND plane placement wrt antenna
-PCB Design Considerations 
+CC26xx PCB Design Considerations 
 	- http://www.ti.com/lit/an/swra640/swra640.pdf 
-Johnson Balun for CC26xx Family
+Johanson Balun for CC26xx Family
 	- http://www.ti.com/lit/an/swra572/swra572.pdf 
 	- 9 discrete LC components into a single components(basically replacing LC on RF_N and RF_P pins)
 	- Complex impedance matching

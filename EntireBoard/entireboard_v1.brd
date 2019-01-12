@@ -461,6 +461,51 @@ MANUFACTURER:SAMTEC.</description>
 <text x="-2.794" y="-4.826" size="0.762" layer="21">1</text>
 <text x="-2.794" y="4.064" size="0.762" layer="21">2</text>
 </package>
+<package name="RHD2000_EVAL_BOARD_TESTPOINT_SMALL">
+<pad name="1" x="0" y="0" drill="0.8128" shape="octagon" rot="R90"/>
+<text x="-1.016" y="0.7874" size="0.9906" layer="25" font="vector" ratio="12">&gt;NAME</text>
+</package>
+<package name="SW_1188E">
+<hole x="1.15" y="0" drill="0.9"/>
+<hole x="-1.15" y="0" drill="0.9"/>
+<smd name="P$4" x="2.1" y="1.3" dx="0.9" dy="1.3" layer="1"/>
+<smd name="P$3" x="-2.1" y="1.3" dx="0.9" dy="1.3" layer="1"/>
+<smd name="P$2" x="3.375" y="-0.5" dx="1.45" dy="1" layer="1"/>
+<smd name="P$1" x="-3.5" y="-0.5" dx="1.45" dy="1" layer="1"/>
+<text x="-3.5" y="2.5" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.5" y="-3" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="PTH_2.54MM_01X01">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 1 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="0" y="0" drill="1"/>
+<wire x1="-1.25" y1="1.25" x2="1.25" y2="1.25" width="0.127" layer="21"/>
+<wire x1="1.25" y1="1.25" x2="1.25" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="1.25" y1="-1.25" x2="-1.25" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-1.25" y1="-1.25" x2="-1.25" y2="1.25" width="0.127" layer="21"/>
+<text x="-1.25" y="1.5" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
+<text x="0" y="-1.27" size="1.016" layer="21" font="vector" ratio="16" rot="R270" align="center-left">&gt;LABEL01</text>
+<polygon width="0.127" layer="21">
+<vertex x="-1.905" y="-1.905"/>
+<vertex x="-1.905" y="-1.27"/>
+<vertex x="-1.27" y="-0.635"/>
+<vertex x="-0.635" y="-1.27"/>
+<vertex x="-1.27" y="-1.905"/>
+</polygon>
+</package>
+<package name="RHD2000_EVAL_BOARD_0402">
+<wire x1="-0.4572" y1="0.254" x2="0.4572" y2="0.254" width="0.1016" layer="51"/>
+<wire x1="0.4572" y1="-0.254" x2="-0.4572" y2="-0.254" width="0.1016" layer="51"/>
+<wire x1="-1.0668" y1="0.5588" x2="1.0668" y2="0.5588" width="0.127" layer="21"/>
+<wire x1="1.0668" y1="0.5588" x2="1.0668" y2="-0.5588" width="0.127" layer="21"/>
+<wire x1="1.0668" y1="-0.5588" x2="-1.0668" y2="-0.5588" width="0.127" layer="21"/>
+<wire x1="-1.0668" y1="-0.5588" x2="-1.0668" y2="0.5588" width="0.127" layer="21"/>
+<rectangle x1="-0.508" y1="-0.254" x2="-0.254" y2="0.254" layer="51"/>
+<rectangle x1="0.254" y1="-0.254" x2="0.508" y2="0.254" layer="51"/>
+<smd name="1" x="-0.5334" y="0" dx="0.6858" dy="0.762" layer="1"/>
+<smd name="2" x="0.5334" y="0" dx="0.6858" dy="0.762" layer="1"/>
+<text x="-1.143" y="0.762" size="1.016" layer="25" font="vector">&gt;NAME</text>
+<text x="-1.27" y="-1.778" size="1.016" layer="27" font="vector">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="R0402" urn="urn:adsk.eagle:package:23547/3" type="model">
@@ -628,6 +673,20 @@ MANUFACTURER:SAMTEC.</description>
 <smd name="56" x="-3.25" y="4.05" dx="0.9" dy="0.25" layer="1" rot="R90"/>
 <text x="-3.905" y="4.505" size="1.27" layer="25" font="vector">&gt;NAME</text>
 <rectangle x1="-3.1" y1="-3.1" x2="3.1" y2="3.1" layer="43"/>
+</package>
+</packages>
+</library>
+<library name="MF_Passives">
+<packages>
+<package name="R0402">
+<description>&lt;b&gt;Description:&lt;/b&gt; Standard 0402 Package for Resistors&lt;br/&gt;</description>
+<smd name="P$1" x="-0.55" y="0" dx="0.5" dy="0.6" layer="1" rot="R180"/>
+<smd name="P$2" x="0.55" y="0" dx="0.5" dy="0.6" layer="1" rot="R180"/>
+<wire x1="-1.1" y1="0.55" x2="-1.1" y2="-0.55" width="0.127" layer="21"/>
+<wire x1="-1.1" y1="-0.55" x2="1.1" y2="-0.55" width="0.127" layer="21"/>
+<wire x1="1.1" y1="-0.55" x2="1.1" y2="0.55" width="0.127" layer="21"/>
+<wire x1="1.1" y1="0.55" x2="-1.1" y2="0.55" width="0.127" layer="21"/>
+<text x="-1.1" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 </package>
 </packages>
 </library>
@@ -957,6 +1016,67 @@ design rules under a new name.</description>
 <attribute name="NAME" x="-64.135" y="-28.956" size="0.762" layer="25"/>
 <attribute name="VALUE" x="-64.262" y="-37.846" size="0.762" layer="27"/>
 </element>
+<element name="TP_SPI_CS" library="AxonMobile" package="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" value="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" x="-63.5" y="-62.23">
+<attribute name="NAME" x="-64.516" y="-61.4426" size="0.9906" layer="25" font="vector" ratio="12"/>
+</element>
+<element name="TP_SPI_CLK" library="AxonMobile" package="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" value="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" x="-63.5" y="-66.04">
+<attribute name="NAME" x="-64.516" y="-65.2526" size="0.9906" layer="25" font="vector" ratio="12"/>
+</element>
+<element name="TP_SPI_MOSI" library="AxonMobile" package="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" value="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" x="-63.5" y="-69.85">
+<attribute name="NAME" x="-64.516" y="-69.0626" size="0.9906" layer="25" font="vector" ratio="12"/>
+</element>
+<element name="TP_SPI_MISO" library="AxonMobile" package="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" value="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" x="-63.5" y="-73.66">
+<attribute name="NAME" x="-64.516" y="-72.8726" size="0.9906" layer="25" font="vector" ratio="12"/>
+</element>
+<element name="R2" library="AxonMobile" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="" x="-64.77" y="-77.47">
+<attribute name="NAME" x="-65.405" y="-76.835" size="1.27" layer="25"/>
+<attribute name="SPICEPREFIX" value="R" x="-64.77" y="-77.47" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="-65.405" y="-79.375" size="1.27" layer="27"/>
+</element>
+<element name="BTN_RESET" library="AxonMobile" package="SW_1188E" value="SW_1188E" x="-60.96" y="-83.82">
+<attribute name="NAME" x="-64.46" y="-81.32" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-64.46" y="-86.82" size="1.27" layer="27"/>
+</element>
+<element name="3.3V" library="AxonMobile" package="PTH_2.54MM_01X01" value="MF-CON-2.54mm-01x01" x="-69.85" y="-78.74">
+<attribute name="HOUSEPART" value="YES" x="-69.85" y="-78.74" size="1.778" layer="27" display="off"/>
+<attribute name="LABEL01" value="" x="-69.85" y="-78.74" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="MF-CON-2.54mm-01x01" x="-69.85" y="-78.74" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="-71.1" y="-77.24" size="1.016" layer="25" font="vector" ratio="16"/>
+<attribute name="POPULATE" value="1" x="-69.85" y="-78.74" size="1.778" layer="27" display="off"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-CON-2.54mm-01x01" x="-69.85" y="-78.74" size="1.778" layer="27" display="off"/>
+</element>
+<element name="GND" library="AxonMobile" package="PTH_2.54MM_01X01" value="MF-CON-2.54mm-01x01" x="-76.2" y="-78.74">
+<attribute name="HOUSEPART" value="YES" x="-76.2" y="-78.74" size="1.778" layer="27" display="off"/>
+<attribute name="LABEL01" value="" x="-76.2" y="-78.74" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="MF-CON-2.54mm-01x01" x="-76.2" y="-78.74" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="-77.45" y="-77.24" size="1.016" layer="25" font="vector" ratio="16"/>
+<attribute name="POPULATE" value="1" x="-76.2" y="-78.74" size="1.778" layer="27" display="off"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-CON-2.54mm-01x01" x="-76.2" y="-78.74" size="1.778" layer="27" display="off"/>
+</element>
+<element name="CURRENT-SENSE" library="MF_Passives" package="R0402" value="0.01ohm" x="-76.2" y="-90.17">
+<attribute name="HOUSEPART" value="" x="-76.2" y="-90.17" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="-76.2" y="-90.17" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="-77.3" y="-89.07" size="1.016" layer="25" font="vector" ratio="16"/>
+<attribute name="POPULATE" value="1" x="-76.2" y="-90.17" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="" x="-76.2" y="-90.17" size="1.778" layer="27" display="off"/>
+<attribute name="URL" value="" x="-76.2" y="-90.17" size="1.778" layer="27" display="off"/>
+<attribute name="VOLTAGE" value="" x="-76.2" y="-90.17" size="1.778" layer="27" display="off"/>
+<attribute name="WATTAGE" value="" x="-76.2" y="-90.17" size="1.778" layer="27" display="off"/>
+</element>
+<element name="R_CS" library="MF_Passives" package="R0402" value="0.01ohm" x="-76.2" y="-93.98">
+<attribute name="HOUSEPART" value="" x="-76.2" y="-93.98" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="-76.2" y="-93.98" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="-77.3" y="-92.88" size="1.016" layer="25" font="vector" ratio="16"/>
+<attribute name="POPULATE" value="1" x="-76.2" y="-93.98" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="" x="-76.2" y="-93.98" size="1.778" layer="27" display="off"/>
+<attribute name="URL" value="" x="-76.2" y="-93.98" size="1.778" layer="27" display="off"/>
+<attribute name="VOLTAGE" value="" x="-76.2" y="-93.98" size="1.778" layer="27" display="off"/>
+<attribute name="WATTAGE" value="" x="-76.2" y="-93.98" size="1.778" layer="27" display="off"/>
+</element>
+<element name="POWER_IND" library="AxonMobile" package="RHD2000_EVAL_BOARD_0402" value="LED-SMD" x="-76.2" y="-97.79">
+<attribute name="NAME" x="-77.343" y="-97.028" size="1.016" layer="25" font="vector"/>
+<attribute name="VALUE" x="-77.47" y="-99.568" size="1.016" layer="27" font="vector"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
@@ -1009,6 +1129,14 @@ design rules under a new name.</description>
 <contactref element="J1" pad="3"/>
 <contactref element="J1" pad="5"/>
 <contactref element="J1" pad="9"/>
+<contactref element="BTN_RESET" pad="P$3"/>
+<contactref element="BTN_RESET" pad="P$1"/>
+<contactref element="BTN_RESET" pad="P$2"/>
+<contactref element="GND" pad="P$1"/>
+<wire x1="-64.46" y1="-84.32" x2="-76.2" y2="-78.74" width="0" layer="19" extent="1-1"/>
+<wire x1="-63.06" y1="-82.52" x2="-64.46" y2="-84.32" width="0" layer="19" extent="1-1"/>
+<wire x1="-57.585" y1="-84.32" x2="-63.06" y2="-82.52" width="0" layer="19" extent="1-1"/>
+<wire x1="-63.5" y1="-35.052" x2="-76.2" y2="-78.74" width="0" layer="19" extent="1-1"/>
 <wire x1="-62.23" y1="-35.052" x2="-63.5" y2="-35.052" width="0" layer="19" extent="1-1"/>
 <wire x1="-59.69" y1="-35.052" x2="-62.23" y2="-35.052" width="0" layer="19" extent="1-1"/>
 <wire x1="-55.23" y1="-36.83" x2="-59.69" y2="-35.052" width="0" layer="19" extent="1-1"/>
@@ -1078,6 +1206,8 @@ design rules under a new name.</description>
 </signal>
 <signal name="WMCU_VDD">
 <contactref element="L2" pad="1"/>
+<contactref element="3.3V" pad="P$1"/>
+<wire x1="-46.495" y1="38.1" x2="-69.85" y2="-78.74" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$6">
 <contactref element="C12" pad="2"/>
@@ -1134,6 +1264,10 @@ design rules under a new name.</description>
 <contactref element="C7" pad="1"/>
 <contactref element="L2" pad="2"/>
 <contactref element="R1" pad="2"/>
+<contactref element="R_CS" pad="P$1"/>
+<contactref element="POWER_IND" pad="2"/>
+<wire x1="-75.6666" y1="-97.79" x2="-76.75" y2="-93.98" width="0" layer="19" extent="1-1"/>
+<wire x1="-55.38" y1="-33.02" x2="-76.75" y2="-93.98" width="0" layer="19" extent="1-1"/>
 <wire x1="-20.53" y1="2.95" x2="-55.38" y2="-33.02" width="0" layer="19" extent="1-1"/>
 <wire x1="-16.03" y1="2.95" x2="-20.53" y2="2.95" width="0" layer="19" extent="1-1"/>
 <wire x1="-14.38" y1="8.1" x2="-16.03" y2="2.95" width="0" layer="19" extent="1-1"/>
@@ -1159,24 +1293,32 @@ design rules under a new name.</description>
 <contactref element="U2" pad="28"/>
 <wire x1="-38.66" y1="-10.4" x2="-41.1734" y2="-13.97" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="SPI_CS">
+<signal name="SPI_CS_TP">
 <contactref element="CC2652R1" pad="12"/>
+<contactref element="TP_SPI_CS" pad="1"/>
 <contactref element="U2" pad="19"/>
+<wire x1="-43.16" y1="-10.4" x2="-63.5" y2="-62.23" width="0" layer="19" extent="1-1"/>
 <wire x1="-21.18" y1="3.6" x2="-43.16" y2="-10.4" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SPI_MISO">
 <contactref element="CC2652R1" pad="14"/>
+<contactref element="TP_SPI_MISO" pad="1"/>
 <contactref element="U2" pad="25"/>
+<wire x1="-40.16" y1="-10.4" x2="-63.5" y2="-73.66" width="0" layer="19" extent="1-1"/>
 <wire x1="-20.03" y1="2.95" x2="-40.16" y2="-10.4" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SPI_MOSI">
 <contactref element="CC2652R1" pad="15"/>
+<contactref element="TP_SPI_MOSI" pad="1"/>
 <contactref element="U2" pad="23"/>
+<wire x1="-41.16" y1="-10.4" x2="-63.5" y2="-69.85" width="0" layer="19" extent="1-1"/>
 <wire x1="-19.53" y1="2.95" x2="-41.16" y2="-10.4" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SPI_CLK">
 <contactref element="CC2652R1" pad="16"/>
+<contactref element="TP_SPI_CLK" pad="1"/>
 <contactref element="U2" pad="21"/>
+<wire x1="-42.16" y1="-10.4" x2="-63.5" y2="-66.04" width="0" layer="19" extent="1-1"/>
 <wire x1="-19.03" y1="2.95" x2="-42.16" y2="-10.4" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="JTAG_TMS">
@@ -1190,9 +1332,9 @@ design rules under a new name.</description>
 <wire x1="-14.38" y1="3.6" x2="-63.5" y2="-30.988" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
-<contactref element="C11" pad="2"/>
 <contactref element="U$2" pad="FEED"/>
-<wire x1="-23.48" y1="33.02" x2="-28.26" y2="12.44" width="0" layer="19" extent="1-1"/>
+<contactref element="CURRENT-SENSE" pad="P$2"/>
+<wire x1="-28.26" y1="12.44" x2="-75.65" y2="-90.17" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="JTAG_TDO">
 <contactref element="CC2652R1" pad="26"/>
@@ -1238,9 +1380,26 @@ design rules under a new name.</description>
 <contactref element="R1" pad="1"/>
 <contactref element="C20" pad="1"/>
 <contactref element="J1" pad="10"/>
+<contactref element="R2" pad="1"/>
+<wire x1="-56.53" y1="-36.83" x2="-65.27" y2="-77.47" width="0" layer="19" extent="1-1"/>
 <wire x1="-56.38" y1="-33.02" x2="-56.53" y2="-36.83" width="0" layer="19" extent="1-1"/>
 <wire x1="-59.69" y1="-30.988" x2="-56.38" y2="-33.02" width="0" layer="19" extent="1-1"/>
 <wire x1="-14.38" y1="8.6" x2="-56.38" y2="-33.02" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$16">
+<contactref element="R2" pad="2"/>
+<contactref element="BTN_RESET" pad="P$4"/>
+<wire x1="-58.86" y1="-82.52" x2="-64.27" y2="-77.47" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$11">
+<contactref element="C11" pad="2"/>
+<contactref element="CURRENT-SENSE" pad="P$1"/>
+<wire x1="-23.48" y1="33.02" x2="-76.75" y2="-90.17" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$13">
+<contactref element="R_CS" pad="P$2"/>
+<contactref element="POWER_IND" pad="1"/>
+<wire x1="-75.65" y1="-93.98" x2="-76.7334" y2="-97.79" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

@@ -8789,10 +8789,6 @@ MANUFACTURER:SAMTEC.</description>
 <part name="L5" library="MF_Passives" deviceset="INDUCTOR" device="_0402" value="2.4nH"/>
 <part name="L6" library="MF_Passives" deviceset="INDUCTOR" device="_0402" value="2nH"/>
 <part name="L3" library="MF_Passives" deviceset="INDUCTOR" device="_0402" value="2nH"/>
-<part name="TP_PWR1" library="AxonMobile" deviceset="RHD2000_EVAL_BOARD_TESTPOINT" device="_SMALL"/>
-<part name="TP_PWR2" library="AxonMobile" deviceset="RHD2000_EVAL_BOARD_TESTPOINT" device="_SMALL"/>
-<part name="TP1" library="AxonMobile" deviceset="RHD2000_EVAL_BOARD_TESTPOINT" device="_SMALL"/>
-<part name="TP_ANT2" library="AxonMobile" deviceset="RHD2000_EVAL_BOARD_TESTPOINT" device="_SMALL"/>
 </parts>
 <sheets>
 <sheet>
@@ -9024,12 +9020,6 @@ MANUFACTURER:SAMTEC.</description>
 <instance part="POWER_IND" gate="G$1" x="36.83" y="179.07" rot="R90">
 <attribute name="NAME" x="41.402" y="175.641" size="1.778" layer="95" font="vector" rot="R180"/>
 <attribute name="VALUE" x="41.402" y="180.975" size="1.778" layer="96" font="vector" rot="R180" align="top-left"/>
-</instance>
-<instance part="TP_PWR1" gate="TP$1" x="20.32" y="171.45" rot="R180">
-<attribute name="NAME" x="20.066" y="177.165" size="1.778" layer="95" rot="R180"/>
-</instance>
-<instance part="TP_PWR2" gate="TP$1" x="33.02" y="171.45" rot="R180">
-<attribute name="NAME" x="32.766" y="177.165" size="1.778" layer="95" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -9371,11 +9361,8 @@ MANUFACTURER:SAMTEC.</description>
 </segment>
 <segment>
 <pinref part="R_CS" gate="G$1" pin="P$1"/>
-<wire x1="21.59" y1="179.07" x2="20.32" y2="179.07" width="0.1524" layer="91"/>
+<wire x1="21.59" y1="179.07" x2="19.05" y2="179.07" width="0.1524" layer="91"/>
 <label x="19.05" y="179.07" size="1.778" layer="95" rot="R180" xref="yes"/>
-<pinref part="TP_PWR1" gate="TP$1" pin="1"/>
-<wire x1="20.32" y1="179.07" x2="19.05" y2="179.07" width="0.1524" layer="91"/>
-<junction x="20.32" y="179.07"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -9615,11 +9602,8 @@ MANUFACTURER:SAMTEC.</description>
 <net name="N$13" class="0">
 <segment>
 <pinref part="R_CS" gate="G$1" pin="P$2"/>
-<wire x1="31.75" y1="179.07" x2="33.02" y2="179.07" width="0.1524" layer="91"/>
+<wire x1="31.75" y1="179.07" x2="34.29" y2="179.07" width="0.1524" layer="91"/>
 <pinref part="POWER_IND" gate="G$1" pin="A"/>
-<pinref part="TP_PWR2" gate="TP$1" pin="1"/>
-<wire x1="33.02" y1="179.07" x2="34.29" y2="179.07" width="0.1524" layer="91"/>
-<junction x="33.02" y="179.07"/>
 </segment>
 </net>
 </nets>
@@ -9691,12 +9675,6 @@ MANUFACTURER:SAMTEC.</description>
 <instance part="L3" gate="G$1" x="143.51" y="138.43">
 <attribute name="NAME" x="138.43" y="143.51" size="1.016" layer="95" font="vector" align="top-left"/>
 <attribute name="VALUE" x="138.43" y="140.97" size="1.016" layer="96" font="vector"/>
-</instance>
-<instance part="TP1" gate="TP$1" x="172.72" y="146.05">
-<attribute name="NAME" x="172.974" y="140.335" size="1.778" layer="95"/>
-</instance>
-<instance part="TP_ANT2" gate="TP$1" x="186.69" y="146.05">
-<attribute name="NAME" x="186.944" y="140.335" size="1.778" layer="95"/>
 </instance>
 </instances>
 <busses>
@@ -9793,21 +9771,15 @@ MANUFACTURER:SAMTEC.</description>
 <net name="N$2" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="FEED"/>
-<wire x1="184.15" y1="138.43" x2="186.69" y2="138.43" width="0.1524" layer="91"/>
+<wire x1="184.15" y1="138.43" x2="190.5" y2="138.43" width="0.1524" layer="91"/>
 <pinref part="CURRENT-SENSE" gate="G$1" pin="P$2"/>
-<pinref part="TP_ANT2" gate="TP$1" pin="1"/>
-<wire x1="186.69" y1="138.43" x2="190.5" y2="138.43" width="0.1524" layer="91"/>
-<junction x="186.69" y="138.43"/>
 </segment>
 </net>
 <net name="N$11" class="0">
 <segment>
 <pinref part="C11" gate="G$1" pin="2"/>
-<wire x1="168.91" y1="138.43" x2="172.72" y2="138.43" width="0.1524" layer="91"/>
+<wire x1="168.91" y1="138.43" x2="173.99" y2="138.43" width="0.1524" layer="91"/>
 <pinref part="CURRENT-SENSE" gate="G$1" pin="P$1"/>
-<pinref part="TP1" gate="TP$1" pin="1"/>
-<wire x1="172.72" y1="138.43" x2="173.99" y2="138.43" width="0.1524" layer="91"/>
-<junction x="172.72" y="138.43"/>
 </segment>
 </net>
 <net name="N$7" class="0">

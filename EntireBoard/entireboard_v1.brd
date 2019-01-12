@@ -1105,6 +1105,18 @@ design rules under a new name.</description>
 <attribute name="POPULATE" value="1" x="-57" y="-19" size="1.778" layer="27" display="off"/>
 <attribute name="URL" value="" x="-57" y="-19" size="1.778" layer="27" display="off"/>
 </element>
+<element name="TP_PWR1" library="AxonMobile" package="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" value="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" x="-57" y="-23">
+<attribute name="NAME" x="-58.016" y="-22.2126" size="0.9906" layer="25" font="vector" ratio="12"/>
+</element>
+<element name="TP_PWR2" library="AxonMobile" package="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" value="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" x="-57" y="-27">
+<attribute name="NAME" x="-58.016" y="-26.2126" size="0.9906" layer="25" font="vector" ratio="12"/>
+</element>
+<element name="TP1" library="AxonMobile" package="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" value="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" x="-57" y="-31">
+<attribute name="NAME" x="-58.016" y="-30.2126" size="0.9906" layer="25" font="vector" ratio="12"/>
+</element>
+<element name="TP_ANT2" library="AxonMobile" package="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" value="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" x="-57" y="-35">
+<attribute name="NAME" x="-58.016" y="-34.2126" size="0.9906" layer="25" font="vector" ratio="12"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
@@ -1251,18 +1263,20 @@ design rules under a new name.</description>
 <contactref element="L2" pad="2"/>
 <contactref element="R1" pad="2"/>
 <contactref element="R_CS" pad="P$1"/>
-<wire x1="10.47" y1="19.75" x2="14.62" y2="18.1" width="0" layer="19" extent="1-1"/>
+<contactref element="TP_PWR1" pad="1"/>
+<wire x1="-57.8" y1="22.86" x2="-57" y2="-23" width="0" layer="19" extent="1-1"/>
+<wire x1="-51.45" y1="22.86" x2="-57.8" y2="22.86" width="0" layer="19" extent="1-1"/>
+<wire x1="-45.1" y1="22.86" x2="-51.45" y2="22.86" width="0" layer="19" extent="1-1"/>
+<wire x1="-38.75" y1="22.86" x2="-45.1" y2="22.86" width="0" layer="19" extent="1-1"/>
+<wire x1="-43.83" y1="29.21" x2="-45.1" y2="22.86" width="0" layer="19" extent="1-1"/>
+<wire x1="-46.4566" y1="40.64" x2="-43.83" y2="29.21" width="0" layer="19" extent="1-1"/>
+<wire x1="-38.65" y1="44.45" x2="-46.4566" y2="40.64" width="0" layer="19" extent="1-1"/>
+<wire x1="-44.945" y1="49.53" x2="-38.65" y2="44.45" width="0" layer="19" extent="1-1"/>
+<wire x1="-21.09" y1="40.64" x2="-38.65" y2="44.45" width="0" layer="19" extent="1-1"/>
+<wire x1="10.47" y1="19.75" x2="-21.09" y2="40.64" width="0" layer="19" extent="1-1"/>
+<wire x1="14.62" y1="18.1" x2="10.47" y2="19.75" width="0" layer="19" extent="1-1"/>
 <wire x1="12.97" y1="12.95" x2="14.62" y2="18.1" width="0" layer="19" extent="1-1"/>
 <wire x1="8.47" y1="12.95" x2="12.97" y2="12.95" width="0" layer="19" extent="1-1"/>
-<wire x1="-21.09" y1="40.64" x2="10.47" y2="19.75" width="0" layer="19" extent="1-1"/>
-<wire x1="-38.65" y1="44.45" x2="-21.09" y2="40.64" width="0" layer="19" extent="1-1"/>
-<wire x1="-44.945" y1="49.53" x2="-38.65" y2="44.45" width="0" layer="19" extent="1-1"/>
-<wire x1="-46.4566" y1="40.64" x2="-38.65" y2="44.45" width="0" layer="19" extent="1-1"/>
-<wire x1="-43.83" y1="29.21" x2="-46.4566" y2="40.64" width="0" layer="19" extent="1-1"/>
-<wire x1="-45.1" y1="22.86" x2="-43.83" y2="29.21" width="0" layer="19" extent="1-1"/>
-<wire x1="-51.45" y1="22.86" x2="-45.1" y2="22.86" width="0" layer="19" extent="1-1"/>
-<wire x1="-57.8" y1="22.86" x2="-51.45" y2="22.86" width="0" layer="19" extent="1-1"/>
-<wire x1="-38.75" y1="22.86" x2="-45.1" y2="22.86" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VCC">
 <contactref element="U2" pad="31"/>
@@ -1388,7 +1402,9 @@ design rules under a new name.</description>
 <signal name="N$13">
 <contactref element="R_CS" pad="P$2"/>
 <contactref element="POWER_IND" pad="1"/>
-<wire x1="-47.5234" y1="40.64" x2="-37.55" y2="44.45" width="0" layer="19" extent="1-1"/>
+<contactref element="TP_PWR2" pad="1"/>
+<wire x1="-47.5234" y1="40.64" x2="-57" y2="-27" width="0" layer="19" extent="1-1"/>
+<wire x1="-37.55" y1="44.45" x2="-47.5234" y2="40.64" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$6">
 <contactref element="C12" pad="2"/>
@@ -1417,12 +1433,16 @@ design rules under a new name.</description>
 <signal name="N$2">
 <contactref element="U$2" pad="FEED"/>
 <contactref element="CURRENT-SENSE" pad="P$2"/>
-<wire x1="-32.47" y1="44.45" x2="13.04" y2="22.44" width="0" layer="19" extent="1-1"/>
+<contactref element="TP_ANT2" pad="1"/>
+<wire x1="-32.47" y1="44.45" x2="-57" y2="-35" width="0" layer="19" extent="1-1"/>
+<wire x1="13.04" y1="22.44" x2="-32.47" y2="44.45" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$11">
 <contactref element="C11" pad="2"/>
 <contactref element="CURRENT-SENSE" pad="P$1"/>
-<wire x1="-29.83" y1="29.21" x2="-33.57" y2="44.45" width="0" layer="19" extent="1-1"/>
+<contactref element="TP1" pad="1"/>
+<wire x1="-29.83" y1="29.21" x2="-57" y2="-31" width="0" layer="19" extent="1-1"/>
+<wire x1="-33.57" y1="44.45" x2="-29.83" y2="29.21" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$7">
 <contactref element="L3" pad="P$2"/>

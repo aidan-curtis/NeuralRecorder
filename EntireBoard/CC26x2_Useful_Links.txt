@@ -57,3 +57,8 @@ Uniflash v4 Quick Guide
 	- http://processors.wiki.ti.com/index.php/UniFlash_v4_Quick_Guide
 JTAG and Uniflash Video Tutorial
 	- https://training.ti.com/using-jtag-ucd3138-introduction-uniflash
+
+-----------------------
+Bluetooth
+TI Serial Port Service
+	- http://www.ti.com/lit/ug/tidua63/tidua63.pdf

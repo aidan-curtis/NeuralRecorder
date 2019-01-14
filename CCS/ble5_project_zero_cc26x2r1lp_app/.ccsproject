@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?ccsproject version="1.0"?>
+<projectOptions>
+	<ccsVersion value="8.2.0"/>
+	<deviceVariant value="Cortex M.CC2652R1F"/>
+	<deviceFamily value="TMS470"/>
+	<deviceEndianness value="little"/>
+	<codegenToolVersion value="18.1.3.LTS"/>
+	<isElfFormat value="true"/>
+	<connection value="common/targetdb/connections/TIXDS110_Connection.xml"/>
+	<linkerCommandFile value="cc26x2_app_oad_agama.cmd"/>
+	<rts value="libc.a"/>
+	<createSlaveProjects value=""/>
+	<templateProperties value="id=ble5_project_zero_cc26x2r1lp_app.projectspec.ble5_project_zero_cc26x2r1lp_app,type=rtsc,products=,xdcToolsVersion=3.50.08.24_core,target=ti.targets.arm.elf.M4F,platform=ti.platforms.simplelink:CC2642R1F,buildProfile=release,isHybrid=true,configuroOptions=--compileOptions ${COMPILER_FLAGS} --xdcpath ${SRC_BLE_DIR}/../../../source;${SRC_BLE_DIR}/../../../kernel/tirtos/packages;${SRC_BLE_DIR}"/>
+	<origin value="C:\ti\simplelink_cc26x2_sdk_2_30_00_34\examples\rtos\CC26X2R1_LAUNCHXL\ble5stack\project_zero\tirtos\ccs\ble5_project_zero_cc26x2r1lp_app.projectspec"/>
+	<filesToOpen value=""/>
+</projectOptions>

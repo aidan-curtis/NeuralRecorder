@@ -9,34 +9,34 @@
 </settings>
 <grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="2" name="Route2" color="16" fill="1" visible="yes" active="no"/>
-<layer number="3" name="Route3" color="17" fill="1" visible="yes" active="no"/>
-<layer number="4" name="Route4" color="18" fill="1" visible="yes" active="no"/>
-<layer number="5" name="Route5" color="19" fill="1" visible="yes" active="no"/>
-<layer number="6" name="Route6" color="25" fill="1" visible="yes" active="no"/>
-<layer number="7" name="Route7" color="26" fill="1" visible="yes" active="no"/>
-<layer number="8" name="Route8" color="27" fill="1" visible="yes" active="no"/>
-<layer number="9" name="Route9" color="28" fill="1" visible="yes" active="no"/>
-<layer number="10" name="Route10" color="29" fill="1" visible="yes" active="no"/>
-<layer number="11" name="Route11" color="30" fill="1" visible="yes" active="no"/>
-<layer number="12" name="Route12" color="20" fill="1" visible="yes" active="no"/>
-<layer number="13" name="Route13" color="21" fill="1" visible="yes" active="no"/>
-<layer number="14" name="Route14" color="22" fill="1" visible="yes" active="no"/>
-<layer number="15" name="Route15" color="23" fill="1" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -45,8 +45,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -54,19 +54,19 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
-<layer number="59" name="tCarbon" color="7" fill="1" visible="yes" active="no"/>
-<layer number="60" name="bCarbon" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
@@ -8486,36 +8486,6 @@ MANUFACTURER:SAMTEC.</description>
 <wire x1="2.2" y1="1.6" x2="-2.2" y2="1.6" width="0.127" layer="21"/>
 <text x="-2.2" y="1.8" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 </package>
-<package name="L0402">
-<description>&lt;b&gt;Description:&lt;/b&gt; Standard 0402 Package for Inductors&lt;br/&gt;</description>
-<smd name="P$1" x="-0.55" y="0" dx="0.5" dy="0.6" layer="1" rot="R180"/>
-<smd name="P$2" x="0.55" y="0" dx="0.5" dy="0.6" layer="1" rot="R180"/>
-<wire x1="-1.1" y1="0.55" x2="-1.1" y2="-0.55" width="0.127" layer="21"/>
-<wire x1="-1.1" y1="-0.55" x2="1.1" y2="-0.55" width="0.127" layer="21"/>
-<wire x1="1.1" y1="-0.55" x2="1.1" y2="0.55" width="0.127" layer="21"/>
-<wire x1="1.1" y1="0.55" x2="-1.1" y2="0.55" width="0.127" layer="21"/>
-<text x="-1.1" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
-</package>
-<package name="L0603">
-<description>&lt;b&gt;Description:&lt;/b&gt; Standard 0603 Package for Inductors&lt;br/&gt;</description>
-<smd name="P$1" x="-0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
-<smd name="P$2" x="0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
-<wire x1="-1.4" y1="0.7" x2="-1.4" y2="-0.7" width="0.127" layer="21"/>
-<wire x1="-1.4" y1="-0.7" x2="1.4" y2="-0.7" width="0.127" layer="21"/>
-<wire x1="1.4" y1="-0.7" x2="1.4" y2="0.7" width="0.127" layer="21"/>
-<wire x1="1.4" y1="0.7" x2="-1.4" y2="0.7" width="0.127" layer="21"/>
-<text x="-1.4" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
-</package>
-<package name="L1210">
-<description>&lt;b&gt;Description:&lt;/b&gt; Standard 1210 Package for Inductors&lt;br/&gt;</description>
-<smd name="P$1" x="-1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
-<smd name="P$2" x="1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
-<wire x1="-2.2" y1="1.6" x2="-2.2" y2="-1.575" width="0.127" layer="21"/>
-<wire x1="-2.2" y1="-1.575" x2="2.2" y2="-1.575" width="0.127" layer="21"/>
-<wire x1="2.2" y1="-1.575" x2="2.2" y2="1.6" width="0.127" layer="21"/>
-<wire x1="2.2" y1="1.6" x2="-2.2" y2="1.6" width="0.127" layer="21"/>
-<text x="-2.2" y="1.8" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
-</package>
 </packages>
 <symbols>
 <symbol name="RESISTOR">
@@ -8534,18 +8504,6 @@ MANUFACTURER:SAMTEC.</description>
 <wire x1="-1.016" y1="-2.286" x2="0" y2="-2.54" width="0.1524" layer="94"/>
 <text x="2.54" y="1.524" size="1.016" layer="95" font="vector" align="top-left">&gt;NAME</text>
 <text x="2.54" y="-1.524" size="1.016" layer="96" font="vector">&gt;VALUE</text>
-</symbol>
-<symbol name="INDUCTOR">
-<description>&lt;b&gt;Library:&lt;/b&gt;  MF_Passives&lt;br/&gt;
-&lt;b&gt;Description:&lt;/b&gt; Symbol for Inductors&lt;br/&gt;</description>
-<pin name="P$1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
-<pin name="P$2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<text x="-5.08" y="5.08" size="1.016" layer="95" font="vector" align="top-left">&gt;NAME</text>
-<text x="-5.08" y="2.54" size="1.016" layer="96" font="vector">&gt;VALUE</text>
-<wire x1="-2.54" y1="0" x2="-1.27" y2="0" width="0.1524" layer="94" curve="-180"/>
-<wire x1="-1.27" y1="0" x2="0" y2="0" width="0.1524" layer="94" curve="-180"/>
-<wire x1="0" y1="0" x2="1.27" y2="0" width="0.1524" layer="94" curve="-180"/>
-<wire x1="1.27" y1="0" x2="2.54" y2="0" width="0.1524" layer="94" curve="-180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -8643,57 +8601,6 @@ MANUFACTURER:SAMTEC.</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="INDUCTOR" prefix="L" uservalue="yes">
-<description>&lt;b&gt;Library:&lt;/b&gt;  MF_Passives&lt;br/&gt;
-&lt;b&gt;Description:&lt;/b&gt; Device for Inductors. Manufacture part number (MPN) can be added via Attributes. Check https://factory.macrofab.com/parts for the house parts list.&lt;br/&gt;</description>
-<gates>
-<gate name="G$1" symbol="INDUCTOR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="_0402" package="L0402">
-<connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="HOUSEPART" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-<attribute name="POPULATE" value="1" constant="no"/>
-<attribute name="URL" value="" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="_0603" package="L0603">
-<connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="HOUSEPART" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-<attribute name="POPULATE" value="1" constant="no"/>
-<attribute name="URL" value="" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="_1210" package="L1210">
-<connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="HOUSEPART" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-<attribute name="POPULATE" value="" constant="no"/>
-<attribute name="URL" value="" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -8734,10 +8641,14 @@ MANUFACTURER:SAMTEC.</description>
 <part name="GND36" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C11" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:6240340/1" value="1.8pF"/>
 <part name="C12" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:6240340/1" value="12pF"/>
+<part name="L3" library="AxonMobile" deviceset="L-SMD" device="" value="2nH"/>
+<part name="L4" library="AxonMobile" deviceset="L-SMD" device="" value="2nH"/>
 <part name="C13" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:6240340/1" value="1pF"/>
 <part name="GND37" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="L5" library="AxonMobile" deviceset="L-SMD" device="" value="2.4nH"/>
 <part name="C14" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:6240340/1" value="1pF"/>
 <part name="C15" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:6240340/1" value="1pF"/>
+<part name="L6" library="AxonMobile" deviceset="L-SMD" device="" value="2.4nH"/>
 <part name="C16" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:6240340/1" value="12pF"/>
 <part name="GND38" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND39" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -8771,6 +8682,10 @@ MANUFACTURER:SAMTEC.</description>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J1" library="AxonMobile" deviceset="FTSH-105-01-XXX-DV-K" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
+<part name="TP_SPI_CS" library="AxonMobile" deviceset="RHD2000_EVAL_BOARD_TESTPOINT" device="_SMALL"/>
+<part name="TP_SPI_CLK" library="AxonMobile" deviceset="RHD2000_EVAL_BOARD_TESTPOINT" device="_SMALL"/>
+<part name="TP_SPI_MOSI" library="AxonMobile" deviceset="RHD2000_EVAL_BOARD_TESTPOINT" device="_SMALL"/>
+<part name="TP_SPI_MISO" library="AxonMobile" deviceset="RHD2000_EVAL_BOARD_TESTPOINT" device="_SMALL"/>
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R2" library="AxonMobile" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3"/>
 <part name="BTN_RESET" library="AxonMobile" deviceset="SW_1188E" device=""/>
@@ -8781,14 +8696,6 @@ MANUFACTURER:SAMTEC.</description>
 <part name="CURRENT-SENSE" library="MF_Passives" deviceset="RESISTOR" device="_0402" value="0.01ohm"/>
 <part name="R_CS" library="MF_Passives" deviceset="RESISTOR" device="_0402" value="0.01ohm"/>
 <part name="POWER_IND" library="AxonMobile" deviceset="LED-SMD" device=""/>
-<part name="L7" library="MF_Passives" deviceset="INDUCTOR" device="_0402" value="2.4nH"/>
-<part name="L5" library="MF_Passives" deviceset="INDUCTOR" device="_0402" value="2.4nH"/>
-<part name="L6" library="MF_Passives" deviceset="INDUCTOR" device="_0402" value="2nH"/>
-<part name="L3" library="MF_Passives" deviceset="INDUCTOR" device="_0402" value="2nH"/>
-<part name="TP_PWR1" library="AxonMobile" deviceset="RHD2000_EVAL_BOARD_TESTPOINT" device="_SMALL"/>
-<part name="TP_PWR2" library="AxonMobile" deviceset="RHD2000_EVAL_BOARD_TESTPOINT" device="_SMALL"/>
-<part name="TP1" library="AxonMobile" deviceset="RHD2000_EVAL_BOARD_TESTPOINT" device="_SMALL"/>
-<part name="TP_ANT2" library="AxonMobile" deviceset="RHD2000_EVAL_BOARD_TESTPOINT" device="_SMALL"/>
 </parts>
 <sheets>
 <sheet>
@@ -8804,6 +8711,7 @@ MANUFACTURER:SAMTEC.</description>
 <text x="81.28" y="58.42" size="1.778" layer="97">P44</text>
 <text x="91.44" y="58.42" size="1.778" layer="97">P34</text>
 <text x="115.57" y="67.31" size="2.54" layer="97">JTAG Debugging Connector</text>
+<text x="96.52" y="157.48" size="1.778" layer="97">NOTE: add pads on 4 SPI signal lines for testing</text>
 <text x="7.62" y="58.42" size="0.889" layer="97">5V Ext Supply</text>
 <text x="7.62" y="58.42" size="0.889" layer="97">5V Ext Supply</text>
 <text x="7.62" y="58.42" size="0.889" layer="97">3.3V Ext Supply</text>
@@ -8974,6 +8882,18 @@ MANUFACTURER:SAMTEC.</description>
 <instance part="GND11" gate="1" x="127" y="44.45">
 <attribute name="VALUE" x="124.46" y="41.91" size="1.778" layer="96"/>
 </instance>
+<instance part="TP_SPI_CS" gate="TP$1" x="111.76" y="147.32">
+<attribute name="NAME" x="112.014" y="141.605" size="1.778" layer="95"/>
+</instance>
+<instance part="TP_SPI_CLK" gate="TP$1" x="114.3" y="142.24">
+<attribute name="NAME" x="114.554" y="136.525" size="1.778" layer="95"/>
+</instance>
+<instance part="TP_SPI_MOSI" gate="TP$1" x="116.84" y="137.16">
+<attribute name="NAME" x="117.094" y="131.445" size="1.778" layer="95"/>
+</instance>
+<instance part="TP_SPI_MISO" gate="TP$1" x="119.38" y="132.08">
+<attribute name="NAME" x="119.634" y="126.365" size="1.778" layer="95"/>
+</instance>
 <instance part="GND13" gate="1" x="8.89" y="125.222">
 <attribute name="VALUE" x="6.35" y="122.682" size="1.778" layer="96"/>
 </instance>
@@ -9008,12 +8928,6 @@ MANUFACTURER:SAMTEC.</description>
 <instance part="POWER_IND" gate="G$1" x="36.83" y="179.07" rot="R90">
 <attribute name="NAME" x="41.402" y="175.641" size="1.778" layer="95" font="vector" rot="R180"/>
 <attribute name="VALUE" x="41.402" y="180.975" size="1.778" layer="96" font="vector" rot="R180" align="top-left"/>
-</instance>
-<instance part="TP_PWR1" gate="TP$1" x="20.32" y="171.45" rot="R180">
-<attribute name="NAME" x="20.066" y="177.165" size="1.778" layer="95" rot="R180"/>
-</instance>
-<instance part="TP_PWR2" gate="TP$1" x="33.02" y="171.45" rot="R180">
-<attribute name="NAME" x="32.766" y="177.165" size="1.778" layer="95" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -9355,11 +9269,8 @@ MANUFACTURER:SAMTEC.</description>
 </segment>
 <segment>
 <pinref part="R_CS" gate="G$1" pin="P$1"/>
-<wire x1="21.59" y1="179.07" x2="20.32" y2="179.07" width="0.1524" layer="91"/>
+<wire x1="21.59" y1="179.07" x2="19.05" y2="179.07" width="0.1524" layer="91"/>
 <label x="19.05" y="179.07" size="1.778" layer="95" rot="R180" xref="yes"/>
-<pinref part="TP_PWR1" gate="TP$1" pin="1"/>
-<wire x1="20.32" y1="179.07" x2="19.05" y2="179.07" width="0.1524" layer="91"/>
-<junction x="20.32" y="179.07"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -9398,8 +9309,13 @@ MANUFACTURER:SAMTEC.</description>
 <wire x1="93.98" y1="152.4" x2="109.22" y2="152.4" width="0.1524" layer="91"/>
 <label x="93.98" y="152.4" size="1.778" layer="95"/>
 <wire x1="109.22" y1="152.4" x2="109.22" y2="139.7" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="139.7" x2="152.4" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="139.7" x2="111.76" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="TP_SPI_CS" gate="TP$1" pin="1"/>
+<wire x1="111.76" y1="139.7" x2="144.78" y2="139.7" width="0.1524" layer="91"/>
+<junction x="111.76" y="139.7"/>
 <pinref part="U2" gate="A" pin="!CS!+"/>
+<wire x1="144.78" y1="139.7" x2="146.05" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="146.05" y1="139.7" x2="152.4" y2="139.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SPI_MISO" class="0">
@@ -9408,8 +9324,15 @@ MANUFACTURER:SAMTEC.</description>
 <wire x1="93.98" y1="149.86" x2="106.68" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="149.86" x2="106.68" y2="124.46" width="0.1524" layer="91"/>
 <label x="93.98" y="149.86" size="1.778" layer="95"/>
-<wire x1="106.68" y1="124.46" x2="152.4" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="124.46" x2="119.38" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="TP_SPI_MISO" gate="TP$1" pin="1"/>
+<wire x1="119.38" y1="124.46" x2="134.62" y2="124.46" width="0.1524" layer="91"/>
+<junction x="119.38" y="124.46"/>
 <pinref part="U2" gate="A" pin="MISO+"/>
+<wire x1="134.62" y1="124.46" x2="137.16" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="124.46" x2="146.05" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="146.05" y1="124.46" x2="152.4" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="124.46" x2="137.16" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SPI_MOSI" class="0">
@@ -9418,8 +9341,15 @@ MANUFACTURER:SAMTEC.</description>
 <wire x1="93.98" y1="147.32" x2="104.14" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="147.32" x2="104.14" y2="129.54" width="0.1524" layer="91"/>
 <label x="93.98" y="147.32" size="1.778" layer="95"/>
-<wire x1="104.14" y1="129.54" x2="152.4" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="129.54" x2="116.84" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="TP_SPI_MOSI" gate="TP$1" pin="1"/>
+<wire x1="116.84" y1="129.54" x2="135.89" y2="129.54" width="0.1524" layer="91"/>
+<junction x="116.84" y="129.54"/>
 <pinref part="U2" gate="A" pin="MOSI+"/>
+<wire x1="135.89" y1="129.54" x2="137.16" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="129.54" x2="146.05" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="146.05" y1="129.54" x2="152.4" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="129.54" x2="137.16" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SPI_CLK" class="0">
@@ -9428,8 +9358,15 @@ MANUFACTURER:SAMTEC.</description>
 <wire x1="93.98" y1="144.78" x2="101.6" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="144.78" x2="101.6" y2="134.62" width="0.1524" layer="91"/>
 <label x="93.98" y="144.78" size="1.778" layer="95"/>
-<wire x1="101.6" y1="134.62" x2="152.4" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="134.62" x2="114.3" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="TP_SPI_CLK" gate="TP$1" pin="1"/>
+<wire x1="114.3" y1="134.62" x2="135.89" y2="134.62" width="0.1524" layer="91"/>
+<junction x="114.3" y="134.62"/>
 <pinref part="U2" gate="A" pin="SCLK+"/>
+<wire x1="135.89" y1="134.62" x2="137.16" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="134.62" x2="146.05" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="146.05" y1="134.62" x2="152.4" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="134.62" x2="137.16" y2="134.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RF_P" class="0">
@@ -9573,11 +9510,8 @@ MANUFACTURER:SAMTEC.</description>
 <net name="N$13" class="0">
 <segment>
 <pinref part="R_CS" gate="G$1" pin="P$2"/>
-<wire x1="31.75" y1="179.07" x2="33.02" y2="179.07" width="0.1524" layer="91"/>
+<wire x1="31.75" y1="179.07" x2="34.29" y2="179.07" width="0.1524" layer="91"/>
 <pinref part="POWER_IND" gate="G$1" pin="A"/>
-<pinref part="TP_PWR2" gate="TP$1" pin="1"/>
-<wire x1="33.02" y1="179.07" x2="34.29" y2="179.07" width="0.1524" layer="91"/>
-<junction x="33.02" y="179.07"/>
 </segment>
 </net>
 </nets>
@@ -9605,12 +9539,24 @@ MANUFACTURER:SAMTEC.</description>
 <attribute name="NAME" x="153.035" y="139.446" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="157.861" y="139.446" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="L3" gate="G$1" x="143.51" y="138.43" rot="R90">
+<attribute name="NAME" x="148.59" y="137.16" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="148.59" y="142.24" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="L4" gate="G$1" x="128.27" y="138.43" rot="R90">
+<attribute name="NAME" x="133.35" y="137.16" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="133.35" y="142.24" size="1.778" layer="96" rot="R180"/>
+</instance>
 <instance part="C13" gate="G$1" x="135.89" y="133.35">
 <attribute name="NAME" x="136.906" y="133.985" size="1.778" layer="95"/>
 <attribute name="VALUE" x="136.906" y="129.159" size="1.778" layer="96"/>
 </instance>
 <instance part="GND37" gate="1" x="136.042109375" y="122.167859375">
 <attribute name="VALUE" x="133.502109375" y="119.627859375" size="1.778" layer="96"/>
+</instance>
+<instance part="L5" gate="G$1" x="107.95" y="133.35" rot="R90">
+<attribute name="NAME" x="113.03" y="132.08" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="113.03" y="137.16" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="C14" gate="G$1" x="110.49" y="148.59" rot="R90">
 <attribute name="NAME" x="109.855" y="149.606" size="1.778" layer="95" rot="R90"/>
@@ -9619,6 +9565,10 @@ MANUFACTURER:SAMTEC.</description>
 <instance part="C15" gate="G$1" x="92.71" y="130.81">
 <attribute name="NAME" x="93.726" y="131.445" size="1.778" layer="95"/>
 <attribute name="VALUE" x="93.726" y="126.619" size="1.778" layer="96"/>
+</instance>
+<instance part="L6" gate="G$1" x="92.71" y="156.21" rot="R180">
+<attribute name="NAME" x="93.98" y="161.29" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="88.9" y="161.29" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="C16" gate="G$1" x="102.87" y="163.83" rot="R90">
 <attribute name="NAME" x="102.235" y="164.846" size="1.778" layer="95" rot="R90"/>
@@ -9633,28 +9583,6 @@ MANUFACTURER:SAMTEC.</description>
 <instance part="CURRENT-SENSE" gate="G$1" x="179.07" y="138.43" rot="R90">
 <attribute name="NAME" x="177.546" y="140.97" size="1.016" layer="95" font="vector" rot="R90" align="top-left"/>
 <attribute name="VALUE" x="180.594" y="140.97" size="1.016" layer="96" font="vector" rot="R90"/>
-</instance>
-<instance part="L7" gate="G$1" x="92.71" y="156.21" rot="R90">
-<attribute name="NAME" x="87.63" y="151.13" size="1.016" layer="95" font="vector" rot="R90" align="top-left"/>
-<attribute name="VALUE" x="90.17" y="151.13" size="1.016" layer="96" font="vector" rot="R90"/>
-</instance>
-<instance part="L5" gate="G$1" x="107.95" y="133.35">
-<attribute name="NAME" x="102.87" y="138.43" size="1.016" layer="95" font="vector" align="top-left"/>
-<attribute name="VALUE" x="102.87" y="135.89" size="1.016" layer="96" font="vector"/>
-</instance>
-<instance part="L6" gate="G$1" x="128.27" y="138.43">
-<attribute name="NAME" x="123.19" y="143.51" size="1.016" layer="95" font="vector" align="top-left"/>
-<attribute name="VALUE" x="123.19" y="140.97" size="1.016" layer="96" font="vector"/>
-</instance>
-<instance part="L3" gate="G$1" x="143.51" y="138.43">
-<attribute name="NAME" x="138.43" y="143.51" size="1.016" layer="95" font="vector" align="top-left"/>
-<attribute name="VALUE" x="138.43" y="140.97" size="1.016" layer="96" font="vector"/>
-</instance>
-<instance part="TP1" gate="TP$1" x="172.72" y="146.05">
-<attribute name="NAME" x="172.974" y="140.335" size="1.778" layer="95"/>
-</instance>
-<instance part="TP_ANT2" gate="TP$1" x="186.69" y="146.05">
-<attribute name="NAME" x="186.944" y="140.335" size="1.778" layer="95"/>
 </instance>
 </instances>
 <busses>
@@ -9696,27 +9624,30 @@ MANUFACTURER:SAMTEC.</description>
 <wire x1="158.75" y1="138.43" x2="161.29" y2="138.43" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="C12" gate="G$1" pin="1"/>
+<pinref part="L3" gate="G$1" pin="2"/>
+</segment>
+</net>
 <net name="N$8" class="0">
 <segment>
+<pinref part="L3" gate="G$1" pin="1"/>
+<pinref part="L4" gate="G$1" pin="2"/>
 <pinref part="C13" gate="G$1" pin="1"/>
 <wire x1="135.89" y1="138.43" x2="135.89" y2="135.89" width="0.1524" layer="91"/>
-<pinref part="L6" gate="G$1" pin="P$2"/>
-<wire x1="133.35" y1="138.43" x2="135.89" y2="138.43" width="0.1524" layer="91"/>
-<pinref part="L3" gate="G$1" pin="P$1"/>
-<wire x1="138.43" y1="138.43" x2="135.89" y2="138.43" width="0.1524" layer="91"/>
 <junction x="135.89" y="138.43"/>
 </segment>
 </net>
 <net name="N$9" class="0">
 <segment>
-<wire x1="123.19" y1="138.43" x2="115.57" y2="138.43" width="0.1524" layer="91"/>
+<pinref part="L4" gate="G$1" pin="1"/>
+<wire x1="120.65" y1="138.43" x2="115.57" y2="138.43" width="0.1524" layer="91"/>
 <wire x1="115.57" y1="138.43" x2="115.57" y2="133.35" width="0.1524" layer="91"/>
+<pinref part="L5" gate="G$1" pin="2"/>
 <pinref part="C14" gate="G$1" pin="2"/>
 <wire x1="115.57" y1="138.43" x2="115.57" y2="148.59" width="0.1524" layer="91"/>
 <junction x="115.57" y="138.43"/>
-<pinref part="L5" gate="G$1" pin="P$2"/>
-<wire x1="113.03" y1="133.35" x2="115.57" y2="133.35" width="0.1524" layer="91"/>
-<pinref part="L6" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="RF_N" class="0">
@@ -9724,55 +9655,40 @@ MANUFACTURER:SAMTEC.</description>
 <pinref part="C15" gate="G$1" pin="1"/>
 <wire x1="92.71" y1="133.35" x2="80.01" y2="133.35" width="0.1524" layer="91"/>
 <label x="80.01" y="133.35" size="1.778" layer="95" rot="R180" xref="yes"/>
-<wire x1="102.87" y1="133.35" x2="92.71" y2="133.35" width="0.1524" layer="91"/>
+<pinref part="L5" gate="G$1" pin="1"/>
+<wire x1="100.33" y1="133.35" x2="92.71" y2="133.35" width="0.1524" layer="91"/>
 <junction x="92.71" y="133.35"/>
-<pinref part="L5" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="RF_P" class="0">
 <segment>
+<pinref part="L6" gate="G$1" pin="1"/>
+<wire x1="92.71" y1="148.59" x2="80.01" y2="148.59" width="0.1524" layer="91"/>
 <label x="80.01" y="148.59" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="C14" gate="G$1" pin="1"/>
 <wire x1="107.95" y1="148.59" x2="92.71" y2="148.59" width="0.1524" layer="91"/>
-<pinref part="L7" gate="G$1" pin="P$1"/>
-<wire x1="92.71" y1="148.59" x2="80.01" y2="148.59" width="0.1524" layer="91"/>
-<wire x1="92.71" y1="151.13" x2="92.71" y2="148.59" width="0.1524" layer="91"/>
 <junction x="92.71" y="148.59"/>
 </segment>
 </net>
 <net name="N$12" class="0">
 <segment>
+<pinref part="L6" gate="G$1" pin="2"/>
 <pinref part="C16" gate="G$1" pin="1"/>
 <wire x1="92.71" y1="163.83" x2="100.33" y2="163.83" width="0.1524" layer="91"/>
-<pinref part="L7" gate="G$1" pin="P$2"/>
-<wire x1="92.71" y1="163.83" x2="92.71" y2="161.29" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="FEED"/>
-<wire x1="184.15" y1="138.43" x2="186.69" y2="138.43" width="0.1524" layer="91"/>
+<wire x1="184.15" y1="138.43" x2="190.5" y2="138.43" width="0.1524" layer="91"/>
 <pinref part="CURRENT-SENSE" gate="G$1" pin="P$2"/>
-<pinref part="TP_ANT2" gate="TP$1" pin="1"/>
-<wire x1="186.69" y1="138.43" x2="190.5" y2="138.43" width="0.1524" layer="91"/>
-<junction x="186.69" y="138.43"/>
 </segment>
 </net>
 <net name="N$11" class="0">
 <segment>
 <pinref part="C11" gate="G$1" pin="2"/>
-<wire x1="168.91" y1="138.43" x2="172.72" y2="138.43" width="0.1524" layer="91"/>
+<wire x1="168.91" y1="138.43" x2="173.99" y2="138.43" width="0.1524" layer="91"/>
 <pinref part="CURRENT-SENSE" gate="G$1" pin="P$1"/>
-<pinref part="TP1" gate="TP$1" pin="1"/>
-<wire x1="172.72" y1="138.43" x2="173.99" y2="138.43" width="0.1524" layer="91"/>
-<junction x="172.72" y="138.43"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="L3" gate="G$1" pin="P$2"/>
-<pinref part="C12" gate="G$1" pin="1"/>
-<wire x1="148.59" y1="138.43" x2="151.13" y2="138.43" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

@@ -8997,15 +8997,6 @@ MANUFACTURER:SAMTEC.</description>
 <wire x1="25.4" y1="58.42" x2="25.4" y2="63.5" width="0.1524" layer="91"/>
 <junction x="25.4" y="58.42"/>
 </segment>
-<segment>
-<pinref part="U1" gate="A" pin="OUT"/>
-<pinref part="C22" gate="G$1" pin="1"/>
-<wire x1="73.66" y1="19.05" x2="75.438" y2="19.05" width="0.1524" layer="91"/>
-<wire x1="75.438" y1="19.05" x2="75.438" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="19.05" x2="86.36" y2="19.05" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="19.05" x2="86.36" y2="20.32" width="0.1524" layer="91"/>
-<junction x="73.66" y="19.05"/>
-</segment>
 </net>
 <net name="VDDS" class="0">
 <segment>
@@ -9322,6 +9313,14 @@ MANUFACTURER:SAMTEC.</description>
 <wire x1="38.1" y1="26.67" x2="40.64" y2="26.67" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="26.67" x2="40.64" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="20.32" x2="38.1" y2="20.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$15" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="OUT"/>
+<pinref part="C22" gate="G$1" pin="1"/>
+<wire x1="73.66" y1="19.05" x2="75.438" y2="19.05" width="0.1524" layer="91"/>
+<wire x1="75.438" y1="19.05" x2="75.438" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

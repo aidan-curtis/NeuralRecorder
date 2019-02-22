@@ -336,7 +336,7 @@
 
 /* Packet RX Configuration */
 #define DATA_ENTRY_HEADER_SIZE 8  /* Constant header size of a Generic Data Entry */
-#define MAX_LENGTH             30 /* Max length byte the radio will accept. Sync with TX code */
+#define MAX_LENGTH             120 /* Max length byte the radio will accept. Sync with TX code */
 #define NUM_DATA_ENTRIES       2  /* NOTE: Only two data entries supported at the moment */
 #define NUM_APPENDED_BYTES     2  /* The Data Entries data field will contain:
                                    * 1 Header byte (RF_cmdPropRx.rxConf.bIncludeHdr = 0x1)
@@ -434,7 +434,9 @@ void *mainThread(void *arg0)
     uartParams.readDataMode = UART_DATA_BINARY;
     uartParams.readReturnMode = UART_RETURN_FULL;
     uartParams.readEcho = UART_ECHO_OFF;
-    uartParams.baudRate = 115200;
+    // uartParams.baudRate = 115200;
+    uartParams.baudRate = 921600;
+
 
     uart = UART_open(Board_UART0, &uartParams);
 

@@ -126,7 +126,7 @@ rfc_CMD_PROP_TX_t RF_cmdPropTx =
     .pktConf.bFsOff = 0x0,
     .pktConf.bUseCrc = 0x1,
     .pktConf.bVarLen = 0x1,
-    .pktLen = 0x7d, // SET APPLICATION PAYLOAD LENGTH CHANGED FROM1e
+    .pktLen = 0x1e, // SET APPLICATION PAYLOAD LENGTH
     .syncWord = 0xD391D391,
     .pPkt = 0, // INSERT APPLICABLE POINTER: (uint8_t*)&xxx
 };
@@ -161,7 +161,6 @@ rfc_CMD_PROP_RX_t RF_cmdPropRx =
     .rxConf.bAppendStatus = 0x1,
     .syncWord = 0xD391D391,
     .maxPktLen = 0x7d, // MAKE SURE DATA ENTRY IS LARGE ENOUGH
-    // .pktConf.addressMode = 0, // CHANGE!
     .address0 = 0xaa,
     .address1 = 0xbb,
     .endTrigger.triggerType = 0x1,

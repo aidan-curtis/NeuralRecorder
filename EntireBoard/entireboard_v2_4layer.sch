@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="10" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -11114,9 +11114,6 @@ chip</description>
 <part name="L3" library="rcl-2" deviceset="L-US" device="L0201" value="2nH"/>
 <part name="L4" library="rcl-2" deviceset="L-US" device="L0201" value="2.4nH"/>
 <part name="L5" library="rcl-2" deviceset="L-US" device="L0201" value="2nH"/>
-<part name="R_CS1" library="MF_Passives" deviceset="RESISTOR" device="_0402" value="0.01ohm"/>
-<part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND26" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="POWER_IND1" library="AxonMobile" deviceset="LED-SMD" device=""/>
 <part name="R3" library="AxonMobile" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3"/>
 <part name="R4" library="AxonMobile" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3"/>
@@ -11389,16 +11386,6 @@ chip</description>
 <instance part="L7" gate="A" x="195.58" y="55.88" smashed="yes">
 <attribute name="VALUE" x="193.5988" y="51.6128" size="3.4798" layer="96" ratio="10" rot="SR0"/>
 <attribute name="NAME" x="194.6656" y="59.2328" size="3.4798" layer="95" ratio="10" rot="SR0"/>
-</instance>
-<instance part="R_CS1" gate="G$1" x="116.84" y="102.87" smashed="yes" rot="R90">
-<attribute name="NAME" x="115.316" y="105.41" size="1.016" layer="95" font="vector" rot="R90" align="top-left"/>
-<attribute name="VALUE" x="118.364" y="105.41" size="1.016" layer="96" font="vector" rot="R90"/>
-</instance>
-<instance part="GND25" gate="1" x="110.49" y="91.44" smashed="yes">
-<attribute name="VALUE" x="107.95" y="88.9" size="1.778" layer="96"/>
-</instance>
-<instance part="GND26" gate="1" x="120.65" y="91.44" smashed="yes">
-<attribute name="VALUE" x="118.11" y="88.9" size="1.778" layer="96"/>
 </instance>
 <instance part="POWER_IND1" gate="G$1" x="112.776" y="120.015" smashed="yes" rot="R90">
 <attribute name="NAME" x="117.348" y="116.586" size="1.778" layer="95" font="vector" rot="R180"/>
@@ -11679,18 +11666,6 @@ chip</description>
 <pinref part="GND23" gate="1" pin="GND"/>
 <wire x1="43.18" y1="26.67" x2="50.8" y2="26.67" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="26.67" x2="50.8" y2="27.94" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND25" gate="1" pin="GND"/>
-<pinref part="R_CS1" gate="G$1" pin="P$1"/>
-<wire x1="110.49" y1="93.98" x2="110.49" y2="102.87" width="0.1524" layer="91"/>
-<wire x1="110.49" y1="102.87" x2="111.76" y2="102.87" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="R_CS1" gate="G$1" pin="P$2"/>
-<pinref part="GND26" gate="1" pin="GND"/>
-<wire x1="121.92" y1="102.87" x2="121.92" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="93.98" x2="120.65" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="POWER_IND1" gate="G$1" pin="C"/>
@@ -12106,7 +12081,6 @@ chip</description>
 <segment>
 <pinref part="CC2652R1" gate="CC2652R1" pin="DIO_20"/>
 <wire x1="93.98" y1="119.38" x2="95.504" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="95.504" y1="119.38" x2="95.504" y2="119.634" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="1"/>
 <wire x1="95.504" y1="119.38" x2="95.504" y2="110.744" width="0.1524" layer="91"/>
 <wire x1="95.504" y1="110.744" x2="97.028" y2="110.744" width="0.1524" layer="91"/>

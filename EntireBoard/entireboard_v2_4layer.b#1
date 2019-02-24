@@ -678,112 +678,6 @@ chip</description>
 </package>
 </packages>
 </library>
-<library name="yka0004">
-<packages>
-<package name="YKA0004ACAC">
-<smd name="A1" x="-0.174996875" y="0.175" dx="0.18" dy="0.18" layer="1" roundness="100" cream="no"/>
-<smd name="A2" x="0.175" y="0.175" dx="0.18" dy="0.18" layer="1" roundness="100" cream="no"/>
-<smd name="B1" x="-0.174996875" y="-0.174996875" dx="0.18" dy="0.18" layer="1" roundness="100" cream="no"/>
-<smd name="B2" x="0.175" y="-0.174996875" dx="0.18" dy="0.18" layer="1" roundness="100" cream="no"/>
-<wire x1="-0.381" y1="0.381" x2="0.381" y2="0.381" width="0.1524" layer="51"/>
-<wire x1="0.381" y1="-0.381" x2="0.381" y2="0.381" width="0.1524" layer="51"/>
-<wire x1="-0.381" y1="-0.381" x2="-0.381" y2="0.381" width="0.1524" layer="51"/>
-<wire x1="-0.381" y1="-0.381" x2="0.381" y2="-0.381" width="0.1524" layer="51"/>
-<wire x1="-0.1016" y1="0.1778" x2="-0.254" y2="0.1778" width="0.0508" layer="51" curve="-180"/>
-<wire x1="-0.254" y1="0.1778" x2="-0.1016" y2="0.1778" width="0.0508" layer="51" curve="-180"/>
-<text x="-0.2794" y="-0.8128" size="1.27" layer="51" ratio="6" rot="SR0">.Designator</text>
-<wire x1="-0.4826" y1="0.1524" x2="-0.4826" y2="0.4826" width="0.1524" layer="21"/>
-<wire x1="-0.4826" y1="0.4826" x2="-0.1524" y2="0.4826" width="0.1524" layer="21"/>
-<wire x1="0.3048" y1="0.4826" x2="0.4826" y2="0.4826" width="0.1524" layer="21"/>
-<wire x1="0.4826" y1="0.3048" x2="0.4826" y2="0.4826" width="0.1524" layer="21"/>
-<wire x1="0.4826" y1="-0.4826" x2="0.4826" y2="-0.3048" width="0.1524" layer="21"/>
-<wire x1="0.3048" y1="-0.4826" x2="0.4826" y2="-0.4826" width="0.1524" layer="21"/>
-<wire x1="-0.4826" y1="-0.4826" x2="-0.4826" y2="-0.3048" width="0.1524" layer="21"/>
-<wire x1="-0.4826" y1="-0.4826" x2="-0.3048" y2="-0.4826" width="0.1524" layer="21"/>
-<wire x1="-0.1016" y1="0.2286" x2="-0.1524" y2="0.2286" width="0.0508" layer="31" curve="-180"/>
-<wire x1="-0.1524" y1="0.2286" x2="-0.1016" y2="0.2286" width="0.0508" layer="31" curve="-180"/>
-<wire x1="-0.2032" y1="0.2286" x2="-0.254" y2="0.2286" width="0.0508" layer="31" curve="-180"/>
-<wire x1="-0.254" y1="0.2286" x2="-0.2032" y2="0.2286" width="0.0508" layer="31" curve="-180"/>
-<wire x1="-0.2032" y1="0.127" x2="-0.254" y2="0.127" width="0.0508" layer="31" curve="-180"/>
-<wire x1="-0.254" y1="0.127" x2="-0.2032" y2="0.127" width="0.0508" layer="31" curve="-180"/>
-<wire x1="-0.1016" y1="0.127" x2="-0.1524" y2="0.127" width="0.0508" layer="31" curve="-180"/>
-<wire x1="-0.1524" y1="0.127" x2="-0.1016" y2="0.127" width="0.0508" layer="31" curve="-180"/>
-<wire x1="0.1524" y1="0.127" x2="0.1016" y2="0.127" width="0.0508" layer="31" curve="-180"/>
-<wire x1="0.1016" y1="0.127" x2="0.1524" y2="0.127" width="0.0508" layer="31" curve="-180"/>
-<wire x1="0.254" y1="0.127" x2="0.2032" y2="0.127" width="0.0508" layer="31" curve="-180"/>
-<wire x1="0.2032" y1="0.127" x2="0.254" y2="0.127" width="0.0508" layer="31" curve="-180"/>
-<wire x1="0.254" y1="0.2286" x2="0.2032" y2="0.2286" width="0.0508" layer="31" curve="-180"/>
-<wire x1="0.2032" y1="0.2286" x2="0.254" y2="0.2286" width="0.0508" layer="31" curve="-180"/>
-<wire x1="0.1524" y1="0.2286" x2="0.1016" y2="0.2286" width="0.0508" layer="31" curve="-180"/>
-<wire x1="0.1016" y1="0.2286" x2="0.1524" y2="0.2286" width="0.0508" layer="31" curve="-180"/>
-<wire x1="0.1524" y1="-0.2286" x2="0.1016" y2="-0.2286" width="0.0508" layer="31" curve="-180"/>
-<wire x1="0.1016" y1="-0.2286" x2="0.1524" y2="-0.2286" width="0.0508" layer="31" curve="-180"/>
-<wire x1="0.254" y1="-0.2286" x2="0.2032" y2="-0.2286" width="0.0508" layer="31" curve="-180"/>
-<wire x1="0.2032" y1="-0.2286" x2="0.254" y2="-0.2286" width="0.0508" layer="31" curve="-180"/>
-<wire x1="0.254" y1="-0.127" x2="0.2032" y2="-0.127" width="0.0508" layer="31" curve="-180"/>
-<wire x1="0.2032" y1="-0.127" x2="0.254" y2="-0.127" width="0.0508" layer="31" curve="-180"/>
-<wire x1="0.1524" y1="-0.127" x2="0.1016" y2="-0.127" width="0.0508" layer="31" curve="-180"/>
-<wire x1="0.1016" y1="-0.127" x2="0.1524" y2="-0.127" width="0.0508" layer="31" curve="-180"/>
-<wire x1="-0.1016" y1="-0.127" x2="-0.1524" y2="-0.127" width="0.0508" layer="31" curve="-180"/>
-<wire x1="-0.1524" y1="-0.127" x2="-0.1016" y2="-0.127" width="0.0508" layer="31" curve="-180"/>
-<wire x1="-0.2032" y1="-0.127" x2="-0.254" y2="-0.127" width="0.0508" layer="31" curve="-180"/>
-<wire x1="-0.254" y1="-0.127" x2="-0.2032" y2="-0.127" width="0.0508" layer="31" curve="-180"/>
-<wire x1="-0.2032" y1="-0.2286" x2="-0.254" y2="-0.2286" width="0.0508" layer="31" curve="-180"/>
-<wire x1="-0.254" y1="-0.2286" x2="-0.2032" y2="-0.2286" width="0.0508" layer="31" curve="-180"/>
-<wire x1="-0.1016" y1="-0.2286" x2="-0.1524" y2="-0.2286" width="0.0508" layer="31" curve="-180"/>
-<wire x1="-0.1524" y1="-0.2286" x2="-0.1016" y2="-0.2286" width="0.0508" layer="31" curve="-180"/>
-<polygon width="0.0254" layer="31">
-<vertex x="-0.279996875" y="0.120003125"/>
-<vertex x="-0.069996875" y="0.120003125"/>
-<vertex x="-0.069996875" y="0.230003125"/>
-<vertex x="-0.279996875" y="0.230003125"/>
-</polygon>
-<polygon width="0.0254" layer="31">
-<vertex x="-0.119996875" y="0.070003125"/>
-<vertex x="-0.119996875" y="0.280003125"/>
-<vertex x="-0.229996875" y="0.280003125"/>
-<vertex x="-0.229996875" y="0.070003125"/>
-</polygon>
-<polygon width="0.0254" layer="31">
-<vertex x="0.23" y="0.070003125"/>
-<vertex x="0.23" y="0.280003125"/>
-<vertex x="0.12" y="0.280003125"/>
-<vertex x="0.12" y="0.070003125"/>
-</polygon>
-<polygon width="0.0254" layer="31">
-<vertex x="0.28" y="0.230003125"/>
-<vertex x="0.07" y="0.230003125"/>
-<vertex x="0.07" y="0.120003125"/>
-<vertex x="0.28" y="0.120003125"/>
-</polygon>
-<polygon width="0.0254" layer="31">
-<vertex x="0.28" y="-0.12"/>
-<vertex x="0.07" y="-0.12"/>
-<vertex x="0.07" y="-0.23"/>
-<vertex x="0.28" y="-0.23"/>
-</polygon>
-<polygon width="0.0254" layer="31">
-<vertex x="0.12" y="-0.07"/>
-<vertex x="0.12" y="-0.28"/>
-<vertex x="0.23" y="-0.28"/>
-<vertex x="0.23" y="-0.07"/>
-</polygon>
-<polygon width="0.0254" layer="31">
-<vertex x="-0.229996875" y="-0.07"/>
-<vertex x="-0.229996875" y="-0.28"/>
-<vertex x="-0.119996875" y="-0.28"/>
-<vertex x="-0.119996875" y="-0.07"/>
-</polygon>
-<polygon width="0.0254" layer="31">
-<vertex x="-0.279996875" y="-0.23"/>
-<vertex x="-0.069996875" y="-0.23"/>
-<vertex x="-0.069996875" y="-0.12"/>
-<vertex x="-0.279996875" y="-0.12"/>
-</polygon>
-<text x="-3.2766" y="-0.635" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
-</package>
-</packages>
-</library>
 <library name="0532610271">
 <packages>
 <package name="MOLEX_0532610271">
@@ -1901,6 +1795,64 @@ Source: http://www.niccomp.com/Catalog/nis.pdf</description>
 </package>
 </packages>
 </library>
+<library name="yka0004">
+<packages>
+<package name="YKA0004AAAA">
+<smd name="1" x="-0.174996875" y="0.175" dx="0.2" dy="0.2" layer="1" roundness="100" cream="no"/>
+<smd name="2" x="0.175" y="0.175" dx="0.2" dy="0.2" layer="1" roundness="100" cream="no"/>
+<smd name="3" x="-0.174996875" y="-0.174996875" dx="0.2" dy="0.2" layer="1" roundness="100" cream="no"/>
+<smd name="4" x="0.175" y="-0.174996875" dx="0.2" dy="0.2" layer="1" roundness="100" cream="no"/>
+<wire x1="0.3556" y1="-0.3556" x2="0.3556" y2="0.3556" width="0.1524" layer="51"/>
+<wire x1="-0.3556" y1="-0.3556" x2="0.3556" y2="-0.3556" width="0.1524" layer="51"/>
+<wire x1="-0.3556" y1="0.3556" x2="0.3556" y2="0.3556" width="0.1524" layer="51"/>
+<wire x1="-0.3556" y1="-0.3556" x2="-0.3556" y2="0.3556" width="0.1524" layer="51"/>
+<wire x1="-0.1016" y1="0.1778" x2="-0.254" y2="0.1778" width="0.0508" layer="51" curve="-180"/>
+<wire x1="-0.254" y1="0.1778" x2="-0.1016" y2="0.1778" width="0.0508" layer="51" curve="-180"/>
+<text x="-0.254" y="-0.762" size="1.27" layer="51" ratio="6" rot="SR0">.Designator</text>
+<polygon width="0.0254" layer="31">
+<vertex x="-0.28" y="0.12"/>
+<vertex x="-0.28" y="0.23"/>
+<vertex x="-0.23" y="0.28"/>
+<vertex x="-0.12" y="0.28"/>
+<vertex x="-0.07" y="0.23"/>
+<vertex x="-0.07" y="0.12"/>
+<vertex x="-0.12" y="0.07"/>
+<vertex x="-0.23" y="0.07"/>
+</polygon>
+<polygon width="0.0254" layer="31">
+<vertex x="0.07" y="0.12"/>
+<vertex x="0.07" y="0.23"/>
+<vertex x="0.12" y="0.28"/>
+<vertex x="0.23" y="0.28"/>
+<vertex x="0.28" y="0.23"/>
+<vertex x="0.28" y="0.12"/>
+<vertex x="0.23" y="0.07"/>
+<vertex x="0.12" y="0.07"/>
+</polygon>
+<polygon width="0.0254" layer="31">
+<vertex x="-0.28" y="-0.23"/>
+<vertex x="-0.28" y="-0.12"/>
+<vertex x="-0.23" y="-0.07"/>
+<vertex x="-0.12" y="-0.07"/>
+<vertex x="-0.07" y="-0.12"/>
+<vertex x="-0.07" y="-0.23"/>
+<vertex x="-0.12" y="-0.28"/>
+<vertex x="-0.23" y="-0.28"/>
+</polygon>
+<polygon width="0.0254" layer="31">
+<vertex x="0.07" y="-0.23"/>
+<vertex x="0.07" y="-0.12"/>
+<vertex x="0.12" y="-0.07"/>
+<vertex x="0.23" y="-0.07"/>
+<vertex x="0.28" y="-0.12"/>
+<vertex x="0.28" y="-0.23"/>
+<vertex x="0.23" y="-0.28"/>
+<vertex x="0.12" y="-0.28"/>
+</polygon>
+<text x="-3.2766" y="-0.635" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2247,9 +2199,6 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 </element>
 <element name="U$2" library="antenna" package="DN007+0" value="INVERTED_F_ANTENNA+0" x="21.7418" y="8.4498" smashed="yes" rot="R180"/>
 <element name="U2" library="RHD2000" package="QFN56_8_X_8_LARGE" value="RHD2216_QFN" x="48.575" y="35.687" smashed="yes" rot="R270"/>
-<element name="U1" library="yka0004" package="YKA0004ACAC" value="YKA" x="9.74" y="54.832" smashed="yes" rot="R180">
-<attribute name="NAME" x="9.0814" y="53.118" size="0.762" layer="25" ratio="6" rot="SR0"/>
-</element>
 <element name="P1" library="0532610271" package="MOLEX_0532610271" value="0532610271" x="19.248" y="52.404" smashed="yes" rot="R180">
 <attribute name="DESCRIPTION" value=" 1.25mm _.049_ Pitch PicoBlade Header, Surface Mount, Right Angle, Lead-free, 2 Circuits " x="19.248" y="52.404" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DIGI-KEY_PART_NUMBER" value="WM7620CT-ND" x="19.248" y="52.404" size="1.778" layer="27" rot="R180" display="off"/>
@@ -2309,6 +2258,9 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="POPULATE" value="1" x="40.2336" y="57.3786" size="1.778" layer="27" display="off"/>
 <attribute name="URL" value="https://factory.macrofab.com/part/MF-CON-2.54mm-01x01" x="40.2336" y="57.3786" size="1.778" layer="27" display="off"/>
 </element>
+<element name="U1" library="yka0004" package="YKA0004AAAA" value="TPS7A0533PYKAR" x="10.8712" y="55.3466" smashed="yes" rot="R270">
+<attribute name="NAME" x="10.2362" y="58.6232" size="1.27" layer="25" ratio="6" rot="SR270"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
@@ -2365,7 +2317,6 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <contactref element="C16" pad="2"/>
 <contactref element="U$2" pad="GND"/>
 <contactref element="U$2" pad="GND@1"/>
-<contactref element="U1" pad="B2"/>
 <wire x1="45.825" y1="31.637" x2="45.325" y2="31.637" width="0.1524" layer="1"/>
 <wire x1="46.825" y1="31.637" x2="46.825" y2="32.512" width="0.1524" layer="1"/>
 <wire x1="46.825" y1="32.512" x2="46.825" y2="33.937" width="0.1524" layer="1"/>
@@ -2462,9 +2413,6 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <via x="13.208" y="56.896" extent="1-16" drill="0.35"/>
 <wire x1="6.462" y1="55.372" x2="4.572" y2="55.372" width="0.1524" layer="1"/>
 <via x="4.572" y="55.372" extent="1-16" drill="0.35"/>
-<wire x1="9.565" y1="55.006996875" x2="9.565" y2="55.459" width="0.1524" layer="1"/>
-<wire x1="9.565" y1="55.459" x2="8.128" y2="56.896" width="0.1524" layer="1"/>
-<via x="8.128" y="56.896" extent="1-16" drill="0.35"/>
 <wire x1="19.873" y1="52.404" x2="20.461" y2="51.816" width="0.1524" layer="1"/>
 <wire x1="20.461" y1="51.816" x2="24.892" y2="51.816" width="0.1524" layer="1"/>
 <via x="24.892" y="51.816" extent="1-16" drill="0.35"/>
@@ -2491,12 +2439,6 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <wire x1="23.622" y1="42.9514" x2="23.1254" y2="43.448" width="0.1524" layer="1"/>
 <wire x1="23.1254" y1="43.448" x2="22.338" y2="43.448" width="0.1524" layer="1"/>
 <contactref element="GND27" pad="P$1"/>
-<polygon width="0.1524" layer="15">
-<vertex x="1.524" y="58.928"/>
-<vertex x="58.166" y="58.928"/>
-<vertex x="58.166" y="12.7"/>
-<vertex x="1.524" y="12.7"/>
-</polygon>
 <wire x1="17.018" y1="26.782" x2="17.0688" y2="26.7312" width="0.1524" layer="1"/>
 <wire x1="17.0688" y1="26.7312" x2="17.0688" y2="24.9936" width="0.4445" layer="1"/>
 <via x="17.0688" y="24.9936" extent="1-16" drill="0.35"/>
@@ -2512,18 +2454,6 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <vertex x="57.9374" y="24.3586"/>
 <vertex x="57.9374" y="11.811"/>
 <vertex x="1.397" y="11.811"/>
-</polygon>
-<polygon width="0.1524" layer="16">
-<vertex x="58.42" y="58.928"/>
-<vertex x="58.42" y="12.573"/>
-<vertex x="1.397" y="12.573"/>
-<vertex x="1.397" y="58.928"/>
-</polygon>
-<polygon width="0.1524" layer="16" pour="cutout">
-<vertex x="12.827" y="30.607"/>
-<vertex x="24.257" y="30.607"/>
-<vertex x="24.257" y="12.827"/>
-<vertex x="12.827" y="12.827"/>
 </polygon>
 <wire x1="27.432" y1="28.56" x2="27.432" y2="27.051" width="0.1524" layer="1"/>
 <via x="27.432" y="27.051" extent="1-16" drill="0.35"/>
@@ -2571,6 +2501,46 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <via x="20.0152" y="34.417" extent="1-16" drill="0.35"/>
 <via x="21.7932" y="34.417" extent="1-16" drill="0.35"/>
 <via x="23.495" y="34.3662" extent="1-16" drill="0.35"/>
+<polygon width="0.1524" layer="16">
+<vertex x="24.257" y="27.813"/>
+<vertex x="24.257" y="11.8872"/>
+<vertex x="24.511" y="11.6332"/>
+<vertex x="57.8866" y="11.6332"/>
+<vertex x="58.3184" y="12.065"/>
+<vertex x="58.3184" y="59.0804"/>
+<vertex x="58.3692" y="59.1312"/>
+<vertex x="1.1938" y="59.1312"/>
+<vertex x="1.016" y="58.9534"/>
+<vertex x="1.016" y="11.811"/>
+<vertex x="1.143" y="11.684"/>
+<vertex x="14.8336" y="11.684"/>
+<vertex x="15.113" y="11.9634"/>
+<vertex x="15.113" y="30.7594"/>
+<vertex x="15.1384" y="30.7848"/>
+<vertex x="24.2062" y="30.7848"/>
+</polygon>
+<polygon width="0.1524" layer="15">
+<vertex x="24.2824" y="11.7348"/>
+<vertex x="58.0898" y="11.7348"/>
+<vertex x="58.1914" y="11.8364"/>
+<vertex x="58.1914" y="59.1058"/>
+<vertex x="58.2422" y="59.1566"/>
+<vertex x="1.143" y="59.1566"/>
+<vertex x="0.9906" y="59.0042"/>
+<vertex x="0.9906" y="11.7094"/>
+<vertex x="1.0668" y="11.6332"/>
+<vertex x="1.2192" y="11.4808"/>
+<vertex x="14.8082" y="11.4808"/>
+<vertex x="15.1892" y="11.8618"/>
+<vertex x="15.1892" y="30.6324"/>
+<vertex x="15.24" y="30.6832"/>
+<vertex x="24.1554" y="30.6832"/>
+<vertex x="24.1554" y="11.8618"/>
+</polygon>
+<contactref element="U1" pad="4"/>
+<wire x1="10.696203125" y1="55.1716" x2="9.8524" y2="55.1716" width="0.2032" layer="1"/>
+<wire x1="9.8524" y1="55.1716" x2="9.6012" y2="55.4228" width="0.2032" layer="1"/>
+<via x="9.6012" y="55.4228" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="VDDR">
 <contactref element="C8" pad="1"/>
@@ -2617,17 +2587,20 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <signal name="WMCU_VDD">
 <contactref element="L2" pad="1"/>
 <contactref element="3.3V" pad="P$1"/>
-<contactref element="U1" pad="A2"/>
-<contactref element="C22" pad="1"/>
 <wire x1="8.89" y1="49.53" x2="15.989" y2="49.53" width="0.254" layer="1"/>
 <wire x1="15.989" y1="49.53" x2="17.513" y2="48.006" width="0.254" layer="1"/>
 <wire x1="8.89" y1="49.53" x2="8.128" y2="50.292" width="0.254" layer="1"/>
 <wire x1="8.128" y1="50.292" x2="8.1426" y2="54.1636" width="0.254" layer="1"/>
 <wire x1="8.1426" y1="54.1636" x2="8.636" y2="54.657" width="0.254" layer="1"/>
 <wire x1="8.636" y1="54.657" x2="9.3925875" y2="54.657" width="0.254" layer="1"/>
-<wire x1="7.762" y1="55.372" x2="7.921" y2="55.372" width="0.254" layer="1"/>
 <wire x1="7.921" y1="55.372" x2="8.636" y2="54.657" width="0.254" layer="1"/>
-<wire x1="9.3925875" y1="54.657" x2="9.565" y2="54.657" width="0.1524" layer="1"/>
+<contactref element="U1" pad="2"/>
+<contactref element="C22" pad="1"/>
+<wire x1="11.024803125" y1="55.035490625" x2="11.024803125" y2="55.150203125" width="0.2032" layer="1"/>
+<wire x1="11.024803125" y1="55.150203125" x2="11.0462" y2="55.1716" width="0.2032" layer="1"/>
+<wire x1="9.3925875" y1="54.657" x2="10.6463125" y2="54.657" width="0.2032" layer="1"/>
+<wire x1="10.6463125" y1="54.657" x2="11.024803125" y2="55.035490625" width="0.2032" layer="1"/>
+<wire x1="7.921" y1="55.372" x2="7.762" y2="55.372" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VDDS">
 <contactref element="CC2652R1" pad="44"/>
@@ -3005,16 +2978,18 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <wire x1="19.541" y1="15.4536" x2="19.541" y2="11.3792" width="0.4445" layer="1"/>
 </signal>
 <signal name="N$14">
-<contactref element="U1" pad="B1"/>
 <contactref element="C21" pad="1"/>
-<contactref element="U1" pad="A1"/>
 <contactref element="P1" pad="1"/>
-<wire x1="9.914996875" y1="55.006996875" x2="9.914996875" y2="56.792996875" width="0.1524" layer="1"/>
 <wire x1="9.914996875" y1="56.792996875" x2="10.018" y2="56.896" width="0.1524" layer="1"/>
-<wire x1="9.914996875" y1="54.657" x2="9.914996875" y2="55.006996875" width="0.1524" layer="1"/>
-<wire x1="9.914996875" y1="54.657" x2="12.399" y2="54.657" width="0.1524" layer="1"/>
 <wire x1="14.652" y1="52.404" x2="18.623" y2="52.404" width="0.1524" layer="1"/>
-<wire x1="12.399" y1="54.657" x2="14.652" y2="52.404" width="0.1524" layer="1"/>
+<wire x1="14.652" y1="52.404" x2="12.399" y2="54.657" width="0.1524" layer="1"/>
+<contactref element="U1" pad="1"/>
+<contactref element="U1" pad="3"/>
+<wire x1="12.399" y1="54.657" x2="11.534403125" y2="55.521596875" width="0.2032" layer="1"/>
+<wire x1="11.534403125" y1="55.521596875" x2="11.0462" y2="55.521596875" width="0.2032" layer="1"/>
+<wire x1="11.0462" y1="55.521596875" x2="10.696203125" y2="55.521596875" width="0.2032" layer="1"/>
+<wire x1="10.696203125" y1="55.521596875" x2="9.914996875" y2="56.302803125" width="0.2032" layer="1"/>
+<wire x1="9.914996875" y1="56.302803125" x2="9.914996875" y2="56.792996875" width="0.2032" layer="1"/>
 </signal>
 <signal name="N$7">
 <contactref element="C12" pad="1"/>
@@ -3047,15 +3022,6 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <contactref element="POWER_IND2" pad="1"/>
 <wire x1="22.098" y1="41.902" x2="23.6046" y2="41.902" width="0.1524" layer="1"/>
 <wire x1="23.6046" y1="41.902" x2="23.622" y2="41.8846" width="0.1524" layer="1"/>
-</signal>
-<signal name="N$28">
-<polygon width="0.1524" layer="15" pour="cutout">
-<vertex x="12.954" y="30.607"/>
-<vertex x="23.876" y="30.607"/>
-<vertex x="24.257" y="30.291484375"/>
-<vertex x="24.257" y="12.7"/>
-<vertex x="12.954" y="12.7"/>
-</polygon>
 </signal>
 <signal name="N$2">
 <via x="4.0386" y="35.7632" extent="1-16" drill="0.35"/>
@@ -3108,13 +3074,14 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
 </mfgpreviewcolors>
 <errors>
-<approved hash="5,1,270bad7ba188046a"/>
 <approved hash="5,1,d7a5f419a76268df"/>
 <approved hash="5,1,42aaa46432efc422"/>
 <approved hash="5,1,8d593a7a79b16056"/>
 <approved hash="5,1,9092279b6a1d787d"/>
 <approved hash="23,1,b37803440040b07c"/>
 <approved hash="23,1,848b068a1c149e61"/>
+<approved hash="5,1,ef47014c69c4a85d"/>
+<approved hash="23,1,13b1028d1f710696"/>
 </errors>
 </board>
 </drawing>

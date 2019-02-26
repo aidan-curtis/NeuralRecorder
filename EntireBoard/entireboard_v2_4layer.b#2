@@ -2491,12 +2491,6 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <wire x1="23.622" y1="42.9514" x2="23.1254" y2="43.448" width="0.1524" layer="1"/>
 <wire x1="23.1254" y1="43.448" x2="22.338" y2="43.448" width="0.1524" layer="1"/>
 <contactref element="GND27" pad="P$1"/>
-<polygon width="0.1524" layer="15">
-<vertex x="1.524" y="58.928"/>
-<vertex x="58.166" y="58.928"/>
-<vertex x="58.166" y="12.7"/>
-<vertex x="1.524" y="12.7"/>
-</polygon>
 <wire x1="17.018" y1="26.782" x2="17.0688" y2="26.7312" width="0.1524" layer="1"/>
 <wire x1="17.0688" y1="26.7312" x2="17.0688" y2="24.9936" width="0.4445" layer="1"/>
 <via x="17.0688" y="24.9936" extent="1-16" drill="0.35"/>
@@ -2512,18 +2506,6 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <vertex x="57.9374" y="24.3586"/>
 <vertex x="57.9374" y="11.811"/>
 <vertex x="1.397" y="11.811"/>
-</polygon>
-<polygon width="0.1524" layer="16">
-<vertex x="58.42" y="58.928"/>
-<vertex x="58.42" y="12.573"/>
-<vertex x="1.397" y="12.573"/>
-<vertex x="1.397" y="58.928"/>
-</polygon>
-<polygon width="0.1524" layer="16" pour="cutout">
-<vertex x="12.827" y="30.607"/>
-<vertex x="24.257" y="30.607"/>
-<vertex x="24.257" y="12.827"/>
-<vertex x="12.827" y="12.827"/>
 </polygon>
 <wire x1="27.432" y1="28.56" x2="27.432" y2="27.051" width="0.1524" layer="1"/>
 <via x="27.432" y="27.051" extent="1-16" drill="0.35"/>
@@ -2571,6 +2553,42 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <via x="20.0152" y="34.417" extent="1-16" drill="0.35"/>
 <via x="21.7932" y="34.417" extent="1-16" drill="0.35"/>
 <via x="23.495" y="34.3662" extent="1-16" drill="0.35"/>
+<polygon width="0.1524" layer="16">
+<vertex x="24.257" y="27.813"/>
+<vertex x="24.257" y="11.8872"/>
+<vertex x="24.511" y="11.6332"/>
+<vertex x="57.8866" y="11.6332"/>
+<vertex x="58.3184" y="12.065"/>
+<vertex x="58.3184" y="59.0804"/>
+<vertex x="58.3692" y="59.1312"/>
+<vertex x="1.1938" y="59.1312"/>
+<vertex x="1.016" y="58.9534"/>
+<vertex x="1.016" y="11.811"/>
+<vertex x="1.143" y="11.684"/>
+<vertex x="14.8336" y="11.684"/>
+<vertex x="15.113" y="11.9634"/>
+<vertex x="15.113" y="30.7594"/>
+<vertex x="15.1384" y="30.7848"/>
+<vertex x="24.2062" y="30.7848"/>
+</polygon>
+<polygon width="0.1524" layer="15">
+<vertex x="24.2824" y="11.7348"/>
+<vertex x="58.0898" y="11.7348"/>
+<vertex x="58.1914" y="11.8364"/>
+<vertex x="58.1914" y="59.1058"/>
+<vertex x="58.2422" y="59.1566"/>
+<vertex x="1.143" y="59.1566"/>
+<vertex x="0.9906" y="59.0042"/>
+<vertex x="0.9906" y="11.7094"/>
+<vertex x="1.0668" y="11.6332"/>
+<vertex x="1.2192" y="11.4808"/>
+<vertex x="14.8082" y="11.4808"/>
+<vertex x="15.1892" y="11.8618"/>
+<vertex x="15.1892" y="30.6324"/>
+<vertex x="15.24" y="30.6832"/>
+<vertex x="24.1554" y="30.6832"/>
+<vertex x="24.1554" y="11.8618"/>
+</polygon>
 </signal>
 <signal name="VDDR">
 <contactref element="C8" pad="1"/>
@@ -3048,15 +3066,6 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <wire x1="22.098" y1="41.902" x2="23.6046" y2="41.902" width="0.1524" layer="1"/>
 <wire x1="23.6046" y1="41.902" x2="23.622" y2="41.8846" width="0.1524" layer="1"/>
 </signal>
-<signal name="N$28">
-<polygon width="0.1524" layer="15" pour="cutout">
-<vertex x="12.954" y="30.607"/>
-<vertex x="23.876" y="30.607"/>
-<vertex x="24.257" y="30.291484375"/>
-<vertex x="24.257" y="12.7"/>
-<vertex x="12.954" y="12.7"/>
-</polygon>
-</signal>
 <signal name="N$2">
 <via x="4.0386" y="35.7632" extent="1-16" drill="0.35"/>
 </signal>
@@ -3108,13 +3117,14 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
 </mfgpreviewcolors>
 <errors>
-<approved hash="5,1,270bad7ba188046a"/>
 <approved hash="5,1,d7a5f419a76268df"/>
 <approved hash="5,1,42aaa46432efc422"/>
 <approved hash="5,1,8d593a7a79b16056"/>
 <approved hash="5,1,9092279b6a1d787d"/>
 <approved hash="23,1,b37803440040b07c"/>
 <approved hash="23,1,848b068a1c149e61"/>
+<approved hash="5,1,ef47014c69c4a85d"/>
+<approved hash="23,1,13b1028d1f710696"/>
 </errors>
 </board>
 </drawing>

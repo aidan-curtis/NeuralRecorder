@@ -2222,21 +2222,21 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <element name="U1" library="yka0004" package="DBV0005A_M" value="TPS7A0508PDBVRDBV0005A_M" x="11.5062" y="53.7972" rot="R90">
 <attribute name="NAME" x="12.1412" y="50.5206" size="1.27" layer="25" ratio="6" rot="SR90"/>
 </element>
-<element name="J1" library="MF_Connectors" package="PTH_2.54MM_01X09" value="MF-CON-2.54mm-01x09" x="4.572" y="33.8582" rot="R90">
-<attribute name="HOUSEPART" value="YES" x="4.572" y="33.8582" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="LABEL01" value="" x="4.572" y="33.8582" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="LABEL02" value="" x="4.572" y="33.8582" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="LABEL03" value="" x="4.572" y="33.8582" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="LABEL04" value="" x="4.572" y="33.8582" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="LABEL05" value="" x="4.572" y="33.8582" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="LABEL06" value="" x="4.572" y="33.8582" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="LABEL07" value="" x="4.572" y="33.8582" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="LABEL08" value="" x="4.572" y="33.8582" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="LABEL09" value="" x="4.572" y="33.8582" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="MF-CON-2.54mm-01x09" x="4.572" y="33.8582" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="3.072" y="22.4482" size="1.016" layer="25" font="vector" ratio="16" rot="R90"/>
-<attribute name="POPULATE" value="1" x="4.572" y="33.8582" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="URL" value="https://factory.macrofab.com/part/MF-CON-2.54mm-01x09" x="4.572" y="33.8582" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="J1" library="MF_Connectors" package="PTH_2.54MM_01X09" value="MF-CON-2.54mm-01x09" x="5.1308" y="34.3916" rot="R90">
+<attribute name="HOUSEPART" value="YES" x="5.1308" y="34.3916" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="LABEL01" value="" x="5.1308" y="34.3916" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="LABEL02" value="" x="5.1308" y="34.3916" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="LABEL03" value="" x="5.1308" y="34.3916" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="LABEL04" value="" x="5.1308" y="34.3916" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="LABEL05" value="" x="5.1308" y="34.3916" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="LABEL06" value="" x="5.1308" y="34.3916" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="LABEL07" value="" x="5.1308" y="34.3916" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="LABEL08" value="" x="5.1308" y="34.3916" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="LABEL09" value="" x="5.1308" y="34.3916" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="MF-CON-2.54mm-01x09" x="5.1308" y="34.3916" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="3.6308" y="22.9816" size="1.016" layer="25" font="vector" ratio="16" rot="R90"/>
+<attribute name="POPULATE" value="1" x="5.1308" y="34.3916" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-CON-2.54mm-01x09" x="5.1308" y="34.3916" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="C6" library="MF_Passives" package="C0603" value="22uF" x="5.3086" y="17.9832" rot="R270">
 <attribute name="DIELECTRIC" value="" x="5.3086" y="17.9832" size="1.778" layer="27" rot="R270" display="off"/>
@@ -2440,11 +2440,11 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <wire x1="34.544" y1="39.5" x2="34.544" y2="39.624" width="0.1524" layer="1"/>
 <wire x1="32.766" y1="37.338" x2="33.463" y2="38.035" width="0.1524" layer="1"/>
 <wire x1="33.463" y1="38.035" x2="33.463" y2="38.419" width="0.1524" layer="1"/>
-<wire x1="22.338" y1="45.356" x2="22.338" y2="43.448" width="0.1524" layer="1"/>
+<wire x1="22.338" y1="45.356" x2="22.338" y2="43.705" width="0.1524" layer="1"/>
 <wire x1="22.338" y1="43.448" x2="22.352" y2="43.434" width="0.1524" layer="1"/>
 <via x="22.352" y="43.434" extent="1-16" drill="0.35"/>
 <wire x1="23.608" y1="44.69" x2="22.352" y2="43.434" width="0.1524" layer="1"/>
-<wire x1="22.338" y1="43.705" x2="22.338" y2="43.448" width="0" layer="19" extent="1-16"/>
+<wire x1="22.338" y1="43.705" x2="22.338" y2="43.448" width="0.1524" layer="1"/>
 <wire x1="23.1254" y1="43.448" x2="22.338" y2="43.448" width="0.1524" layer="1"/>
 <contactref element="GND27" pad="P$1"/>
 <wire x1="17.018" y1="26.782" x2="17.0688" y2="26.7312" width="0.1524" layer="1"/>
@@ -2573,8 +2573,8 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <wire x1="5.08" y1="49.53" x2="4.572" y2="55.372" width="0" layer="19" extent="1-1"/>
 <wire x1="20.701" y1="13.8684" x2="16.9164" y2="20.5232" width="0" layer="19" extent="1-1"/>
 <wire x1="22.8854" y1="13.843" x2="20.701" y2="13.8684" width="0" layer="19" extent="1-1"/>
-<wire x1="4.572" y1="23.6982" x2="11.447" y2="31.383" width="0" layer="19" extent="1-1"/>
-<wire x1="5.3086" y1="17.2332" x2="4.572" y2="23.6982" width="0" layer="19" extent="1-1"/>
+<wire x1="5.1308" y1="24.2316" x2="11.447" y2="31.383" width="0" layer="19" extent="1-1"/>
+<wire x1="5.3086" y1="17.2332" x2="5.1308" y2="24.2316" width="0" layer="19" extent="1-1"/>
 <wire x1="2.6804" y1="-2.5654" x2="5.3086" y2="17.2332" width="0" layer="19" extent="1-1"/>
 <wire x1="1.4598" y1="-9.7282" x2="2.6804" y2="-2.5654" width="0" layer="19" extent="1-1"/>
 <wire x1="1.4598" y1="-13.3096" x2="1.4598" y2="-9.7282" width="0" layer="19" extent="1-1"/>
@@ -2704,8 +2704,8 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <contactref element="C6" pad="P$1"/>
 <wire x1="14.224" y1="44.916" x2="16.227" y2="45.17" width="0" layer="19" extent="1-1"/>
 <wire x1="12.7626" y1="45.17" x2="14.224" y2="44.916" width="0" layer="19" extent="1-1"/>
-<wire x1="4.572" y1="26.2382" x2="12.7" y2="39.624" width="0" layer="19" extent="1-1"/>
-<wire x1="5.3086" y1="18.7332" x2="4.572" y2="26.2382" width="0" layer="19" extent="1-1"/>
+<wire x1="5.1308" y1="26.7716" x2="12.7" y2="39.624" width="0" layer="19" extent="1-1"/>
+<wire x1="5.3086" y1="18.7332" x2="5.1308" y2="26.7716" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VCC">
 <contactref element="U2" pad="31"/>
@@ -2836,7 +2836,7 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <wire x1="26.0396" y1="38.959" x2="26.0604" y2="38.9382" width="0.1524" layer="1"/>
 <wire x1="26.0604" y1="38.9382" x2="30.5776" y2="43.4554" width="0.1524" layer="1"/>
 <contactref element="J1" pad="P$6"/>
-<wire x1="4.572" y1="36.3982" x2="25.152" y2="38.959" width="0" layer="19" extent="1-1"/>
+<wire x1="5.1308" y1="36.9316" x2="25.152" y2="38.959" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="JTAG_TCK">
 <contactref element="CC2652R1" pad="25"/>
@@ -2845,7 +2845,7 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <wire x1="26.6192" y1="42.3164" x2="26.6192" y2="45.7708" width="0.1524" layer="1"/>
 <wire x1="26.6192" y1="45.7708" x2="27.7742" y2="46.9258" width="0.1524" layer="1"/>
 <contactref element="J1" pad="P$7"/>
-<wire x1="4.572" y1="38.9382" x2="24.502" y2="39.609" width="0" layer="19" extent="1-1"/>
+<wire x1="5.1308" y1="39.4716" x2="24.502" y2="39.609" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="JTAG_TDO">
 <contactref element="CC2652R1" pad="26"/>
@@ -2855,7 +2855,7 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <wire x1="24.002" y1="40.2072" x2="26.289" y2="42.4942" width="0.1524" layer="1"/>
 <wire x1="28.0924" y1="48.1584" x2="30.5402" y2="48.1584" width="0.1524" layer="1"/>
 <contactref element="J1" pad="P$8"/>
-<wire x1="4.572" y1="41.4782" x2="24.002" y2="39.609" width="0" layer="19" extent="1-1"/>
+<wire x1="5.1308" y1="42.0116" x2="24.002" y2="39.609" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="JTAG_TDI">
 <contactref element="CC2652R1" pad="27"/>
@@ -2865,7 +2865,7 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <wire x1="23.502" y1="40.266" x2="25.9334" y2="42.6974" width="0.1524" layer="1"/>
 <wire x1="25.9334" y1="42.6974" x2="25.9334" y2="46.5328" width="0.1524" layer="1"/>
 <contactref element="J1" pad="P$9"/>
-<wire x1="4.572" y1="44.0182" x2="23.502" y2="39.609" width="0" layer="19" extent="1-1"/>
+<wire x1="5.1308" y1="44.5516" x2="23.502" y2="39.609" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
 <contactref element="C17" pad="1"/>
@@ -2944,7 +2944,7 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <wire x1="25.146" y1="46.6852" x2="25.146" y2="47.5488" width="0.1524" layer="1"/>
 <wire x1="25.146" y1="47.5488" x2="28.333" y2="50.7358" width="0.1524" layer="1"/>
 <contactref element="J1" pad="P$5"/>
-<wire x1="4.572" y1="33.8582" x2="19.502" y2="39.609" width="0" layer="19" extent="1-1"/>
+<wire x1="5.1308" y1="34.3916" x2="19.502" y2="39.609" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$16">
 <contactref element="R2" pad="2"/>
@@ -3075,12 +3075,12 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <signal name="RXD">
 <contactref element="J1" pad="P$3"/>
 <contactref element="CC2652R1" pad="7"/>
-<wire x1="4.572" y1="28.7782" x2="22.002" y2="32.809" width="0" layer="19" extent="1-1"/>
+<wire x1="5.1308" y1="29.3116" x2="22.002" y2="32.809" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="TXD">
 <contactref element="J1" pad="P$4"/>
 <contactref element="CC2652R1" pad="8"/>
-<wire x1="4.572" y1="31.3182" x2="22.502" y2="32.809" width="0" layer="19" extent="1-1"/>
+<wire x1="5.1308" y1="31.8516" x2="22.502" y2="32.809" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$13">
 <contactref element="CC2652R1" pad="20"/>

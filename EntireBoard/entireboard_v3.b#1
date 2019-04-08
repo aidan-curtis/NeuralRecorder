@@ -22,7 +22,7 @@
 <layer number="12" name="Route12" color="20" fill="1" visible="no" active="no"/>
 <layer number="13" name="Route13" color="21" fill="1" visible="no" active="no"/>
 <layer number="14" name="Route14" color="22" fill="1" visible="no" active="no"/>
-<layer number="15" name="Route15" color="23" fill="1" visible="no" active="yes"/>
+<layer number="15" name="Route15" color="23" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
@@ -164,10 +164,10 @@
 <wire x1="0" y1="40" x2="0" y2="0" width="0" layer="20"/>
 <text x="1.9304" y="9.1186" size="1.016" layer="21">Axon Mobile rev3</text>
 <text x="6.9342" y="36.2712" size="0.508" layer="25">3V3</text>
-<text x="36.2966" y="28.7274" size="0.508" layer="25" rot="R180">GND</text>
-<text x="36.2712" y="30.861" size="0.508" layer="25" rot="R180">3V3</text>
-<text x="36.3728" y="33.5534" size="0.508" layer="25" rot="R180">RXD</text>
-<text x="36.3474" y="35.8394" size="0.508" layer="25" rot="R180">TXD</text>
+<text x="36.3474" y="27.3558" size="0.508" layer="25" rot="R180">GND</text>
+<text x="36.2712" y="30.1752" size="0.508" layer="25" rot="R180">3V3</text>
+<text x="36.4998" y="33.1724" size="0.4572" layer="25" rot="R180">RXD</text>
+<text x="36.2458" y="35.687" size="0.508" layer="25" rot="R180">TXD</text>
 <text x="39.0906" y="39.116" size="0.508" layer="25" rot="R270">RESET</text>
 <text x="35.0266" y="36.449" size="0.508" layer="25" rot="R180">TMS</text>
 <text x="32.7406" y="36.3474" size="0.508" layer="25" rot="R180">TCK</text>
@@ -181,6 +181,8 @@
 <text x="35.1028" y="8.7884" size="0.6096" layer="25">7</text>
 <text x="37.6936" y="9.7536" size="0.6096" layer="25">4</text>
 <text x="37.7952" y="8.8138" size="0.6096" layer="25">5</text>
+<text x="25.3746" y="16.8402" size="0.6096" layer="25" rot="R270">REF_ELEC</text>
+<text x="28.1432" y="10.1854" size="0.6096" layer="25" rot="R180">GND</text>
 </plain>
 <libraries>
 <library name="AxonMobile">
@@ -1098,16 +1100,16 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="VALUE" x="1.6002" y="40.2844" size="1.27" layer="28" rot="MR180"/>
 </element>
 <element name="SPI_CLK" library="AxonMobile" package="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" value="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" x="32.7914" y="31.5468" smashed="yes">
-<attribute name="NAME" x="32.893" y="32.639" size="0.508" layer="25" ratio="12" rot="R90"/>
+<attribute name="NAME" x="32.893" y="32.639" size="0.4572" layer="25" ratio="12" rot="R90"/>
 </element>
 <element name="SPI_CS" library="AxonMobile" package="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" value="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" x="34.5694" y="31.5468" smashed="yes">
-<attribute name="NAME" x="35.8648" y="33.274" size="0.508" layer="25" ratio="12" rot="R180"/>
+<attribute name="NAME" x="34.2646" y="35.1536" size="0.4572" layer="25" ratio="12" rot="R270"/>
 </element>
 <element name="SPI_MISO" library="AxonMobile" package="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" value="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" x="29.2354" y="31.5468" smashed="yes">
-<attribute name="NAME" x="29.3116" y="32.6136" size="0.508" layer="25" ratio="12" rot="R90"/>
+<attribute name="NAME" x="29.3116" y="32.6136" size="0.4572" layer="25" ratio="12" rot="R90"/>
 </element>
 <element name="SPI_MOSI" library="AxonMobile" package="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" value="RHD2000_EVAL_BOARD_TESTPOINT_SMALL" x="31.0134" y="31.5468" smashed="yes">
-<attribute name="NAME" x="31.1912" y="32.5628" size="0.508" layer="25" ratio="12" rot="R90"/>
+<attribute name="NAME" x="31.1912" y="32.5628" size="0.4572" layer="25" ratio="12" rot="R90"/>
 </element>
 <element name="U$2" library="antenna" package="DN007+0" value="INVERTED_F_ANTENNA+0" x="18.2112" y="4.8176" smashed="yes" rot="R180"/>
 <element name="U2" library="RHD2000" package="QFN56_8_X_8_LARGE" value="RHD2216_QFN" x="32.1818" y="22.0116" smashed="yes" rot="R180"/>
@@ -2197,6 +2199,24 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <contactref element="J4" pad="P$1"/>
 <wire x1="36.2318" y1="18.7616" x2="37.8714" y2="17.122" width="0.1524" layer="1"/>
 <wire x1="37.8714" y1="17.122" x2="37.8714" y2="14.4018" width="0.1524" layer="1"/>
+</signal>
+<signal name="N$26">
+<via x="2.794" y="11.9126" extent="1-16" drill="0.35"/>
+</signal>
+<signal name="N$27">
+<via x="7.5692" y="13.3604" extent="1-16" drill="0.35"/>
+</signal>
+<signal name="N$28">
+<via x="2.5908" y="16.891" extent="1-16" drill="0.35"/>
+</signal>
+<signal name="N$29">
+<via x="7.6454" y="19.4818" extent="1-16" drill="0.35"/>
+</signal>
+<signal name="N$30">
+<via x="22.8854" y="17.4752" extent="1-16" drill="0.35"/>
+</signal>
+<signal name="N$31">
+<via x="22.9616" y="11.9634" extent="1-16" drill="0.35"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

@@ -22,7 +22,7 @@
 <layer number="12" name="Route12" color="20" fill="1" visible="no" active="no"/>
 <layer number="13" name="Route13" color="21" fill="1" visible="no" active="no"/>
 <layer number="14" name="Route14" color="22" fill="1" visible="no" active="no"/>
-<layer number="15" name="Route15" color="23" fill="1" visible="no" active="yes"/>
+<layer number="15" name="Route15" color="23" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
@@ -166,7 +166,7 @@
 <text x="6.9342" y="36.2712" size="0.508" layer="25">3V3</text>
 <text x="36.3474" y="27.3558" size="0.508" layer="25" rot="R180">GND</text>
 <text x="36.2712" y="30.1752" size="0.508" layer="25" rot="R180">3V3</text>
-<text x="36.3728" y="33.02" size="0.4572" layer="25" rot="R180">RXD</text>
+<text x="36.4998" y="33.1724" size="0.4572" layer="25" rot="R180">RXD</text>
 <text x="36.2458" y="35.687" size="0.508" layer="25" rot="R180">TXD</text>
 <text x="39.0906" y="39.116" size="0.508" layer="25" rot="R270">RESET</text>
 <text x="35.0266" y="36.449" size="0.508" layer="25" rot="R180">TMS</text>
@@ -181,6 +181,8 @@
 <text x="35.1028" y="8.7884" size="0.6096" layer="25">7</text>
 <text x="37.6936" y="9.7536" size="0.6096" layer="25">4</text>
 <text x="37.7952" y="8.8138" size="0.6096" layer="25">5</text>
+<text x="25.3746" y="16.8402" size="0.6096" layer="25" rot="R270">REF_ELEC</text>
+<text x="28.1432" y="10.1854" size="0.6096" layer="25" rot="R180">GND</text>
 </plain>
 <libraries>
 <library name="AxonMobile">
@@ -1016,7 +1018,6 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="HOUSEPART" value="YES" x="62.2554" y="3.8608" size="1.778" layer="27" display="off"/>
 <attribute name="LABEL01" value="" x="7.6454" y="36.8808" size="1.016" layer="21" font="vector" ratio="16" rot="R270" align="center-left"/>
 <attribute name="MPN" value="MF-CON-2.54mm-01x01" x="62.2554" y="3.8608" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="12.1652" y="15.2854" size="1.016" layer="25" ratio="16" rot="R90"/>
 <attribute name="POPULATE" value="1" x="62.2554" y="3.8608" size="1.778" layer="27" display="off"/>
 <attribute name="URL" value="https://factory.macrofab.com/part/MF-CON-2.54mm-01x01" x="62.2554" y="3.8608" size="1.778" layer="27" display="off"/>
 </element>
@@ -1028,11 +1029,11 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="VALUE" x="-0.0254" y="32.5882" size="0.508" layer="27" rot="R180"/>
 </element>
 <element name="C1" library="RHD2000_eval_board" package="0402" value="100n" x="28.7528" y="28.1686" smashed="yes" rot="R90">
-<attribute name="NAME" x="27.9908" y="27.0256" size="1.016" layer="25" rot="R90"/>
+<attribute name="NAME" x="30.4546" y="27.432" size="1.016" layer="25" rot="R90"/>
 <attribute name="VALUE" x="30.5308" y="26.8986" size="1.016" layer="27" font="vector" rot="R90"/>
 </element>
 <element name="C10" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="C0402" package3d_urn="urn:adsk.eagle:package:6240340/1" value="0.1uF" x="12.7622" y="28.3784" smashed="yes" rot="R270">
-<attribute name="NAME" x="13.5242" y="29.0134" size="0.762" layer="25" rot="R270"/>
+<attribute name="NAME" x="13.2956" y="29.877" size="0.762" layer="25" rot="R270"/>
 <attribute name="VALUE" x="10.8572" y="27.2354" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="C17" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="C0402" package3d_urn="urn:adsk.eagle:package:6240340/1" value="1uF" x="23.9334" y="34.7358" smashed="yes">
@@ -1044,7 +1045,7 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="VALUE" x="22.3266" y="20.4724" size="1.27" layer="27"/>
 </element>
 <element name="C19" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="C0402" package3d_urn="urn:adsk.eagle:package:6240340/1" value="12pF" x="26.1366" y="27.5082" smashed="yes">
-<attribute name="NAME" x="25.5016" y="28.2702" size="0.762" layer="25"/>
+<attribute name="NAME" x="25.3492" y="26.162" size="0.762" layer="25"/>
 <attribute name="VALUE" x="25.5016" y="25.6032" size="1.27" layer="27"/>
 </element>
 <element name="C2" library="RHD2000_eval_board" package="0402" value="10n" x="25.9654" y="24.9568" smashed="yes" rot="R180">
@@ -1052,11 +1053,11 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="VALUE" x="24.0652" y="31.5534" size="1.016" layer="27" font="vector" rot="R270"/>
 </element>
 <element name="C20" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="C0402" package3d_urn="urn:adsk.eagle:package:6240340/1" value="0.1uF" x="1.7704" y="38.1978" smashed="yes" rot="MR270">
-<attribute name="NAME" x="2.1374" y="36.4998" size="0.508" layer="26" rot="MR0"/>
+<attribute name="NAME" x="1.858" y="36.4998" size="0.508" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="3.6754" y="38.8328" size="1.27" layer="28" rot="MR270"/>
 </element>
 <element name="C3" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="C0402" package3d_urn="urn:adsk.eagle:package:6240340/1" value="0.1uF" x="24.7584" y="28.9928" smashed="yes">
-<attribute name="NAME" x="23.2344" y="27.4688" size="0.762" layer="25"/>
+<attribute name="NAME" x="25.1902" y="29.6024" size="0.762" layer="25"/>
 <attribute name="VALUE" x="22.8534" y="27.0878" size="1.27" layer="27"/>
 </element>
 <element name="C4" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="C0402" package3d_urn="urn:adsk.eagle:package:6240340/1" value="0.1uF" x="23.8694" y="33.3108" smashed="yes">
@@ -1064,14 +1065,14 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="VALUE" x="23.2344" y="31.4058" size="1.27" layer="27"/>
 </element>
 <element name="C5" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="C0402" package3d_urn="urn:adsk.eagle:package:6240340/1" value="0.1uF" x="11.3604" y="32.0688" smashed="yes" rot="R180">
-<attribute name="NAME" x="11.4874" y="31.3068" size="1.27" layer="25" rot="R180"/>
+<attribute name="NAME" x="9.7094" y="32.4498" size="0.762" layer="25" rot="R180"/>
 <attribute name="VALUE" x="11.9954" y="33.9738" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="C7" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="C0402" package3d_urn="urn:adsk.eagle:package:6240340/1" value="0.1uF" x="14.9746" y="38.0172" smashed="yes" rot="MR90">
-<attribute name="NAME" x="15.8916" y="37.0652" size="0.8128" layer="26" rot="MR270"/>
+<attribute name="NAME" x="14.3444" y="36.4656" size="0.8128" layer="26" rot="MR180"/>
 </element>
 <element name="C9" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="C0402" package3d_urn="urn:adsk.eagle:package:6240340/1" value="0.1uF" x="11.3604" y="30.9258" smashed="yes" rot="R180">
-<attribute name="NAME" x="11.9954" y="30.1638" size="1.27" layer="25" rot="R180"/>
+<attribute name="NAME" x="11.9954" y="30.3416" size="0.762" layer="25" rot="R180"/>
 <attribute name="VALUE" x="11.9954" y="32.8308" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="GND" library="AxonMobile" package="PTH_2.54MM_01X01" value="MF-CON-2.54mm-01x01" x="10.1854" y="38.1508" smashed="yes">
@@ -1088,12 +1089,12 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="DIGI-KEY_PURCHASE_URL" value="https://www.digikey.com/product-detail/en/murata-electronics-north-america/BLM18HE152SN1D/490-5216-1-ND/1948392?utm_source=snapeda&amp;utm_medium=aggregator&amp;utm_campaign=symbol" x="47.7774" y="85.3948" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="MF" value="Murata Electronics" x="47.7774" y="85.3948" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="MP" value="BLM18HE152SN1D" x="47.7774" y="85.3948" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="NAME" x="0.5724" y="35.2298" size="0.5" layer="26" rot="MR180"/>
+<attribute name="NAME" x="3.5814" y="35.2688" size="0.5" layer="26" rot="MR90"/>
 <attribute name="PACKAGE" value="0603 Samtec" x="47.7774" y="85.3948" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="VALUE" x="0.5724" y="37.0198" size="0.5" layer="28" rot="MR180"/>
 </element>
 <element name="R1" library="AxonMobile" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100k" x="3.5052" y="38.8874" smashed="yes" rot="MR180">
-<attribute name="NAME" x="2.3622" y="39.1414" size="0.6096" layer="26" rot="MR270"/>
+<attribute name="NAME" x="3.6576" y="37.719" size="0.6096" layer="26" rot="MR0"/>
 <attribute name="SPICEPREFIX" value="R" x="25.0952" y="79.5274" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="VALUE" x="1.6002" y="40.2844" size="1.27" layer="28" rot="MR180"/>
 </element>
@@ -1117,19 +1118,18 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="DIGI-KEY_PURCHASE_URL" value="https://www.digikey.com/product-detail/en/molex-llc/0532610271/WM7620CT-ND/699107?utm_source=snapeda&amp;utm_medium=aggregator&amp;utm_campaign=symbol" x="7.4968" y="25.9386" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="MF" value="Molex, LLC" x="7.4968" y="25.9386" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="MP" value="0532610271" x="7.4968" y="25.9386" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="NAME" x="8.768859375" y="21.486390625" size="1.272059375" layer="26" rot="MR90"/>
 <attribute name="PACKAGE" value="None" x="7.4968" y="25.9386" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="VALUE" x="0.66988125" y="21.482559375" size="1.273159375" layer="28" rot="MR90"/>
 </element>
 <element name="C21" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="C0402" package3d_urn="urn:adsk.eagle:package:6240340/1" value="1uF" x="4.9022" y="35.0774" smashed="yes" rot="MR90">
-<attribute name="NAME" x="5.6642" y="34.4424" size="0.508" layer="26" rot="MR90"/>
+<attribute name="NAME" x="5.5372" y="34.29" size="0.508" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="2.9972" y="34.4424" size="1.27" layer="28" rot="MR90"/>
 </element>
 <element name="C22" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="C0402" package3d_urn="urn:adsk.eagle:package:6240340/1" value="1uF" x="2.0066" y="34.4932" smashed="yes" rot="MR180">
 <attribute name="VALUE" x="1.3716" y="36.3982" size="1.27" layer="28" rot="MR180"/>
 </element>
 <element name="R3" library="AxonMobile" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="" x="11.0236" y="35.3822" smashed="yes" rot="R180">
-<attribute name="NAME" x="10.8966" y="34.7472" size="0.6096" layer="25" rot="R180"/>
+<attribute name="NAME" x="12.1412" y="35.5854" size="0.6096" layer="25" rot="R270"/>
 <attribute name="SPICEPREFIX" value="R" x="11.0236" y="35.3822" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="11.6586" y="37.2872" size="1.27" layer="27" rot="R180"/>
 </element>
@@ -1143,7 +1143,7 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="DIELECTRIC" value="" x="13.3096" y="38.0746" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="HOUSEPART" value="" x="13.3096" y="38.0746" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="MPN" value="" x="13.3096" y="38.0746" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="NAME" x="14.4096" y="36.6746" size="1.016" layer="26" font="vector" ratio="16" rot="MR90"/>
+<attribute name="NAME" x="13.973" y="35.4154" size="1.016" layer="26" font="vector" ratio="16" rot="MR0"/>
 <attribute name="POPULATE" value="1" x="13.3096" y="38.0746" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="TOLERANCE" value="" x="13.3096" y="38.0746" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="URL" value="" x="13.3096" y="38.0746" size="1.778" layer="28" rot="MR90" display="off"/>
@@ -1153,7 +1153,7 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="DIELECTRIC" value="" x="19.2278" y="38.9382" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="HOUSEPART" value="" x="19.2278" y="38.9382" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="MPN" value="" x="19.2278" y="38.9382" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="NAME" x="21.1298" y="38.6002" size="1.016" layer="26" font="vector" ratio="16" rot="MR180"/>
+<attribute name="NAME" x="20.2154" y="37.9906" size="1.016" layer="26" font="vector" ratio="16" rot="MR180"/>
 <attribute name="POPULATE" value="1" x="19.2278" y="38.9382" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="TOLERANCE" value="" x="19.2278" y="38.9382" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="URL" value="" x="19.2278" y="38.9382" size="1.778" layer="28" rot="MR180" display="off"/>
@@ -1162,7 +1162,7 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <element name="L1" library="MF_Passives" package="L0603" value="6.8uH" x="16.6116" y="38.1762" smashed="yes" rot="MR90">
 <attribute name="HOUSEPART" value="" x="16.6116" y="38.1762" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="MPN" value="" x="16.6116" y="38.1762" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="NAME" x="14.9176" y="36.5222" size="1.016" layer="26" font="vector" ratio="16" rot="MR90"/>
+<attribute name="NAME" x="17.2496" y="35.5678" size="1.016" layer="26" font="vector" ratio="16" rot="MR0"/>
 <attribute name="POPULATE" value="1" x="16.6116" y="38.1762" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="URL" value="" x="16.6116" y="38.1762" size="1.778" layer="28" rot="MR90" display="off"/>
 </element>
@@ -1214,28 +1214,28 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <element name="L5" library="MF_Passives" package="L0402" value="2.4nH" x="14.605" y="25.781" smashed="yes" rot="R180">
 <attribute name="HOUSEPART" value="" x="14.605" y="25.781" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="14.605" y="25.781" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="15.705" y="24.681" size="1.016" layer="25" font="vector" ratio="16" rot="R180"/>
+<attribute name="NAME" x="14.435" y="25.0874" size="1.016" layer="25" font="vector" ratio="16" rot="R180"/>
 <attribute name="POPULATE" value="1" x="14.605" y="25.781" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="URL" value="" x="14.605" y="25.781" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="L4" library="MF_Passives" package="L0402" value="2.4nH" x="17.0942" y="23.4188" smashed="yes" rot="R270">
 <attribute name="HOUSEPART" value="" x="17.0942" y="23.4188" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="17.0942" y="23.4188" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="18.1942" y="24.5188" size="1.016" layer="25" font="vector" ratio="16" rot="R270"/>
+<attribute name="NAME" x="17.991" y="23.9854" size="1.016" layer="25" font="vector" ratio="16" rot="R270"/>
 <attribute name="POPULATE" value="1" x="17.0942" y="23.4188" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="URL" value="" x="17.0942" y="23.4188" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="L3" library="MF_Passives" package="L0402" value="2nH" x="16.0528" y="20.2946" smashed="yes" rot="R270">
 <attribute name="HOUSEPART" value="" x="16.0528" y="20.2946" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="16.0528" y="20.2946" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="17.1528" y="21.3946" size="1.016" layer="25" font="vector" ratio="16" rot="R270"/>
+<attribute name="NAME" x="17.0512" y="20.9374" size="1.016" layer="25" font="vector" ratio="16" rot="R270"/>
 <attribute name="POPULATE" value="1" x="16.0528" y="20.2946" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="URL" value="" x="16.0528" y="20.2946" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="L2" library="MF_Passives" package="L0402" value="2nH" x="16.0528" y="16.4846" smashed="yes" rot="R270">
 <attribute name="HOUSEPART" value="" x="16.0528" y="16.4846" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="16.0528" y="16.4846" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="17.1528" y="17.5846" size="1.016" layer="25" font="vector" ratio="16" rot="R270"/>
+<attribute name="NAME" x="17.0004" y="17.0512" size="1.016" layer="25" font="vector" ratio="16" rot="R270"/>
 <attribute name="POPULATE" value="1" x="16.0528" y="16.4846" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="URL" value="" x="16.0528" y="16.4846" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
@@ -1243,7 +1243,7 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="DIELECTRIC" value="" x="16.0274" y="9.7282" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="HOUSEPART" value="" x="16.0274" y="9.7282" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="16.0274" y="9.7282" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="17.1274" y="10.8282" size="1.016" layer="25" font="vector" ratio="16" rot="R270"/>
+<attribute name="NAME" x="14.0032" y="11.0568" size="1.016" layer="25" font="vector" ratio="16" rot="R270"/>
 <attribute name="POPULATE" value="1" x="16.0274" y="9.7282" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="TOLERANCE" value="" x="16.0274" y="9.7282" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="URL" value="" x="16.0274" y="9.7282" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1253,7 +1253,7 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="DIELECTRIC" value="" x="16.0528" y="13.0302" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="HOUSEPART" value="" x="16.0528" y="13.0302" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="16.0528" y="13.0302" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="17.1528" y="14.1302" size="1.016" layer="25" font="vector" ratio="16" rot="R270"/>
+<attribute name="NAME" x="13.9778" y="14.1302" size="1.016" layer="25" font="vector" ratio="16" rot="R270"/>
 <attribute name="POPULATE" value="1" x="16.0528" y="13.0302" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="TOLERANCE" value="" x="16.0528" y="13.0302" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="URL" value="" x="16.0528" y="13.0302" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1263,7 +1263,7 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="DIELECTRIC" value="" x="15.494" y="18.3896" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="HOUSEPART" value="" x="15.494" y="18.3896" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="15.494" y="18.3896" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="16.594" y="17.2896" size="1.016" layer="25" font="vector" ratio="16" rot="R180"/>
+<attribute name="NAME" x="19.134" y="18.9406" size="1.016" layer="25" font="vector" ratio="16" rot="R180"/>
 <attribute name="POPULATE" value="1" x="15.494" y="18.3896" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="TOLERANCE" value="" x="15.494" y="18.3896" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="URL" value="" x="15.494" y="18.3896" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1273,7 +1273,7 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="DIELECTRIC" value="" x="17.6022" y="25.781" size="1.778" layer="27" display="off"/>
 <attribute name="HOUSEPART" value="" x="17.6022" y="25.781" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="17.6022" y="25.781" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="16.5022" y="26.881" size="1.016" layer="25" font="vector" ratio="16"/>
+<attribute name="NAME" x="15.6386" y="26.6016" size="1.016" layer="25" font="vector" ratio="16"/>
 <attribute name="POPULATE" value="1" x="17.6022" y="25.781" size="1.778" layer="27" display="off"/>
 <attribute name="TOLERANCE" value="" x="17.6022" y="25.781" size="1.778" layer="27" display="off"/>
 <attribute name="URL" value="" x="17.6022" y="25.781" size="1.778" layer="27" display="off"/>
@@ -1283,7 +1283,7 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="DIELECTRIC" value="" x="15.113" y="23.3934" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="HOUSEPART" value="" x="15.113" y="23.3934" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="15.113" y="23.3934" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="16.213" y="24.4934" size="1.016" layer="25" font="vector" ratio="16" rot="R270"/>
+<attribute name="NAME" x="12.4636" y="21.0136" size="1.016" layer="25" font="vector" ratio="16"/>
 <attribute name="POPULATE" value="1" x="15.113" y="23.3934" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="TOLERANCE" value="" x="15.113" y="23.3934" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="URL" value="" x="15.113" y="23.3934" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1293,14 +1293,13 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="DIELECTRIC" value="" x="12.319" y="25.1968" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="HOUSEPART" value="" x="12.319" y="25.1968" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="12.319" y="25.1968" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="13.419" y="26.2968" size="1.016" layer="25" font="vector" ratio="16" rot="R270"/>
+<attribute name="NAME" x="10.498" y="26.373" size="1.016" layer="25" font="vector" ratio="16" rot="R270"/>
 <attribute name="POPULATE" value="1" x="12.319" y="25.1968" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="TOLERANCE" value="" x="12.319" y="25.1968" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="URL" value="" x="12.319" y="25.1968" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VOLTAGE" value="" x="12.319" y="25.1968" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="U$1" library="AxonMobile" package="CC2652R1_QFN-48" value="CC2652R1" x="18.034" y="31.877" smashed="yes" rot="R90">
-<attribute name="NAME" x="13.589" y="31.877" size="0.6096" layer="25" font="vector" ratio="20" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="23.114" y="31.877" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="bottom-center"/>
 </element>
 <element name="J1" library="MF_Connectors" package="PTH_2.54MM_01X05" value="MF-CON-2.54mm-01x05" x="32.7914" y="11.7348" smashed="yes" rot="R180">
@@ -2197,6 +2196,24 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <contactref element="J4" pad="P$1"/>
 <wire x1="36.2318" y1="18.7616" x2="37.8714" y2="17.122" width="0.1524" layer="1"/>
 <wire x1="37.8714" y1="17.122" x2="37.8714" y2="14.4018" width="0.1524" layer="1"/>
+</signal>
+<signal name="N$26">
+<via x="2.794" y="11.9126" extent="1-16" drill="0.35"/>
+</signal>
+<signal name="N$27">
+<via x="7.5692" y="13.3604" extent="1-16" drill="0.35"/>
+</signal>
+<signal name="N$28">
+<via x="2.5908" y="16.891" extent="1-16" drill="0.35"/>
+</signal>
+<signal name="N$29">
+<via x="7.6454" y="19.4818" extent="1-16" drill="0.35"/>
+</signal>
+<signal name="N$30">
+<via x="22.8854" y="17.4752" extent="1-16" drill="0.35"/>
+</signal>
+<signal name="N$31">
+<via x="22.9616" y="11.9634" extent="1-16" drill="0.35"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

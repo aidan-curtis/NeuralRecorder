@@ -2,8 +2,6 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-SHELL = cmd.exe
-
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../smartrf_settings/smartrf_settings.c 
@@ -15,10 +13,10 @@ OBJS += \
 ./smartrf_settings/smartrf_settings.obj 
 
 OBJS__QUOTED += \
-"smartrf_settings\smartrf_settings.obj" 
+"smartrf_settings/smartrf_settings.obj" 
 
 C_DEPS__QUOTED += \
-"smartrf_settings\smartrf_settings.d" 
+"smartrf_settings/smartrf_settings.d" 
 
 C_SRCS__QUOTED += \
 "../smartrf_settings/smartrf_settings.c" 

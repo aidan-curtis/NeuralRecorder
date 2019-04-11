@@ -101,6 +101,49 @@ static uint8_t packet[PAYLOAD_LENGTH];
 //                                0b0000110000000000, 0b0000110100000000, 0b0000111000000000, 0b0000111100000000,
 //};
 
+
+// Compression stuff
+int lag = 5;
+int num_channels = 8;
+double calculated_betas[] = {-0.36, 0.71, -0.57, -0.65, 1.65}; // reversed coeffs
+uint16_t storage_coeffs[][] = uint16_t[num_channels][lag+1];
+uint16_t constant_offset = 0;
+uint16_t error[] = uint16_t[num_channels];
+
+
+void load_error_to_packet(){
+    for(int ch = 0; ch < num_channels; ch += 1){
+        packet[ch*2] = (error[ch] >> 8);
+        packet[ch*2+1] = error[ch] & 0xff;
+    }
+}
+
+void get_error_signal(){
+    for(int ch = 0; ch < num_channels; ch += 1){
+        error[ch] = 0;
+        for(int i = 0; i < lag; i += 1){
+            error[ch] += storage_coeffs[ch][i]*calculated_betas[i];
+        }
+        error[ch] = error[ch]-storage_coeffs[ch][lag];
+    }
+}
+
+void shift_channels(){
+    for(int ch = 0; ch < num_channels; ch += 1){
+        for(int i = 1; i <= lag; i+=1){
+            storage_coeffs[ch][i-1] = storage_coeffs[ch][i];
+        }
+    }
+}
+
+void store_packet_in_hist(){
+    shift_channels()
+    for(int ch = 0; ch < num_channels; ch += 1){
+        storage_coeffs[ch][lag] = (packet[ch*2] << 8) | packet[ch*2+1];
+    }
+}
+
+
 //bit13-bit8 are channel numbers
 static uint16_t channels[8] = { 0b0000010000000000, 0b0000010100000000, 0b0000011000000000, 0b0000011100000000,
                                 0b0000100000000000, 0b0000100100000000, 0b0000101000000000, 0b0000101100000000
@@ -226,121 +269,47 @@ void *masterThread(void *arg0)
     uint8_t setup_counter = 0;
     GPIO_write(Board_SPI_MASTER_READY, 0);
 
-//    for (i = 0; i < MAX_LOOP; i++) {
     while (1) {
         for (j = 0; j < PAYLOAD_LENGTH / 2; j++) {
             /* Copy message to transmit buffer */
             if (setup_counter <  num_messages) {
                 masterTxBuffer[0] = messages[setup_counter];
             } else if (j < PAYLOAD_LENGTH / 2) { // data bits
-//                masterTxBuffer[0] = 0b0000101000000000; // read from channel 0 on Intan chip
                 masterTxBuffer[0] = channels[j];
             }
-//            else { // when j > 33
-//                ind = 1;
-//            }
 
-//            if (ind == 0) {
-                // SPI data bits
-                GPIO_write(Board_GPIO_LED1, 0);
+            GPIO_write(Board_GPIO_LED1, 0);
 
-                /* Initialize master SPI transaction structure */
-                memset((void *) masterRxBuffer, 0, SPI_MSG_LENGTH);
-                transaction.count = SPI_MSG_LENGTH;
-                transaction.txBuf = (void *) masterTxBuffer;
-                transaction.rxBuf = (void *) masterRxBuffer;
+            /* Initialize master SPI transaction structure */
+            memset((void *) masterRxBuffer, 0, SPI_MSG_LENGTH);
+            transaction.count = SPI_MSG_LENGTH;
+            transaction.txBuf = (void *) masterTxBuffer;
+            transaction.rxBuf = (void *) masterRxBuffer;
 
-                /* Perform SPI transfer */
-                transferOK = SPI_transfer(masterSpi, &transaction);
-                setup_counter++;
-                if (setup_counter > 200) {
-                    setup_counter = 100;
-                }
+            /* Perform SPI transfer */
+            transferOK = SPI_transfer(masterSpi, &transaction);
+            setup_counter++;
+            if (setup_counter > 200) {
+                setup_counter = 100;
+            }
 
-                GPIO_write(Board_GPIO_LED1, 1);
-                packet[j*2] = (masterRxBuffer[0] >> 8);
-                packet[j*2+1] = masterRxBuffer[0] & 0xff;
-//            } else {
-//                // want to send indicator data bits
-//                packet[j*2] = 0x00;
-//                packet[j*2+1] = 0x01;
-//            }
-//            ind = 0;
+            GPIO_write(Board_GPIO_LED1, 1);
+            packet[j*2] = (masterRxBuffer[0] >> 8);
+            packet[j*2+1] = masterRxBuffer[0] & 0xff;
         }
 
-        // start --> RF transfer
-//        for (i = 0; i < PAYLOAD_LENGTH; i++)
-//        {
-        // NOTE: change this for robustness because spi_length is currently 1
-//        }
-//        packet[i] = (uint8_t) transaction.rxBuf;
+        //Compression functions to modify packet info
+        store_packet_in_hist();
+        get_error_signal();
+        load_error_to_packet();
+
+
         /* Set absolute TX time to utilize automatic power management */
         curtime += PACKET_INTERVAL;
         RF_cmdPropTx.startTime = curtime;
         RF_EventMask terminationReason = RF_runCmd(rfHandle, (RF_Op*)&RF_cmdPropTx,
                                                            RF_PriorityNormal, NULL, 0);
-//        switch(terminationReason)
-//        {
-//            case RF_EventCmdDone:
-//                // A radio operation command in a chain finished
-//                Display_printf(display, 0, 0, "termination RF_EventCmdDone\n");
-//                break;
-//            case RF_EventLastCmdDone:
-//                // A stand-alone radio operation command or the last radio
-//                // operation command in a chain finished.
-//                Display_printf(display, 0, 0, "termination RF_EventLastCmdDone\n");
-//                break;
-//            case RF_EventCmdCancelled:
-//                // Command cancelled before it was started; it can be caused
-//            // by RF_cancelCmd() or RF_flushCmd().
-//                Display_printf(display, 0, 0, "termination RF_EventCmdCancelled\n");
-//                break;
-//            case RF_EventCmdAborted:
-//                // Abrupt command termination caused by RF_cancelCmd() or
-//                // RF_flushCmd().
-//                Display_printf(display, 0, 0, "termination RF_EventCmdAborted\n");
-//                break;
-//            case RF_EventCmdStopped:
-//                // Graceful command termination caused by RF_cancelCmd() or
-//                // RF_flushCmd().
-//                Display_printf(display, 0, 0, "termination RF_EventCmdStopped\n");
-//                break;
-//            default:
-//                // Uncaught error event
-//                while(1);
-//        }
-//
-//        uint32_t cmdStatus = ((volatile RF_Op*)&RF_cmdPropTx)->status;
-//        switch(cmdStatus)
-//        {
-//            case PROP_DONE_OK:
-//                // Packet transmitted successfully
-//                break;
-//            case PROP_DONE_STOPPED:
-//                // received CMD_STOP while transmitting packet and finished
-//                // transmitting packet
-//                break;
-//            case PROP_DONE_ABORT:
-//                // Received CMD_ABORT while transmitting packet
-//                break;
-//            case PROP_ERROR_PAR:
-//                // Observed illegal parameter
-//                break;
-//            case PROP_ERROR_NO_SETUP:
-//                // Command sent without setting up the radio in a supported
-//                // mode using CMD_PROP_RADIO_SETUP or CMD_RADIO_SETUP
-//                break;
-//            case PROP_ERROR_NO_FS:
-//                // Command sent without the synthesizer being programmed
-//                break;
-//            case PROP_ERROR_TXUNF:
-//                // TX underflow observed during operation
-//                break;
-//            default:
-//                // Uncaught error event - these could come from the
-//                // pool of states defined in rf_mailbox.h
-//                while(1);
-//        }
+
         /* Sleep for a bit before starting the next SPI transfer  */
     }
 

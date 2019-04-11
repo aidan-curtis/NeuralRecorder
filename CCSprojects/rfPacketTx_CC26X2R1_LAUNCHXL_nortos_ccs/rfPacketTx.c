@@ -70,6 +70,15 @@ static PIN_State ledPinState;
 static uint8_t packet[PAYLOAD_LENGTH];
 //static uint16_t seqNumber;
 
+
+// Coded compression coefficients that were calculated externally
+// COMPRESSION
+int lag = 5;
+int num_channels = 8;
+double calculated_betas[] = {1.65, -0.65, -0.57, 0.71, -0.36};
+double storage_coeffs[][] = double[num_channels][lag+1];
+double constant_offset = 0;
+
 /*
  * Application LED pin configuration table:
  *   - All LEDs board LEDs are off.
@@ -87,6 +96,18 @@ PIN_Config pinTable[] =
 #endif
     PIN_TERMINATE
 };
+
+//COMPRESSION
+void get_error_signal(double &error){
+    for(int ch=0; ch<num_channels; ch+=1){
+        error[ch] = 0;
+        for(int i = 0; i<lag; i+=1){
+            error[ch] += storage_coeffs[ch][i]*calculated_betas[i];
+        }
+        error[ch] = error[ch]-storage_coeffs[ch][lag];
+    }
+}
+
 
 /***** Function definitions *****/
 
@@ -109,6 +130,8 @@ void *mainThread(void *arg0)
     PINCC26XX_setMux(ledPinHandle, Board_RF_POWER, PINCC26XX_MUX_RFC_GPO1);
 #endif
 #endif
+
+
 
     RF_cmdPropTx.pktLen = PAYLOAD_LENGTH;
     RF_cmdPropTx.pPkt = packet;

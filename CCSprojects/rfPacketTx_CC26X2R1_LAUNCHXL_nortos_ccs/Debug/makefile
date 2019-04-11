@@ -2,9 +2,7 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-SHELL = cmd.exe
-
-CG_TOOL_ROOT := C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS
+CG_TOOL_ROOT := /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.4.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -29,8 +27,8 @@ $(GEN_CMDS__FLAG) \
 
 -include ../makefile.init
 
-RM := DEL /F
-RMDIR := RMDIR /S/Q
+RM := rm -rf
+RMDIR := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
@@ -154,22 +152,22 @@ all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 rfPacketTx_CC26X2R1_LAUNCHXL_nortos_ccs.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: ARM Linker'
-	"C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=DeviceFamily_CC26X2 -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on -z -m"rfPacketTx_CC26X2R1_LAUNCHXL_nortos_ccs.map" -i"C:/ti/simplelink_cc26x2_sdk_2_20_00_36/source" -i"C:/ti/simplelink_cc26x2_sdk_2_20_00_36/kernel/nortos" -i"C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/lib" --diag_wrap=off --display_error_number --warn_sections --xml_link_info="rfPacketTx_CC26X2R1_LAUNCHXL_nortos_ccs_linkInfo.xml" --rom_model -o "rfPacketTx_CC26X2R1_LAUNCHXL_nortos_ccs.out" $(ORDERED_OBJS)
+	"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=DeviceFamily_CC26X2 -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on -z -m"rfPacketTx_CC26X2R1_LAUNCHXL_nortos_ccs.map" -i"/Users/aidancurtis/ti/simplelink_cc26x2_sdk_2_20_00_36/source" -i"/Users/aidancurtis/ti/simplelink_cc26x2_sdk_2_20_00_36/kernel/nortos" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.4.LTS/lib" --diag_wrap=off --display_error_number --warn_sections --xml_link_info="rfPacketTx_CC26X2R1_LAUNCHXL_nortos_ccs_linkInfo.xml" --rom_model -o "rfPacketTx_CC26X2R1_LAUNCHXL_nortos_ccs.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 rfPacketTx_CC26X2R1_LAUNCHXL_nortos_ccs.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: ARM Hex Utility'
-	"C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armhex"  -o "rfPacketTx_CC26X2R1_LAUNCHXL_nortos_ccs.hex" $(EXE_OUTPUTS__QUOTED)
+	"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.4.LTS/bin/armhex"  -o "rfPacketTx_CC26X2R1_LAUNCHXL_nortos_ccs.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "CC26X2R1_LAUNCHXL.obj" "CC26X2R1_LAUNCHXL_fxns.obj" "ccfg.obj" "main_nortos.obj" "rfPacketTx.obj" "smartrf_settings\smartrf_settings.obj" 
-	-$(RM) "CC26X2R1_LAUNCHXL.d" "CC26X2R1_LAUNCHXL_fxns.d" "ccfg.d" "main_nortos.d" "rfPacketTx.d" "smartrf_settings\smartrf_settings.d" 
+	-$(RM) "CC26X2R1_LAUNCHXL.obj" "CC26X2R1_LAUNCHXL_fxns.obj" "ccfg.obj" "main_nortos.obj" "rfPacketTx.obj" "smartrf_settings/smartrf_settings.obj" 
+	-$(RM) "CC26X2R1_LAUNCHXL.d" "CC26X2R1_LAUNCHXL_fxns.d" "ccfg.d" "main_nortos.d" "rfPacketTx.d" "smartrf_settings/smartrf_settings.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

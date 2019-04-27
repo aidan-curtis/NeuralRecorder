@@ -30,6 +30,26 @@
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+/* RF settings*/
+#include <stdlib.h>
+
+/* TI Drivers */
+#include <ti/drivers/rf/RF.h>
+#include <ti/drivers/PIN.h>
+#include <ti/drivers/pin/PINCC26XX.h>
+
+/* Driverlib Header files */
+#include DeviceFamily_constructPath(driverlib/rf_prop_mailbox.h)
+
+/* Board Header files */
+#include "smartrf_settings/smartrf_settings.h"
+
+/* Packet TX Configuration */
+#define PAYLOAD_LENGTH      16 // number of channels *2
+#define PACKET_INTERVAL     (uint32_t)(4000000*0.001f) /* Set packet interval to 1ms */
+//#define PACKET_INTERVAL     (uint32_t)(0.0f) /* Set packet interval to 0ms */
+
+
 /*
  *  ======== spimaster.c ========
  */
@@ -62,8 +82,99 @@ static Display_Handle display;
 uint16_t masterRxBuffer[SPI_MSG_LENGTH];
 uint16_t masterTxBuffer[SPI_MSG_LENGTH];
 
-int num_messages = 36;
-uint16_t messages[36];
+int num_messages = 60;
+uint16_t messages[60]; // initial messages for setup
+
+/* Start--> RF variable declarations*/
+/***** Variable declarations *****/
+static RF_Object rfObject;
+static RF_Handle rfHandle;
+
+/* Pin driver handle */
+static PIN_Handle ledPinHandle; // unused
+static PIN_State ledPinState;
+
+static uint8_t packet[PAYLOAD_LENGTH];
+//static uint16_t channels[16] = {0b0000000000000000, 0b0000000100000000, 0b0000001000000000, 0b0000001100000000,
+//                                0b0000010000000000, 0b0000010100000000, 0b0000011000000000, 0b0000011100000000,
+//                                0b0000100000000000, 0b0000100100000000, 0b0000101000000000, 0b0000101100000000,
+//                                0b0000110000000000, 0b0000110100000000, 0b0000111000000000, 0b0000111100000000,
+//};
+
+
+// Compression stuff
+const int lag = 5;
+const int num_channels = 8;
+double calculated_betas[] = {-0.36, 0.71, -0.57, -0.65, 1.65}; // reversed coeffs
+uint16_t storage_coeffs[num_channels][lag+1];
+uint16_t constant_offset = 0;
+uint16_t error[num_channels];
+
+
+void load_error_to_packet(){
+    int ch;
+    for(ch = 0; ch < num_channels; ch += 1){
+        packet[ch*2] = (error[ch] >> 8);
+        packet[ch*2+1] = error[ch] & 0xff;
+    }
+}
+
+void get_error_signal(){
+    int ch;
+    for(ch = 0; ch < num_channels; ch += 1){
+        error[ch] = 0;
+        int i;
+        for(i = 0; i < lag; i += 1){
+            error[ch] += storage_coeffs[ch][i]*calculated_betas[i];
+        }
+        error[ch] = error[ch]-storage_coeffs[ch][lag];
+    }
+}
+
+void shift_channels(){
+    int ch;
+    for(ch = 0; ch < num_channels; ch += 1){
+        int i;
+        for(i = 1; i <= lag; i+=1){
+            storage_coeffs[ch][i-1] = storage_coeffs[ch][i];
+        }
+    }
+}
+
+void store_packet_in_hist(){
+    shift_channels();
+    int ch;
+    for(ch = 0; ch < num_channels; ch += 1){
+        storage_coeffs[ch][lag] = (packet[ch*2] << 8) | packet[ch*2+1];
+    }
+}
+
+
+//bit13-bit8 are channel numbers
+static uint16_t channels[8] = { 0b0000010000000000, 0b0000010100000000, 0b0000011000000000, 0b0000011100000000,
+                                0b0000100000000000, 0b0000100100000000, 0b0000101000000000, 0b0000101100000000
+};
+static uint8_t ind = 0; // packet end indicator
+
+/*
+ * Application LED pin configuration table:
+ *   - All LEDs board LEDs are off.
+ */
+PIN_Config pinTable[] =
+{
+    Board_PIN_LED1 | PIN_GPIO_OUTPUT_EN | PIN_GPIO_LOW | PIN_PUSHPULL | PIN_DRVSTR_MAX,
+#if defined Board_CC1352R1_LAUNCHXL
+    Board_DIO30_RFSW | PIN_GPIO_OUTPUT_EN | PIN_GPIO_HIGH | PIN_PUSHPULL | PIN_DRVSTR_MAX,
+#endif
+#ifdef POWER_MEASUREMENT
+#if defined(Board_CC1350_LAUNCHXL)
+    Board_RF_POWER | PIN_GPIO_OUTPUT_EN | PIN_GPIO_HIGH | PIN_PUSHPULL | PIN_DRVSTR_MAX,
+#endif
+#endif
+    PIN_TERMINATE
+};
+//static uint16_t seqNumber;
+/*RF variable declarations END*/
 
 
 /* Semaphore to block master until slave is ready for transfer */
@@ -89,8 +200,34 @@ void *masterThread(void *arg0)
     SPI_Params      spiParams;
     SPI_Transaction transaction;
     uint32_t        i;
+    uint32_t        j;
     bool            transferOK;
     int32_t         status;
+
+    // Start --> RF crap
+    uint32_t curtime;
+    RF_Params rfParams;
+    RF_Params_init(&rfParams);
+    ledPinHandle = PIN_open(&ledPinState, pinTable);
+//    if (ledPinHandle == NULL)
+//    {
+//        while(1);
+//    }
+    RF_cmdPropTx.pktLen = PAYLOAD_LENGTH;
+    RF_cmdPropTx.pPkt = packet;
+    RF_cmdPropTx.startTrigger.triggerType = TRIG_ABSTIME;
+    RF_cmdPropTx.startTrigger.pastTrig = 1;
+    RF_cmdPropTx.startTime = 0;
+
+    /* Request access to the radio */
+    rfHandle = RF_open(&rfObject, &RF_prop, (RF_RadioSetup*)&RF_cmdPropRadioDivSetup, &rfParams);
+
+    /* Set the frequency */
+    RF_postCmd(rfHandle, (RF_Op*)&RF_cmdFs, RF_PriorityNormal, NULL, 0);
+
+    /* Get current time */
+    curtime = RF_getCurrentTime();
+    // <-- End RF crap
 
     /*
      * Board_SPI_MASTER_READY & Board_SPI_SLAVE_READY are GPIO pins connected
@@ -117,7 +254,7 @@ void *masterThread(void *arg0)
      * Below we set Board_SPI_MASTER_READY & Board_SPI_SLAVE_READY initial
      * conditions for the 'handshake'.
      */
-     
+
     /* Open SPI as master (default) */
     SPI_Params_init(&spiParams);
     spiParams.frameFormat = SPI_POL0_PHA0;
@@ -135,28 +272,53 @@ void *masterThread(void *arg0)
      * Master has opened Board_SPI_MASTER; set Board_SPI_MASTER_READY high to
      * inform the slave.
      */
+    uint8_t setup_counter = 0;
     GPIO_write(Board_SPI_MASTER_READY, 0);
 
-    for (i = 0; i < MAX_LOOP; i++) {
-        /* Copy message to transmit buffer */
-        if(i<num_messages) {
-            masterTxBuffer[0] = messages[i];
-        } else {
-            masterTxBuffer[0] = 0b0000000000000000;
+    while (1) {
+        for (j = 0; j < PAYLOAD_LENGTH / 2; j++) {
+            /* Copy message to transmit buffer */
+            if (setup_counter <  num_messages) {
+                masterTxBuffer[0] = messages[setup_counter];
+            } else if (j < PAYLOAD_LENGTH / 2) { // data bits
+                masterTxBuffer[0] = channels[j]; // change this
+//                masterTxBuffer[0] = 0b0000000000000001;
+            }
+
+            GPIO_write(Board_GPIO_LED1, 0);
+
+            /* Initialize master SPI transaction structure */
+            memset((void *) masterRxBuffer, 0, SPI_MSG_LENGTH);
+            transaction.count = SPI_MSG_LENGTH;
+            transaction.txBuf = (void *) masterTxBuffer;
+            transaction.rxBuf = (void *) masterRxBuffer;
+
+            /* Perform SPI transfer */
+            transferOK = SPI_transfer(masterSpi, &transaction);
+            setup_counter++;
+            if (setup_counter > 200) {
+                setup_counter = 100;
+            }
+
+            GPIO_write(Board_GPIO_LED1, 1);
+            packet[j*2] = (masterRxBuffer[0] >> 8);
+            packet[j*2+1] = masterRxBuffer[0] & 0xff;
         }
-    
-        GPIO_write(Board_GPIO_LED1, 0);
-        
-        /* Initialize master SPI transaction structure */
-        memset((void *) masterRxBuffer, 0, SPI_MSG_LENGTH);
-        transaction.count = SPI_MSG_LENGTH;
-        transaction.txBuf = (void *) masterTxBuffer;
-        transaction.rxBuf = (void *) masterRxBuffer;
 
-        /* Perform SPI transfer */
-        transferOK = SPI_transfer(masterSpi, &transaction);
+        //Compression functions to modify packet info
+//        if (setup_counter >  num_messages + 10){
+//            store_packet_in_hist();
+//            get_error_signal();
+//            load_error_to_packet();
+//        }
 
-        GPIO_write(Board_GPIO_LED1, 1);
+
+        /* Set absolute TX time to utilize automatic power management */
+        curtime += PACKET_INTERVAL;
+        RF_cmdPropTx.startTime = curtime;
+        RF_EventMask terminationReason = RF_runCmd(rfHandle, (RF_Op*)&RF_cmdPropTx,
+                                                           RF_PriorityNormal, NULL, 0);
+
         /* Sleep for a bit before starting the next SPI transfer  */
     }
 
@@ -193,8 +355,8 @@ void *mainThread(void *arg0)
     GPIO_setConfig(Board_GPIO_LED1, GPIO_CFG_OUT_STD | GPIO_CFG_OUT_LOW);
 
     // Enable the software chip select as output
-    GPIO_setConfig(IOID_15, GPIO_CFG_OUT_STD | GPIO_CFG_OUT_HIGH);  
-    
+    GPIO_setConfig(IOID_7, GPIO_CFG_OUT_STD | GPIO_CFG_OUT_HIGH);
+
     /* Open the display for output */
     display = Display_open(Display_Type_UART, NULL);
     if (display == NULL) {
@@ -211,47 +373,73 @@ void *mainThread(void *arg0)
 
     /* Create application threads */
     pthread_attr_init(&attrs);
-    
-    
+
+
     //set up the registers
-    messages[0] = 0b0000000000000000;
-    messages[1] = 0b0000000000000000;
-    messages[2] = 0b1000000011011110; //R0
-    messages[3] = 0b1000000100100000; //R1
-    messages[4] = 0b1000001000101000; //R2
-    messages[5] = 0b1000001100000000; //R3
-    messages[6] = 0b1000010011001101; //R4
-    messages[7] = 0b1000010100000000; //R5
-    messages[8] = 0b1000011000000000; //R6
-    messages[9] = 0b1000011100000000; //R7
-    messages[10] = 0b1000100000001000; //R8
-    messages[11] = 0b1000100100000000; //R9
-    messages[12] = 0b1000101000000100; //R10
-    messages[13] = 0b1000101100000000; //R11
-    messages[14] = 0b1000110000010000; //R12
-    messages[15] = 0b1000110101111100; //R13
-    messages[16] = 0b1000111011111111; //R14
-    messages[17] = 0b1000111111111111; //R15
-    messages[18] = 0b1001000011111111; //R16
-    messages[19] = 0b1001000111111111; //R17
-    messages[20] = 0b0000000000000000;
-    messages[21] = 0b0000000000000000;
-    messages[22] = 0b0000000000000000;
-    messages[23] = 0b0000000000000000;
-    messages[24] = 0b0101010100000000; // Config
-    messages[25] = 0b0000000000000000;
-    messages[26] = 0b0000000000000000;
-    messages[27] = 0b0000000000000000;
-    messages[28] = 0b0000000000000000;
-    messages[29] = 0b0000000000000000;
-    messages[30] = 0b0000000000000000;
-    messages[31] = 0b0000000000000000;
-    messages[32] = 0b0000000000000000;
-    messages[33] = 0b0000000000000000;
-    messages[34] = 0b0000000000000000;
-    messages[35] = 0b0000000000000000;
-    messages[36] = 0b0000000000000000;
-     
+    int s = 0;
+    // 0-9
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b1000000011011110; //R0
+    messages[s++] = 0b1000000100100000; //R1
+    messages[s++] = 0b1000001000101000; //R2
+    messages[s++] = 0b1000001100000000; //R3
+    messages[s++] = 0b1000010011001101; //R4
+    messages[s++] = 0b1000010100000000; //R5
+    messages[s++] = 0b1000011000000000; //R6
+    messages[s++] = 0b1000011100000000; //R7
+    messages[s++] = 0b1000100000001000; //R8
+    messages[s++] = 0b1000100100000000; //R9
+    messages[s++] = 0b1000101000000100; //R10
+    messages[s++] = 0b1000101100000000; //R11
+    messages[s++] = 0b1000110000010000; //R12
+    messages[s++] = 0b1000110101111100; //R13
+    messages[s++] = 0b1000111011111111; //R14
+    messages[s++] = 0b1000111111111111; //R15
+    messages[s++] = 0b1001000011111111; //R16
+    messages[s++] = 0b1001000111111111; //R17
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0101010100000000; // Config
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b0000000000000000;
+    messages[s++] = 0b1110100000000000; // I
+    messages[s++] = 0b1110100100000000; // N
+    messages[s++] = 0b1110101000000000; //
+    messages[s++] = 0b1110101100000000;
+    messages[s++] = 0b1110110000000000;
+    messages[s++] = 0b1110100000000000; // I
+    messages[s++] = 0b1110100100000000; // N
+    messages[s++] = 0b1110101000000000; //
+    messages[s++] = 0b1110101100000000;
+    messages[s++] = 0b1110110000000000;
+    messages[s++] = 0b1110100000000000; // I
+    messages[s++] = 0b1110100100000000; // N
+    messages[s++] = 0b1110101000000000; //
+    messages[s++] = 0b1110101100000000;
+    messages[s++] = 0b1110110000000000;
+
+
     detachState = PTHREAD_CREATE_DETACHED;
     /* Set priority and stack size attributes */
     retc = pthread_attr_setdetachstate(&attrs, detachState);

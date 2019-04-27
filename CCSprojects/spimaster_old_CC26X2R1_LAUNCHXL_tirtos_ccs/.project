@@ -3,7 +3,7 @@
 	<name>spimaster_CC26X2R1_LAUNCHXL_tirtos_ccs</name>
 	<comment></comment>
 	<projects>
-		<project>tirtos_builds_CC26X2R1_LAUNCHXL_release_ccs_2_40_00_81</project>
+		<project>tirtos_builds_CC26X2R1_LAUNCHXL_release_ccs</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
@@ -29,7 +29,7 @@
 		<link>
 			<name>Board.html</name>
 			<type>1</type>
-			<locationURI>COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR/source/ti/boards/CC26X2R1_LAUNCHXL/Board.html</locationURI>
+			<locationURI>COM_TI_SIMPLELINK_CC26X2_SDK_INSTALL_DIR/source/ti/boards/CC26X2R1_LAUNCHXL/Board.html</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

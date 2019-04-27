@@ -61,7 +61,7 @@ int main(void)
     int                 retc;
 
     /* Call driver init functions */
-    Board_init();
+    Board_initGeneral();
 
     /* Initialize the attributes structure with default values */
     pthread_attr_init(&attrs);

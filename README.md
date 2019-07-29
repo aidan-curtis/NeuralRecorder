@@ -1,5 +1,3 @@
-![Team Axon Mobile logo]( axonmobile_logo.png )
-
 <iframe style="width: 100%" height = "500" src="https://www.youtube.com/embed/SluLUA3ErF0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 

@@ -1,4 +1,8 @@
 ![Team Axon Mobile logo]( axonmobile_logo.png )
+
+[![Watch the video](https://www.youtube.com/watch?v=SluLUA3ErF0&ab_channel=RiceUniversity)](https://youtu.be/vt5fpE0bzSY)
+
+
 ## Problem Statement
 According to the World Health Organization, up to 50 million people in the world have epilepsy. Of these 50 million, 30% do not respond to medication to keep their seizures under control. These patients are said to have intractable epilepsy, and one of the most effective ways of treating these patients is to record patient EEG data in order to determine the source of the seizures, and then remove the specific part of the brain that is causing the seizures. This process of recording data is invasive and requires implanting electrodes into the brain. These electrodes are wired from inside the brain to a stationary external source that collects the data. The presence of wires causes two main problems: 1) the patients have limited mobility throughout the duration of the data recording and must remain in the hospital for days or even weeks, and 2) the wires are a potential source of infection.
 

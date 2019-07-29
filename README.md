@@ -1,6 +1,6 @@
 ![Team Axon Mobile logo]( axonmobile_logo.png )
 
-[![Watch the video](https://www.youtube.com/watch?v=SluLUA3ErF0&ab_channel=RiceUniversity)](https://youtu.be/vt5fpE0bzSY)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SluLUA3ErF0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## Problem Statement

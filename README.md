@@ -26,6 +26,14 @@ With a budget of $2,500 and working between August 29, 2018 and April 11, 2019 w
 - Ability to wirelessly transmit data at least 1 meter
 - A Sampling rate of at least 1000 Hz
 
+## Intracranial Testing
+<iframe style="width: 100%" height = "500" src="https://www.youtube.com/embed/LJeJShj3aGc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## ISCAS World Champions
+We placed first in the ISCAS Compatition in Sapporo, Japan.
+![ISCAS Award]( iscas_poster.jpg )
+![ISCAS Poster]( iscas.jpg )
+
 ## Team
 ![Team Axon Mobile]( team photo.jpg )
 - *Aidan Curtis:* arc11 at rice dot edu
